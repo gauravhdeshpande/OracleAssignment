@@ -1,0 +1,10 @@
+{
+	"compilerOptions":{
+		"outDir":"./dist/js/ts_compiled",
+		"rootDir":"./src/js",
+		"watch":true,
+		"alwaysStrict":true,
+		"module":"amd",
+		"target": "es5"
+	}
+}
