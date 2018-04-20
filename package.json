@@ -7,7 +7,7 @@
     "build": "tsc",
     "app": "concurrent --kill-others \"npm run tsc\" \"npm run lite\" ",
     "tsc": "tsc",
-    "lite": "lessc-watch src/css/index.less dest/css/index.css"
+    "lite": "lessc-watch src/css/index.less dist/css/index.css"
   },
   "repository": {
     "type": "git",
