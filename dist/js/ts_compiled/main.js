@@ -1,4 +1,4 @@
-define(["require", "exports", "./Ajax"], function (require, exports, Ajax_1) {
+define(["require", "exports", "./StaticJson"], function (require, exports, StaticJson_1) {
     /*
     
     Learnt:
@@ -21,6 +21,7 @@ define(["require", "exports", "./Ajax"], function (require, exports, Ajax_1) {
     */
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var a = new Ajax_1.default('json/product.json', "POST");
-    a.Trigger();
+    var a = new StaticJson_1.default();
+    console.log(a.productList);
 });
+//a.Trigger();

@@ -19,8 +19,9 @@ Task:
 
 */
 "use strict";
-import foo from './jimmy';
 import Ajax from './Ajax';
-var a = new Ajax('json/product.json',"POST");
+import StaticJson from './StaticJson'
+var a = new StaticJson();
+console.log(a.productList)
+//a.Trigger();
 
-a.Trigger();

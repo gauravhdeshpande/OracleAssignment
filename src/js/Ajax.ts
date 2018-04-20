@@ -28,5 +28,11 @@ class Ajax{
         this.req.open(this.method,this.url,true);
         this.req.send();
     }
+
+    public StaticJson = {
+        
+        'kiko':'gogo'
+        
+    }
 }
 export default Ajax;
