@@ -1,151 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Font Awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title> PLP Page</title>
-    
-    <style>
-        .checked {
-             color: orange;
-                }
-
-    
-    </style>
-</head>
-<body>
-    <!--  Header  -->
-        <header>
-            <h2>Header</h2>
-        </header>
-<!-- / Header -->
-
-    <!--  Breadcrumb -->
-
-    <div class="container">
-        <div class="breadcrumb">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- Font Awesome  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title> PLP Page</title>
+      <style>
+         .checked {
+         color: orange;
+         }
+      </style>
+   </head>
+   <body>
+      <!--  Header  -->
+      <header>
+         <h2>Header</h2>
+      </header>
+      <!-- / Header -->
+      <!--  Breadcrumb -->
+      <div class="container">
+         <div class="breadcrumb">
             <a href="#">Exchange</a>
             <a href="#">Home &amp; Appliances </a>
             <a href="#">Furniture &amp; Mattresses </a>
             <a href="#">Living Room Furniture </a>            
             <a href="#" class="active-link"> Sofas &amp; Couches </a>            
-        </div>
-    </div>
-<!-- Images Area  -->
-<div class="container">
-    <div class="main-img">
-    <div class="img-section-6">
-        <img src="#" alt="Product Image">
-    </div>
-</div>
-<div class="small-pdp-img">
-        <div class="img-section-6">
-                <img src="#" alt="Product Image">
-                <img src="#" alt="Product Image">
-                <img src="#" alt="Product Image">
-                <img src="#" alt="Product Image">
+         </div>
+      </div>
+      <!-- Images Area  -->
+      <div class="container">
+         <div class="main-img">
+            <div class="img-section-6">
+               <img src="#" alt="Product Image">
             </div>
-</div>
-</div>
-
-<!-- / Side Image Area  -->
-
-    <div class="container section-6">
-        <!-- Product type -->
-        <div class="product-title">
+         </div>
+         <div class="small-pdp-img">
+            <div class="img-section-6">
+               <img src="#" alt="Product Image">
+               <img src="#" alt="Product Image">
+               <img src="#" alt="Product Image">
+               <img src="#" alt="Product Image">
+            </div>
+         </div>
+      </div>
+      <!-- / Side Image Area  -->
+      <div class="container section-6">
+         <!-- Product type -->
+         <div class="product-title">
             <h2></h2>
             <p class="item-details"></p>
-            <p class="rating"></p> <span> Reviews </span>           
-        </div>
-        <div class="price-block">
+            <p class="rating"></p>
+            <span> Reviews </span>           
+         </div>
+         <div class="price-block">
             <h2 class="list-price"></h2>
             <h2 class="sale-price"></h2>
-        </div>
-
-        <div class="btn-size">
+         </div>
+         <div class="btn-size">
             <button>S</button>
             <button>M</button>
             <button>L</button>
             <button>XL</button>
-        </div>
-
-        <div class="color-area">
+         </div>
+         <div class="color-area">
             <p class="color-title"></p>
             <button class="Biege"></button>
             <button class="Biege"></button>
             <button class="Biege"></button>
-        </div>
-    </div>
-
-
-    <!-- Quantity Stepper  -->
-
-    <div class="container">
-            <div class="row">
-                <h2>Simple Quantity increment buttons with Javascript </h2>
-                
-                
-                                <div class="col-lg-2">
-                                                <div class="input-group">
-                                            <span class="input-group-btn">
-                                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
-                                                  <span class="glyphicon glyphicon-minus">-</span>
-                                                </button>
-                                            </span>
-                                            <input type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100">
-                                            <span class="input-group-btn">
-                                                <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
-                                                    <span class="glyphicon glyphicon-plus">+</span>
-                                                </button>
-                                            </span>
-                                        </div>
-                                </div>
+         </div>
+      </div>
+      <!-- Quantity Stepper  -->
+      <div class="container">
+         <div class="row">
+            <h2>Simple Quantity increment buttons with Javascript </h2>
+            <div class="col-lg-2">
+               <div class="input-group">
+                  <span class="input-group-btn">
+                  <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                  <span class="glyphicon glyphicon-minus">-</span>
+                  </button>
+                  </span>
+                  <input type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100">
+                  <span class="input-group-btn">
+                  <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                  <span class="glyphicon glyphicon-plus">+</span>
+                  </button>
+                  </span>
+               </div>
             </div>
-        <div class="cart-btn">
+         </div>
+         <div class="cart-btn">
             <button>Add to Cart</button>
-        </div>
-        </div>
-
-        <!-- / Quantity Stepper  -->
-
-        <div class="product-description">
-            <p class="product-desc"></p>
-        </div>
-    
-        <!-- Tabs for PDP  -->
-
-        <div class="container">
-
-                <div class="tab">
-                        <button class="tablinks" onclick="openTabs(event, 'Specifications')">Specifications</button>
-                        <button class="tablinks" onclick="openTabs(event, 'Ratings &amp; Reviews')">Ratings &amp; Reviews</button>
-                        <button class="tablinks" onclick="openTabs(event, 'Warranty')">Warranty</button>
-                </div>
-
-                <div id="Specifications" class="tabcontent">
-                        <h3>Specifications</h3>
-                      </div>
-                      
-                      <div id="Ratings &amp; Reviews" class="tabcontent">
-                        <h3>Ratings &amp; Ratings</h3>
-                      </div>
-                      
-                      <div id="Warranty" class="tabcontent">
-                        <h3>Warranty</h3>
-                      </div>
-                </div>
-                
-                
-
-    <!-- Footer -->
-    <footer>
-        <h2>Footer</h2>
-    </footer>
-
-
-</body>
+         </div>
+      </div>
+      <!-- / Quantity Stepper  -->
+      <div class="product-description">
+         <p class="product-desc"></p>
+      </div>
+      <!-- Tabs for PDP  -->
+      <div class="container">
+         <div class="tab">
+            <button class="tablinks" onclick="openTabs(event, 'Specifications')">Specifications</button>
+            <button class="tablinks" onclick="openTabs(event, 'Ratings &amp; Reviews')">Ratings &amp; Reviews</button>
+            <button class="tablinks" onclick="openTabs(event, 'Warranty')">Warranty</button>
+         </div>
+         <div id="Specifications" class="tabcontent">
+            <h3>Specifications</h3>
+         </div>
+         <div id="Ratings &amp; Reviews" class="tabcontent">
+            <h3>Ratings &amp; Ratings</h3>
+         </div>
+         <div id="Warranty" class="tabcontent">
+            <h3>Warranty</h3>
+         </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+         <h2>Footer</h2>
+      </footer>
+   </body>
 </html>
