@@ -19,184 +19,133 @@
 </head>
 <body>
     <!--  Header  -->
-    <div class="container">
-        <div class="header-text">
+        <header>
             <h2>Header</h2>
-        </div>
-    </div>
+        </header>
+<!-- / Header -->
 
     <!--  Breadcrumb -->
 
     <div class="container">
         <div class="breadcrumb">
             <a href="#">Exchange</a>
-            <a href="#">Shoes</a>
-            <a href="#">Athletic Shoes</a>
-            <a href="#" class="active-link">Men's Athletic Shoes</a>            
+            <a href="#">Home &amp; Appliances </a>
+            <a href="#">Furniture &amp; Mattresses </a>
+            <a href="#">Living Room Furniture </a>            
+            <a href="#" class="active-link"> Sofas &amp; Couches </a>            
         </div>
     </div>
+<!-- Images Area  -->
+<div class="container">
+    <div class="main-img">
+    <div class="img-section-6">
+        <img src="#" alt="Product Image">
+    </div>
+</div>
+<div class="small-pdp-img">
+        <div class="img-section-6">
+                <img src="#" alt="Product Image">
+                <img src="#" alt="Product Image">
+                <img src="#" alt="Product Image">
+                <img src="#" alt="Product Image">
+            </div>
+</div>
+</div>
 
-    <div class="container">
+<!-- / Side Image Area  -->
+
+    <div class="container section-6">
         <!-- Product type -->
         <div class="product-title">
-            <h2>Men's Athletic Shoes</h2>
+            <h2></h2>
+            <p class="item-details"></p>
+            <p class="rating"></p> <span> Reviews </span>           
+        </div>
+        <div class="price-block">
+            <h2 class="list-price"></h2>
+            <h2 class="sale-price"></h2>
+        </div>
+
+        <div class="btn-size">
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+        </div>
+
+        <div class="color-area">
+            <p class="color-title"></p>
+            <button class="Biege"></button>
+            <button class="Biege"></button>
+            <button class="Biege"></button>
         </div>
     </div>
 
-    <!--  Content Area  -->
-    <!--  Aside Section - Filter Nav Begin -->
+
+    <!-- Quantity Stepper  -->
 
     <div class="container">
-        <div class="row">
-            <!--  Department Section Begin  -->
-            <div class="department-section">
-                <a href="#"> Running </a>
-                <a href="#"> Cleats </a>
+            <div class="row">
+                <h2>Simple Quantity increment buttons with Javascript </h2>
+                
+                
+                                <div class="col-lg-2">
+                                                <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                                                  <span class="glyphicon glyphicon-minus">-</span>
+                                                </button>
+                                            </span>
+                                            <input type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                                    <span class="glyphicon glyphicon-plus">+</span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                </div>
             </div>
-            <!--  Brand Section Begin -->
-            <div class="brand-section">
-                    <input type="checkbox" name="361 Degrees" id="checkbox1"> 361 Degrees
-                    <input type="checkbox" name="Adidas" id="checkbox2"> Adidas
+        <div class="cart-btn">
+            <button>Add to Cart</button>
+        </div>
+        </div>
+
+        <!-- / Quantity Stepper  -->
+
+        <div class="product-description">
+            <p class="product-desc"></p>
+        </div>
+    
+        <!-- Tabs for PDP  -->
+
+        <div class="container">
+
+                <div class="tab">
+                        <button class="tablinks" onclick="openTabs(event, 'Specifications')">Specifications</button>
+                        <button class="tablinks" onclick="openTabs(event, 'Ratings &amp; Reviews')">Ratings &amp; Reviews</button>
+                        <button class="tablinks" onclick="openTabs(event, 'Warranty')">Warranty</button>
                 </div>
-        </div>
-    </div>
-    <!--  Aside Section - Filter Nav End -->
 
-    <!-- Main Content Area - PLP  -->
-    <div class="container">
-        <div class="row">
-            <div class="col-custom">
-                <p>Viewing 1-24 of 24</p>
-            </div>
-            <div class="col-custom">
-                    <p>Sort</p>
-                    <select name="Recommended" id="select-sort">
-                        <option value="A-Z">A-Z</option>
-                        <option value="Z-A">Z-A</option>
-                        <option value="price-lh">Price - Low to High</option>
-                        <option value="price-hl">Price - Hight to Low</option>
-                        <option value="rated">Highest Rated First</option>
-                    </select>
+                <div id="Specifications" class="tabcontent">
+                        <h3>Specifications</h3>
+                      </div>
+                      
+                      <div id="Ratings &amp; Reviews" class="tabcontent">
+                        <h3>Ratings &amp; Ratings</h3>
+                      </div>
+                      
+                      <div id="Warranty" class="tabcontent">
+                        <h3>Warranty</h3>
+                      </div>
                 </div>
                 
-        </div>
-    </div>
-    <!-- Main Content Area - PLP End  -->
-        <div class="container">
-            <div class="row">
-                <!-- Product Information  -->
-                <div class="product-col">                    
-                    <div class="product-image">
-                        <img src="images/prod" alt="prod">
-                    </div>
-                    <div class="product-del">
-                        <ul class="pb-product-details-ul">
-                                <li><span class="prod-name">&nbsp;Released 2016, March</span></li>
-                                <li><span class="prod-list-price">&nbsp;157g, 7.7mm thickness</span></li>
-                                <li><span class="prod-sale-price">&nbsp;Android OS, v6.0, up to 7.0</span></li>
-                                <li><span class="prod-final-price">&nbsp;32/64/128GB Storage</span></li>
-                        </ul>
-                    </div>
-
-                    
-                    <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                    </div>
-                    
-                </div>
-                 <!-- Product Information End  -->
-                                 <!-- Product Information  -->
-                <div class="product-col">                    
-                        <div class="product-image">
-                            <img src="images/prod" alt="prod">
-                        </div>
-                        <div>
-                                <ul class="pb-product-details-ul">
-                                    <li><span class="prod-name">&nbsp;Released 2016, March</span></li>
-                                    <li><span class="prod-list-price">&nbsp;157g, 7.7mm thickness</span></li>
-                                    <li><span class="prod-sale-price">&nbsp;Android OS, v6.0, up to 7.0</span></li>
-                                    <li><span class="prod-final-price">&nbsp;32/64/128GB Storage</span></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                     <!-- Product Information End  -->
-                                     <!-- Product Information  -->
-                <div class="product-col">                    
-                        <div class="product-image">
-                            <img src="images/prod" alt="prod">
-                        </div>
-                        <div>
-                                <ul class="pb-product-details-ul">
-                                    <li><span class="prod-name">&nbsp;Released 2016, March</span></li>
-                                    <li><span class="prod-list-price">&nbsp;157g, 7.7mm thickness</span></li>
-                                    <li><span class="prod-sale-price">&nbsp;Android OS, v6.0, up to 7.0</span></li>
-                                    <li><span class="prod-final-price">&nbsp;32/64/128GB Storage</span></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                     <!-- Product Information End  -->
-                                     <!-- Product Information  -->
-                <div class="product-col">                    
-                        <div class="product-image">
-                            <img src="images/prod" alt="prod">
-                        </div>
-                        <div>
-                                <ul class="pb-product-details-ul">
-                                    <li><span class="prod-name">&nbsp;Released 2016, March</span></li>
-                                    <li><span class="prod-list-price">&nbsp;157g, 7.7mm thickness</span></li>
-                                    <li><span class="prod-sale-price">&nbsp;Android OS, v6.0, up to 7.0</span></li>
-                                    <li><span class="prod-final-price">&nbsp;32/64/128GB Storage</span></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                     <!-- Product Information End  -->
-                                     <!-- Product Information  -->
-                <div class="product-col">                    
-                        <div class="product-image">
-                            <img src="images/prod" alt="prod">
-                        </div>
-                        <div>
-                                <ul class="pb-product-details-ul">
-                                    <li><span class="prod-name">&nbsp;Released 2016, March</span></li>
-                                    <li><span class="prod-list-price">&nbsp;157g, 7.7mm thickness</span></li>
-                                    <li><span class="prod-sale-price">&nbsp;Android OS, v6.0, up to 7.0</span></li>
-                                    <li><span class="prod-final-price">&nbsp;32/64/128GB Storage</span></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                     <!-- Product Information End  -->
-                                     <!-- Product Information  -->
-                <div class="product-col">                    
-                        <div class="product-image">
-                            <img src="images/prod" alt="prod">
-                        </div>
-                        <div>
-                                <ul class="pb-product-details-ul">
-                                    <li><span class="name">&nbsp;Released 2016, March</span></li>
-                                    <li><span class="listPrice">&nbsp;157g, 7.7mm thickness</span></li>
-                                    <li><span class="salePrice">&nbsp;Android OS, v6.0, up to 7.0</span></li>
-                                    <li><span class="rating">&nbsp;32/64/128GB Storage</span></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                     <!-- Product Information End  -->
-            </div>          
-        </div>
+                
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer-text">
-            <h2>Fotoer</h2>
-        </div>
-    </div>
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
+
 </body>
 </html>
