@@ -5,6 +5,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <!-- Font Awesome  -->
+      <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/normalize.min.css">
+      <link rel="stylesheet" href="css/reset.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <title> PLP Page</title>
       <style>
@@ -15,18 +19,27 @@
    </head>
    <body>
       <!--  Header  -->
-      <header>
-         <h2>Header</h2>
-      </header>
+      <div class="container">
+          <div class="row">
+            <header>
+                <h2>Header</h2>
+             </header>
+          </div>
+      </div>
+
       <!-- / Header -->
       <!--  Breadcrumb -->
       <div class="container">
+          <div class="row">
          <div class="breadcrumb">
-            <a href="#">Homepage</a>
-            <a href="#">Account Home</a>
-            <a href="#">Order History</a>
-            <a href="#" class="active-link">Order Details</a>            
+             <ul>
+                 <li><a href="#">Homepage</a></li>
+                 <li><a href="#">Account Home</a></li>
+                 <li><a href="#">Order History</a></li>
+                 <li><a href="#" class="active-link">Order Details</a> </li>                
+             </ul>             
          </div>
+        </div>
       </div>
       <div class="container">
          <!-- Product type -->
