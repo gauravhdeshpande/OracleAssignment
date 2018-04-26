@@ -25,3 +25,44 @@ footer {
 	}
 }
 
+// Breadcrumb
+
+@color_2: #7676d6c8;
+
+.breadcrumb {
+	margin: 3% 1%;
+	a {
+		text-decoration: none;
+		color: @color_2;
+		&:before {
+			content: "/";
+			margin-right: 10px;
+		}
+		&:nth-child(1) {
+			&::before {
+				content: "";
+			}
+		}
+	}
+}
+
+
+// Product Title 
+
+.product-title {
+    font-size: 2em;
+}
+
+// Aside Guided Navigation Bar
+.aside {
+    width: 30%;
+    float: left;
+}
+
+.aside h3 {
+    font-size: 2em;
+}
+
+.aside h3 a {
+    display: inherit;
+}
