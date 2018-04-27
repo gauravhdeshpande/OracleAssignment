@@ -1,0 +1,7 @@
+1. Use a common container for all elements in body
+2. First use reset.css then normalize then index.css
+3. Use ul li for breadcrumbs
+4. Use ul li for department and brand
+5. Breakpoints:
+   0-497 (min-width:497)
+   480

@@ -38,7 +38,7 @@ footer h2 {
   font-size: 2em;
 }
 .aside {
-  width: 30%;
+  width: 20%;
   float: left;
 }
 .aside h3 {
@@ -46,4 +46,31 @@ footer h2 {
 }
 .aside h3 a {
   display: inherit;
+}
+.department-section {
+  display: inline-grid;
+  margin: 2%;
+}
+.product-col {
+  float: right;
+}
+.col-custom {
+  display: inline-block;
+  clear: both;
+}
+.product-col {
+  float: right;
+  width: 20%;
+  margin-left: 4%;
+  margin-right: 2%;
+}
+.nav-product {
+  background: lightgrey;
+  width: 1000px;
+  padding: 10px;
+  margin-left: 25%;
+}
+footer {
+  clear: both;
+  float: left;
 }
