@@ -1,3 +1,32 @@
+// General Typography Styles 
+
+@font-family: 'Open Sans', sans-seriff;
+@heading-size: 1.2em;
+@text-size: 1em;
+@primary_color: #333333;
+@secondary_Color: #043c63;
+
+body {
+	font-family: @font-family;
+}
+
+
+.checked {
+	color: orange;
+	}
+
+h2 {
+		font-weight: 300 !important;
+	}
+
+section {
+	margin-bottom: 100px;
+}
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
 // Header / Footer Styles 
 
 @color_1: white;
@@ -27,10 +56,11 @@ footer {
 
 // Breadcrumb
 
-@color_2: #7676d6c8;
+@color_2: #7676d6;
 
 .breadcrumb {
 	margin: 3% 1%;
+	font-size: 14px;
 	a {
 		text-decoration: none;
 		color: @color_2;
@@ -59,6 +89,7 @@ footer {
 .aside {
 	width: 20%;
 	float: left;
+	margin-left: 20px;
 	h3 {
 		font-size: 2em;
 		a {
@@ -85,16 +116,103 @@ footer {
 .product-col {
     float: right;
     width: 20%;
-    margin-left: 4%;
-    margin-right: 2%;
+	height: 300px;
+	margin-left: 4%;
+	margin-right: 2%;
+	
 }
 
 .nav-product {
-    background: lightgrey;
-    width: 1000px;
-    padding: 10px;
+    background: #f9f9f9;
+    width: 70%;
+    padding: 10px 10px;
     margin-left: 25%;
+    margin-top: 10px;
 }
+
+// PDP 
+
+.main-img {
+    width: 50%;
+    clear: both;
+    float: left;
+}
+
+.btn-size > button {
+    outline: none;
+    padding: 6px;
+    width: 5em;
+    background: transparent;
+    border: 1px solid #e3e7ee;
+    margin-top: 1em;
+    border-radius: 3px;
+}
+
+.btn-size > button:hover {
+    outline: none;
+    padding: 6px;
+    width: 5em;
+    background: #625fdaa8;
+    border: 1px solid #f3f3f3;
+    margin-top: 1em;
+    color: white;
+    border-radius: 3px;
+}
+
+.color-area > button {
+    width: auto;
+    display: inline-flex;
+    margin: 2% 1%;
+    height: auto;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+}
+
+input#quantity {
+    width: 5%;
+    outline: none;
+    margin: 2% 0;
+    text-align: center;
+    border: 1px solid #e9e9e9;
+    padding: 3px;
+}
+
+
+span.input-group-btn > button {
+	background: #f9f9f9;
+    border: 1px solid #e9e9e9;
+    outline: none;
+    padding: 6px 10px;
+    font-weight: bold;
+}
+
+
+
+.section-6 {
+    width: 50%;
+    float: left;
+}
+
+// Add to cart button 
+
+.add-cart {
+		width: 20%;
+		padding: 1% 3%;
+		background: lightsteelblue;
+		outline: none;
+		border: none;
+		border-radius: 3px;
+		color: white; 	
+}
+
+// ODP 
+
+	.breadcrumb-odp {		 
+			display: inline-flex;
+		}
+
 
 
 // Footer 
@@ -103,3 +221,4 @@ footer {
 	clear: both;
 	float: left;
 }
+
