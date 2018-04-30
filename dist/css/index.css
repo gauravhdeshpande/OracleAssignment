@@ -152,6 +152,23 @@ span.input-group-btn > button {
   border-radius: 3px;
   color: white;
 }
+.tab {
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: both;
+  margin: 6% 0%;
+  background: #f9f9f9;
+  padding: 1% 2%;
+  border: none;
+}
+.tablinks {
+  border: none;
+  background: transparent;
+}
+.tabcontent {
+  display: none;
+}
 .breadcrumb-odp {
   display: inline-flex;
 }
