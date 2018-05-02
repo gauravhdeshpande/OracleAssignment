@@ -13,6 +13,7 @@ section {
 .container {
   width: 80%;
   margin: 0 auto;
+  line-height: 1.5;
 }
 header {
   width: 100%;
@@ -74,7 +75,9 @@ footer h2 {
 }
 .col-custom {
   display: inline-block;
-  clear: both;
+}
+.sort {
+  float: right;
 }
 .product-col {
   float: right;
@@ -122,7 +125,7 @@ footer h2 {
   border: none;
   outline: none;
   border-radius: 50%;
-  padding: 10px 12px;
+  padding: 6px 12px;
 }
 input#quantity {
   width: 5%;
@@ -169,8 +172,22 @@ span.input-group-btn > button {
 .tabcontent {
   display: none;
 }
+.left {
+  width: 20%;
+  margin-left: 42%;
+  margin-top: 10%;
+}
 .breadcrumb-odp {
   display: inline-flex;
+}
+.orders-side-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 2% 2% 2% 0;
+  line-height: 2;
+  font-size: 14px;
 }
 footer {
   clear: both;
