@@ -245,17 +245,90 @@ span.input-group-btn > button {
 	.breadcrumb-odp {		 
 			display: inline-flex;
 		}
-	.orders-side-section  {
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			width: 20%;
-			margin: 2% 2% 2% 0;
-			line-height: 2;
-			font-size: 14px;
+// 	.orders-side-section  {
+// 			position: relative;
+// 			display: flex;
+// 			flex-direction: column;
+// 			margin: 2% 2% 2% 0;
+// 			line-height: 2;
+// 			font-size: 14px;
+// 		}
+		
+		
+
+		
+// .left-align {
+//     width: 20%;
+// }
+
+.left-align {
+    float: left;
+    width: 25%;
+}
+.right-align {
+    float: right;
+    width: 75%;
+}
+.group:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cart-btn > button {
+    outline: none;
+    border: none;
+    float: right;
+    background: #0000ffbd;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 3px;
+} 
+
+.product-col-6 {
+    display: flex;
+    margin: 6% 0%;
+    border-bottom: 2px solid #f9f9f9;
+}
+
+.q-stepper {
+    width: 25%;
+    margin: 0 3%;
+}
+
+.product-image {
+    width: 35%;
+    height: auto;
+    margin: 0% 1%;
+}
+
+.payment-section {
+	display: flex;
+	margin-left: 0;
+    background: lightgrey;
+    margin: 10% 0%;
+	padding: 3% 10%;
+			.rewards {
+			width: 50%;
+			
 		}
-		
-		
+		.price-table {
+			width: 30%;
+			margin-left: 30%;
+		}
+}
+
+@media screen and (max-width: 480px) {
+    .left-align, 
+    .right-align {
+        float: none;
+        width: auto;
+    }
+}
 
 // Footer 
 
