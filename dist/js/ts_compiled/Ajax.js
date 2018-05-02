@@ -1,7 +1,7 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var Ajax = (function () {
+    var Ajax = /** @class */ (function () {
         function Ajax(u, m) {
             var _this = this;
             this.Trigger = function () {

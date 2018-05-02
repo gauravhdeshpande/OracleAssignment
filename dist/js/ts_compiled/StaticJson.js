@@ -1,11 +1,36 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var StaticJson = (function () {
+    var StaticJson = /** @class */ (function () {
         function StaticJson() {
-            this.productList = {
-                'aba': 'daba'
-            };
+            this.productList = [
+                {
+                    name: 'Adidas Outdoor Men', s: Caprock, Trail: Hiking, Shoes: ',,
+                    listPrice: 2499.00,
+                    salePrice: , $1545: .00 - $1230, .00: ,
+                    Rating: 'Stars'
+                },
+                {
+                    name: 'Nike Men', s: Air, Force: 1, Running: Shoes, ',: listPrice, $2371: .99 - $2399, .99: ,
+                    Rating: 'Stars'
+                },
+                {
+                    name: 'Adidas Outdoor Men', s: Caprock, Trail: Hiking, Shoes: ',,
+                    listPrice: 2499.00,
+                    salePrice: , $1545: .00 - $1230, .00: ,
+                    Rating: 'Stars'
+                },
+                {
+                    name: 'Nike Men', s: Air, Force: 1, Running: Shoes, ',: listPrice, $2371: .99 - $2399, .99: ,
+                    Rating: 'Stars'
+                },
+                {
+                    name: 'Adidas Outdoor Men', s: Caprock, Trail: Hiking, Shoes: ',,
+                    listPrice: 2499.00,
+                    salePrice: , $1545: .00 - $1230, .00: ,
+                    Rating: 'Stars'
+                }
+            ];
         }
         return StaticJson;
     }());
