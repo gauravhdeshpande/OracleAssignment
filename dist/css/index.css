@@ -1,5 +1,7 @@
 html {
   font-family: 'Open Sans', sans-seriff;
+  line-height: 1.5;
+  font-weight: 400;
 }
 .checked {
   color: orange;
@@ -98,6 +100,28 @@ footer h2 {
   margin-left: 25%;
   margin-top: 10px;
 }
+.c1 {
+  background: #043c63;
+}
+.c2 {
+  background: blue;
+}
+.c3 {
+  background: grey;
+}
+.c4 {
+  background: green;
+}
+.c5 {
+  background: brown;
+}
+.c6 {
+  background: orange;
+}
+.quantity-btn {
+  display: flex;
+  justify-content: space-between;
+}
 .main-img {
   width: 50%;
   clear: both;
@@ -116,17 +140,17 @@ footer h2 {
   outline: none;
   padding: 6px;
   width: 5em;
-  background: #625fdaa8;
+  background: #043c63;
   border: 1px solid #f3f3f3;
   margin-top: 1em;
   color: white;
   border-radius: 3px;
 }
 .color-area > button {
-  width: auto;
+  width: 25px;
   display: inline-flex;
   margin: 2% 1%;
-  height: auto;
+  height: 25px;
   border: none;
   outline: none;
   border-radius: 50%;
@@ -138,9 +162,10 @@ input#quantity {
   border: 1px solid #e9e9e9;
   border-radius: 4px;
   width: 60px;
-  height: 44px;
+  height: 40px;
   font-size: 1.4em;
   outline: none;
+  vertical-align: middle;
 }
 span.input-group-btn > button {
   background: #f9f9f9;
@@ -169,12 +194,13 @@ span.input-group-btn > button {
   height: auto;
   float: left;
   clear: both;
-  margin: 6% 0%;
   background: #f9f9f9;
+  padding: 2% 0%;
   border: none;
 }
 .tablinks {
   border: none;
+  outline: none;
   background: transparent;
 }
 .tabcontent {
@@ -210,10 +236,10 @@ img {
   border: none;
   float: right;
   width: auto;
-  height: 40px;
+  height: 45px;
   background: #3370a2;
   color: white;
-  padding: 10px 30px;
+  padding: 8px 40px;
   border-radius: 3px;
 }
 .product-col-6 {
