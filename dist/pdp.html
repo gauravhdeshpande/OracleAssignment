@@ -10,7 +10,13 @@
       <link rel="stylesheet" href="css/index.css">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
       <script src="js/ts_compiled/main.js"></script>
+
       <title> PDP Page</title>
    </head>
    <body>
@@ -113,24 +119,44 @@
       <br><br>
       <!-- Tabs for PDP  -->
       <div class="container-tab">
-         <div class="tab">
-            <button class="tablinks" onclick="openTabs(event, 'Specifications')">Specifications</button>
-            <button class="tablinks" onclick="openTabs(event, 'Ratings &amp; Reviews')">Ratings &amp; Reviews</button>
-            <button class="tablinks" onclick="openTabs(event, 'Warranty')">Warranty</button>
-         </div>
-         <div id="Specifications" class="tabcontent">
-            <h3>Specifications</h3>
-         </div>
-         <div id="Ratings &amp; Reviews" class="tabcontent">
-            <h3>Ratings &amp; Ratings</h3>
-         </div>
-         <div id="Warranty" class="tabcontent">
-            <h3>Warranty</h3>
-         </div>
+        <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Spec')">Specifications</button>
+  <button class="tablinks" onclick="openCity(event, 'RateReview')">Ratings &amp; Reviews</button>
+  <button class="tablinks" onclick="openCity(event, 'Warranty')">Warranty</button>
+</div>
+
+            <div id="Spec" class="tabcontent">
+            <p>Specifications</p>
+            </div>
+
+            <div id="RateReview" class="tabcontent">
+            <p>Ratings  &amp; Reviews</p> 
+            </div>
+
+            <div id="Warranty" class="tabcontent">
+            <p>Warranty</p>
+            </div>
       </div>
       <!-- Footer -->
       <footer>
          <h2>Footer</h2>
       </footer>
+
+      <script>
+      function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+      
+      </script>
    </body>
 </html>
