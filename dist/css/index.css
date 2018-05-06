@@ -301,3 +301,24 @@ footer {
   clear: both;
   float: left;
 }
+/*
+START:Changes By KD
+*/
+body #plp-listing {
+  float: left;
+  background: #ff0000;
+}
+body #plp-listing ul {
+  list-style: none;
+  float: none;
+}
+body #plp-listing ul li {
+  list-style: none;
+  float: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+/*
+END:Changes By KD
+*/

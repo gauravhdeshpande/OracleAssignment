@@ -1,11 +1,11 @@
 {
 	"compilerOptions":{
 		"outDir":"./dist/js/ts_compiled",
-		"rootDir":"./src/js",
+		"rootDir":"./src/js/oracle/",
 		"watch":true,
 		"alwaysStrict":true,
 		"module":"amd",
-		"target": "es5",
+		"target": "es2015",
 		"experimentalDecorators": true
 	}
 }

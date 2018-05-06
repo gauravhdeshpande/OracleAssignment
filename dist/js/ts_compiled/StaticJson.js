@@ -1,8 +1,8 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var StaticJson = /** @class */ (function () {
-        function StaticJson() {
+    class StaticJson {
+        constructor() {
             this.productList = [
                 {
                     name: "Adidas Outdoor Men's Caprock Trail Hiking Shoes",
@@ -34,7 +34,6 @@ define(["require", "exports"], function (require, exports) {
                 }
             ];
         }
-        return StaticJson;
-    }());
+    }
     exports.default = StaticJson;
 });
