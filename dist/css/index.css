@@ -305,19 +305,21 @@ footer {
 START:Changes By KD
 */
 body #plp-listing {
-  float: left;
-  background: #ff0000;
+  display: block;
 }
 body #plp-listing ul {
   list-style: none;
   float: none;
+  width: 72%;
+  margin: 0 0 0 25%;
 }
 body #plp-listing ul li {
   list-style: none;
   float: none;
   display: inline-block;
-  margin: 0;
+  margin: 5px;
   padding: 0;
+  cursor: pointer;
 }
 /*
 END:Changes By KD
