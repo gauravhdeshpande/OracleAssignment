@@ -15,7 +15,7 @@ export default class StaticJson{
             {
                 name:"Adidas Outdoor Men's Caprock Trail Hiking Shoes",
                 listPrice :2499.00,
-                salePrice: :"$1545.00-$1230.00",
+                salePrice:"$1545.00-$1230.00",
                 Rating:3
             },
             {
