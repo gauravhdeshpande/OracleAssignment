@@ -100,6 +100,9 @@ footer h2 {
   margin-left: 25%;
   margin-top: 10px;
 }
+.bordered {
+  border-top: 1px solid #fff;
+}
 .c1 {
   background: #043c63;
 }
@@ -280,7 +283,7 @@ img {
 .payment-section {
   display: flex;
   margin-left: 0;
-  background: lightgrey;
+  background: #d3d3d340;
   padding: 3% 10%;
 }
 .payment-section .rewards {
