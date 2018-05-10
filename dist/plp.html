@@ -28,54 +28,47 @@
             <a href="#" class="active-link">Men's Athletic Shoes</a>            
          </div>
       </div>
-      <div class="container">
-         <!-- Product type -->
-         <div class="product-title">
-            <h2>Men's Athletic Shoes</h2>
-         </div>
-      </div>
+      <h1>Men's Athletic Shoes</h1>
       <!--  Content Area  -->
       <!--  Aside Section - Filter Nav Begin -->
-      <div class="container aside">
-         <div class="row left">
-            <!--  Department Section Begin  -->
-            <div class="department-section">
-                <h6>Department</h6>
-               <a href="#"> Running </a>
-               <a href="#"> Cleats </a>
-            </div>
-            <!--  Brand Section Begin -->
-            <div class="brand-section">
-                <h6>Brand</h6>
-               <input type="checkbox" name="361 Degrees" id="checkbox1"> 361 Degrees
-               <br>
-               <input type="checkbox" name="Adidas" id="checkbox2"> Adidas
-            </div>
-         </div>
+      <div class="col-3">
+         
+        <!--  Department Section Begin  -->
+        <ul class="department-section">
+        <h2>Department</h2>
+            <li><a href="#"> Running </a></li>
+            <li><a href="#"> Cleats </a></li>
+        </ul>
+        <!--  Brand Section Begin -->
+        <form class="brand-section">
+        <h2>Brand</h2>
+            <input type="checkbox" name="361 Degrees" id="checkbox1"> 361 Degrees
+            <br>
+            <input type="checkbox" name="Adidas" id="checkbox2"> Adidas
+        </form>
+         
       </div>
       <!--  Aside Section - Filter Nav End -->
       <!-- Main Content Area - PLP  -->
-      <div class="container">
-         <div class="row nav-product">
-            <div class="col-custom">
-               <p>Viewing 1-24 of 24</p>
+        <div class="col-6">
+            <div class="row nav-product">
+                <div class="col-custom">
+                    <p>Viewing 1-24 of 24</p>
+                </div>
+                <form class="col-custom sort">
+                    Sort
+                    <select name="Recommended" id="select-sort">
+                        <option value="A-Z">A-Z</option>
+                        <option value="Z-A">Z-A</option>
+                        <option value="price-lh">Price - Low to High</option>
+                        <option value="price-hl">Price - Hight to Low</option>
+                        <option value="rated">Highest Rated First</option>
+                    </select>
+                </form>
             </div>
-            <div class="col-custom sort">
-               Sort
-               <select name="Recommended" id="select-sort">
-                  <option value="A-Z">A-Z</option>
-                  <option value="Z-A">Z-A</option>
-                  <option value="price-lh">Price - Low to High</option>
-                  <option value="price-hl">Price - Hight to Low</option>
-                  <option value="rated">Highest Rated First</option>
-               </select>
-            </div>
-         </div>
-      </div>
-      <br>
 
-      <!-- Main Content Area - PLP End  -->
-      <section id="plp-listing"  class="container"></section>
+            <section id="plp-listing"></section>
+        </div>
       <!-- Footer -->
       <footer>
          <h2>Footer</h2>
