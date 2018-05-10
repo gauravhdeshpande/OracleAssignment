@@ -23,12 +23,21 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax"], function (require,
         setTemplate() {
             let list = '';
             let rating;
+            let pricing;
             this.productJson.map((obj, index) => {
                 rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`, 0, obj.rating).join('') + `(${obj.rating})`;
+                pricing = `
+            <del>${obj.price.currency + ' ' + obj.price.sellingPrice}</del>
+            <span>${obj.price.currency + ' ' + obj.price.discountedPrice}</span>
+            
+            <span class="${obj.price.sale ? 'hotPrice' : ''}">${obj.price.currency + ' ' + obj.price.low} - ${obj.price.high} ${obj.price.sale ? 'SALE' : ''}</span>
+            
+        `;
                 list += `<li class="product-col" data-id="${obj.id}">
             <a href="kdPdp.html?id=${obj.id}">
             <img src="images/${obj.image}"/>
             <span class="product-details">${obj.name}</span>
+            ${pricing}
             <span>${rating}</span>
             </a>
         </li>`;

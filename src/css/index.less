@@ -12,7 +12,10 @@ html {
     font-family: @font-family;
     line-height: @leading;
     font-weight: @weight_regular;
-    }
+	}
+.ax-hidden{
+	
+}
 // Header / Footer Styles 
 
 @color_1: white;
@@ -61,13 +64,37 @@ footer {
 		}
 	}
 }
-
+.row{
+	display:inline-block;
+	vertical-align:top;
+}
+.col-3{width:33%;}
+.col-6{width:66%;}
+.nav-product{
+	padding:15px;
+	background:#ececec;
+}
+form.sort{
+	float:right;
+}
 
 #plp-listing{
+
+	li{
+		width:20%;
+		display:inline-grid;
+	}
 	a{
 		text-decoration: none;
 		color:@color_2;
-		
+		display:block;
+		width:100%;
+		span{
+			display:block;
+		}
+		span.hotPrice{
+			color:red;
+		}
 		.fa{
 			color:#cdcdcd;
 		}

@@ -39,7 +39,6 @@ const parentJson = {
                 currency:"$",
                 sellingPrice:"2499.00",
                 discountedPrice:"2960.99",
-                sale:true,
                 low:"1545.00",
                 high:"1230.00"
             },

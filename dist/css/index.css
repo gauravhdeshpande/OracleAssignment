@@ -40,9 +40,38 @@ footer h2 {
 .breadcrumb a:nth-child(1)::before {
   content: "";
 }
+.row {
+  display: inline-block;
+  vertical-align: top;
+}
+.col-3 {
+  width: 33%;
+}
+.col-6 {
+  width: 66%;
+}
+.nav-product {
+  padding: 15px;
+  background: #ececec;
+}
+form.sort {
+  float: right;
+}
+#plp-listing li {
+  width: 20%;
+  display: inline-grid;
+}
 #plp-listing a {
   text-decoration: none;
   color: #043c63;
+  display: block;
+  width: 100%;
+}
+#plp-listing a span {
+  display: block;
+}
+#plp-listing a span.hotPrice {
+  color: red;
 }
 #plp-listing a .fa {
   color: #cdcdcd;
