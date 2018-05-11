@@ -43,10 +43,13 @@ const parentJson = {
                 high:"1230.00"
             },
             rating:3,
-            mainImage:"",
-            colors:[],
-            variants:[],
-            sizes:[]
+            details:{
+                images:[
+                    "images/couch_lg_0.jpg"
+                ],
+                colors:[],
+                sizes:[]
+            }            
         },
         {
             id:"2",
@@ -61,10 +64,13 @@ const parentJson = {
                 high:"1230.00"
             },
             rating:2,
-            mainImage:"",
-            colors:[],
-            variants:[],
-            sizes:[]
+            details:{
+                images:[
+                    "images/couch_lg_0.jpg"
+                ],
+                colors:[],
+                sizes:[]
+            } 
         }
     ]}
 
