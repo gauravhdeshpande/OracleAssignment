@@ -16,9 +16,10 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/pdp_tem
             this.ajaxFailure = (err) => {
             };
             this.clickHanlder = (event) => {
+                console.log('heya');
             };
             this.setContainer('pdp');
-            document.getElementById('pdp').addEventListener("click", this.clickHanlder);
+            // document.getElementById('pdp').addEventListener("click",this.clickHanlder);
             if (this.getParams.id) {
                 Ajax_1.default.getFromUrl('/product-details', this.getParams.id).then(this.ajaxSuccess, this.ajaxFailure);
             }

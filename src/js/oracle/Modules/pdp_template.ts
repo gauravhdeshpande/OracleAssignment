@@ -1,21 +1,34 @@
 class QuantityStepper{
     constructor(){
+        this.minus = this.minus.bind(this);
+    }
+    minus(event){
+            console.log('minus count here');
         
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    add(event){
+        console.log('add count here');
+        
+        event.preventDefault();
+        event.stopPropagation();
     }
     getHtml(){
-        return `      <div class="container">
+        return `<div class="container">
         <div class="row">
            <p>Quantity: </p>
            <div class="col-lg-2 quantity-btn">
               <div class="input-group">
                  <span class="input-group-btn">
-                 <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                 <button click="${this.minus}" type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
                  <span class="glyphicon glyphicon-minus">-</span>
                  </button>
                  </span>
+                 
                  <input type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100">
                  <span class="input-group-btn">
-                 <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                 <button click="${this.add}" type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
                  <span class="glyphicon glyphicon-plus">+</span>
                  </button>
                  </span>
