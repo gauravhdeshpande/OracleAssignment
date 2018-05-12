@@ -41,18 +41,17 @@ class Router {
 
     init=()=>{
         this.routes.forEach((a:RouteData,b:Number)=>{
-            if(a.link == this.filename){this.currentRoute = a;}
+            if(a.link == this.filename){this.currentRoute = a;} 
         });
-        this.activeComponent = this.currentRoute?(new this.currentRoute.component(this.get)):undefined;
+        import('../Pages/'+this.currentRoute.component).then((widget) => {
+            this.activeComponent = new widget.default(this.get);
+        });
     }
 
-    render=()=>{
-        if(this.activeComponent) this.activeComponent.render();
-    }
 }
 
 interface RouteData {
     link: String;
-    component: any;
+    component: String;
 }
 export default Router;

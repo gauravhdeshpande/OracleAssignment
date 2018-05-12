@@ -43,11 +43,9 @@ define(["require", "exports"], function (require, exports) {
                         this.currentRoute = a;
                     }
                 });
-                this.activeComponent = this.currentRoute ? (new this.currentRoute.component(this.get)) : undefined;
-            };
-            this.render = () => {
-                if (this.activeComponent)
-                    this.activeComponent.render();
+                new Promise((resolve_1, reject_1) => { require(['../Pages/' + this.currentRoute.component], resolve_1, reject_1); }).then((widget) => {
+                    this.activeComponent = new widget.default(this.get);
+                });
             };
             this.routes = paths;
             this.breakURL();
