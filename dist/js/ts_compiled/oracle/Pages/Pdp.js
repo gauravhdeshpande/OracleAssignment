@@ -1,18 +1,21 @@
-define(["require", "exports", "./BasePage", "../Utils/Ajax"], function (require, exports, BasePage_1, Ajax_1) {
+define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/pdp_template"], function (require, exports, BasePage_1, Ajax_1, pdp_template_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     class Pdp extends BasePage_1.default {
         constructor(args) {
             super(args);
             this.ajaxSuccess = (data) => {
-                this.json = data;
+                this.json = data.json;
+                this.colorCodes = {};
+                data.colors.map((el) => {
+                    this.colorCodes[el.name] = el.code;
+                });
                 this.setTemplate();
                 this.render();
             };
             this.ajaxFailure = (err) => {
             };
             this.clickHanlder = (event) => {
-                console.log("Heya in here", event.target);
             };
             this.setContainer('pdp');
             document.getElementById('pdp').addEventListener("click", this.clickHanlder);
@@ -21,23 +24,9 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax"], function (require,
             }
         }
         setTemplate() {
-            console.log('hiya in pdp', this.json);
             try {
-                this.template = `<div class="container">
-    <div class="main-img">
-        <div class="img-section-6">
-        <img src="images/couch_lg_0.jpg" alt="Product Image">
-        </div>
-        <div class="small-pdp-img">
-        <div class="img-section-6">
-            <img src="images/couch_sm_0.jpg" alt="Product Image">
-            <img src="images/couch_sm_1.jpg" alt="Product Image">
-            <img src="images/couch_sm_0.jpg" alt="Product Image">
-            <img src="images/couch_sm_1.jpg" alt="Product Image">
-        </div>
-        </div>
-    </div>
-</div>`;
+                let t = new pdp_template_1.default(this.json, this.colorCodes);
+                this.template = t.getTemplate();
             }
             catch (e) {
                 console.log("In PDP error line 30. Error::", e);

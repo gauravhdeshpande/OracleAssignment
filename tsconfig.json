@@ -6,7 +6,6 @@
 		"alwaysStrict":true,
 		"module":"amd",
 		"target": "es2015",
-		"experimentalDecorators": true,
-		"jsx": "preserve"
+		"experimentalDecorators": true
 	}
 }

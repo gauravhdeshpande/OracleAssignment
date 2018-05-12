@@ -17,7 +17,7 @@ class Ajax{
                                 product = el;
                             }
                         });
-                        resolve(product);
+                        resolve({json:product.details,colors:parentJson.colorCodes});
                         break;
                 }
             }, 0);
@@ -44,11 +44,15 @@ const parentJson = {
             },
             rating:3,
             details:{
+                title:'Product Title 1',
                 images:[
-                    "images/couch_lg_0.jpg"
+                    "couch_lg_0.jpg",
+                    "couch_sm_1.jpg",
+                    "couch_sm_0.jpg"
                 ],
-                colors:[],
-                sizes:[]
+                colors:['red','green','blue'],
+                sizes:['s','m','l','xl'],
+                description:'Lorem Ipsum for 1'
             }            
         },
         {
@@ -65,14 +69,33 @@ const parentJson = {
             },
             rating:2,
             details:{
+                title:'Product Title 2',
                 images:[
-                    "images/couch_lg_0.jpg"
+                    "couch_lg_0.jpg",
+                    "couch_sm_1.jpg",
+                    "couch_sm_0.jpg"
                 ],
-                colors:[],
-                sizes:[]
+                colors:['red','green','blue'],
+                sizes:['small','medium','large','xtra large'],
+                description:'Lorem Ipsum for 2'
             } 
         }
-    ]}
+    ],
+    colorCodes:[
+        {
+            name:'red',
+            code:'ff0000'
+        },
+        {
+            name:'green',
+            code:'00ff00'
+        },
+        {
+            name:'blue',
+            code:'0000ff'
+        }
+    ]
+}
 
 /*class Ajax{
     private url:String;

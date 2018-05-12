@@ -1,8 +1,11 @@
 "use strict";
 import BasePage from './BasePage';
 import ajax from '../Utils/Ajax';
+import Template from '../Modules/pdp_template';
 class Pdp extends BasePage{
     json:any;
+    activeImage:any;
+    colorCodes;
     constructor(args){
         super(args);
         this.setContainer('pdp');
@@ -13,7 +16,12 @@ class Pdp extends BasePage{
         
     }
     ajaxSuccess=(data)=>{
-        this.json=data;
+        this.json=data.json;
+        this.colorCodes={};
+        data.colors.map((el)=>{
+            this.colorCodes[el.name]=el.code;
+        });
+        
         this.setTemplate();
         this.render();
     }
@@ -21,26 +29,11 @@ class Pdp extends BasePage{
         
     }
     clickHanlder=(event)=>{
-        console.log("Heya in here",event.target);
     }
     setTemplate(){
-        console.log('hiya in pdp',this.json);
         try{
-            this.template=`<div class="container">
-    <div class="main-img">
-        <div class="img-section-6">
-        <img src="images/couch_lg_0.jpg" alt="Product Image">
-        </div>
-        <div class="small-pdp-img">
-        <div class="img-section-6">
-            <img src="images/couch_sm_0.jpg" alt="Product Image">
-            <img src="images/couch_sm_1.jpg" alt="Product Image">
-            <img src="images/couch_sm_0.jpg" alt="Product Image">
-            <img src="images/couch_sm_1.jpg" alt="Product Image">
-        </div>
-        </div>
-    </div>
-</div>`;
+            let t = new Template(this.json,this.colorCodes);
+            this.template=t.getTemplate();
         }catch(e){
             console.log("In PDP error line 30. Error::",e);
         }
