@@ -1,8 +1,9 @@
-define(["require", "exports"], function (require, exports) {
+define(["require", "exports", "./StaticJson", "./Ejson"], function (require, exports, StaticJson_1, Ejson_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     class Ajax {
         constructor() {
+            this.pr = new Ejson_1.default({ kiko: [{ name: 'kd' }, { name: 'jd' }] });
         }
         getFromUrl(url, id) {
             var promise = new Promise((resolve, reject) => {
@@ -10,16 +11,16 @@ define(["require", "exports"], function (require, exports) {
                     //Decide the JSON the be sent back here
                     switch (url) {
                         case '/Products':
-                            resolve(parentJson.productList);
+                            resolve(StaticJson_1.default.productList);
                             break;
                         case '/product-details':
                             let product = undefined;
-                            parentJson.productList.map((el, index) => {
+                            StaticJson_1.default.productList.map((el, index) => {
                                 if (el.id == id) {
                                     product = el;
                                 }
                             });
-                            resolve({ json: product.details, colors: parentJson.colorCodes });
+                            resolve({ json: product.details, colors: StaticJson_1.default.colorCodes });
                             break;
                     }
                 }, 0);
@@ -29,73 +30,6 @@ define(["require", "exports"], function (require, exports) {
     }
     const ajax = new Ajax();
     exports.default = ajax;
-    const parentJson = {
-        productList: [
-            {
-                id: "1",
-                name: "Adidas Outdoor Men's Caprock Trail Hiking Shoes",
-                image: "product-image_0.png",
-                price: {
-                    currency: "$",
-                    sellingPrice: "2499.00",
-                    discountedPrice: "2960.99",
-                    low: "1545.00",
-                    high: "1230.00"
-                },
-                rating: 3,
-                details: {
-                    title: 'Product Title 1',
-                    images: [
-                        "couch_lg_0.jpg",
-                        "couch_sm_1.jpg",
-                        "couch_sm_0.jpg"
-                    ],
-                    colors: ['red', 'green', 'blue'],
-                    sizes: ['s', 'm', 'l', 'xl'],
-                    description: 'Lorem Ipsum for 1'
-                }
-            },
-            {
-                id: "2",
-                name: "Adidas Outdoor Men's Caprock Trail Hiking Shoes",
-                image: "product-image_1.png",
-                price: {
-                    currency: "$",
-                    sellingPrice: "2499.00",
-                    discountedPrice: "2960.99",
-                    sale: true,
-                    low: "1545.00",
-                    high: "1230.00"
-                },
-                rating: 2,
-                details: {
-                    title: 'Product Title 2',
-                    images: [
-                        "couch_lg_0.jpg",
-                        "couch_sm_1.jpg",
-                        "couch_sm_0.jpg"
-                    ],
-                    colors: ['red', 'green', 'blue'],
-                    sizes: ['small', 'medium', 'large', 'xtra large'],
-                    description: 'Lorem Ipsum for 2'
-                }
-            }
-        ],
-        colorCodes: [
-            {
-                name: 'red',
-                code: 'ff0000'
-            },
-            {
-                name: 'green',
-                code: '00ff00'
-            },
-            {
-                name: 'blue',
-                code: '0000ff'
-            }
-        ]
-    };
 });
 /*class Ajax{
     private url:String;

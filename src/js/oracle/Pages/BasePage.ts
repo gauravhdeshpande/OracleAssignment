@@ -32,7 +32,7 @@ class BasePage{
     setContainer(domId:string){
         this.container = document.getElementById(domId);
     }
-    render=()=>{
+    render(){
         this.container.innerHTML=this.template;
     }
 }

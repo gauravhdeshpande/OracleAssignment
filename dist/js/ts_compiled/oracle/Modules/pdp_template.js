@@ -1,9 +1,11 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    class QuantityStepper {
+    class QuantityStepper extends HTMLElement {
         constructor() {
-            this.minus = this.minus.bind(this);
+            super();
+            this.innerHTML = '<h1 click=${this.minus}>Hello world </h1>';
+            this.child = document.createElement('button');
         }
         minus(event) {
             console.log('minus count here');
@@ -14,6 +16,9 @@ define(["require", "exports"], function (require, exports) {
             console.log('add count here');
             event.preventDefault();
             event.stopPropagation();
+        }
+        getChild() {
+            return this.child;
         }
         getHtml() {
             return `<div class="container">
@@ -48,7 +53,11 @@ define(["require", "exports"], function (require, exports) {
             this.activeImage = this.json.images[0];
             this.json.images.splice(0, 1);
             this.colorCodes = colorCodes;
-            this.qs = new QuantityStepper();
+        }
+        doSomething() {
+            console.log('yoyuo', document.getElementById('kiko'));
+            //this.qs = new QuantityStepper();
+            //document.getElementById('kiko').appendChild(this.qs);
         }
         getTemplate() {
             return `
@@ -98,10 +107,11 @@ define(["require", "exports"], function (require, exports) {
           <div class="product-description">
              <p class="product-desc">${this.json.description}</p>
           </div>
-          ${this.qs.getHtml()}
+          <div id="kiko"></div>
           </form>
     `;
         }
     }
+    //customElements.define('quantity-stepper', QuantityStepper);
     exports.default = Template;
 });

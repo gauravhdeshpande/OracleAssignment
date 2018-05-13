@@ -1,6 +1,10 @@
-class QuantityStepper{
+class QuantityStepper extends HTMLElement{
+    child;
     constructor(){
-        this.minus = this.minus.bind(this);
+        super();
+        this.innerHTML='<h1 click=${this.minus}>Hello world </h1>';
+        this.child = document.createElement('button');
+        
     }
     minus(event){
             console.log('minus count here');
@@ -13,6 +17,9 @@ class QuantityStepper{
         
         event.preventDefault();
         event.stopPropagation();
+    }
+    getChild(){
+        return this.child;
     }
     getHtml(){
         return `<div class="container">
@@ -52,7 +59,12 @@ class Template{
         this.activeImage = this.json.images[0];
         this.json.images.splice(0,1);
         this.colorCodes = colorCodes;
-        this.qs = new QuantityStepper();
+        
+    }
+    doSomething(){
+        console.log('yoyuo',document.getElementById('kiko'));
+        //this.qs = new QuantityStepper();
+        //document.getElementById('kiko').appendChild(this.qs);
     }
     getTemplate(){
         return `
@@ -102,9 +114,11 @@ class Template{
           <div class="product-description">
              <p class="product-desc">${this.json.description}</p>
           </div>
-          ${this.qs.getHtml()}
+          <div id="kiko"></div>
           </form>
     `;
     }
 }
+
+//customElements.define('quantity-stepper', QuantityStepper);
 export default Template;

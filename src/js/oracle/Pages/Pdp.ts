@@ -6,6 +6,7 @@ class Pdp extends BasePage{
     json:any;
     activeImage:any;
     colorCodes;
+    templateObj;
     constructor(args){
         super(args);
         this.setContainer('pdp');
@@ -32,12 +33,19 @@ class Pdp extends BasePage{
     }
     setTemplate(){
         try{
-            let t = new Template(this.json,this.colorCodes);
-            this.template=t.getTemplate();
+            this.templateObj = new Template(this.json,this.colorCodes);
+            this.template= this.templateObj.getTemplate();
         }catch(e){
             console.log("In PDP error line 30. Error::",e);
         }
         
+    }
+    render(){
+        super.render();
+        this.postRender();
+    }
+    postRender(){
+        this.templateObj.doSomething();
     }
 }
 

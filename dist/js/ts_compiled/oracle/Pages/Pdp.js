@@ -26,12 +26,19 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/pdp_tem
         }
         setTemplate() {
             try {
-                let t = new pdp_template_1.default(this.json, this.colorCodes);
-                this.template = t.getTemplate();
+                this.templateObj = new pdp_template_1.default(this.json, this.colorCodes);
+                this.template = this.templateObj.getTemplate();
             }
             catch (e) {
                 console.log("In PDP error line 30. Error::", e);
             }
+        }
+        render() {
+            super.render();
+            this.postRender();
+        }
+        postRender() {
+            this.templateObj.doSomething();
         }
     }
     exports.default = Pdp;

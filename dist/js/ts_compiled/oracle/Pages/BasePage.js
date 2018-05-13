@@ -7,9 +7,6 @@ define(["require", "exports"], function (require, exports) {
          * @param args[0] - Array of GET paramerts from URL
          */
         constructor(args) {
-            this.render = () => {
-                this.container.innerHTML = this.template;
-            };
             this.template = this.template ? this.template : `template for ${this} has not been set`;
             this.container = document.getElementsByClassName('container')[0];
             this.getParams = {};
@@ -33,6 +30,9 @@ define(["require", "exports"], function (require, exports) {
          */
         setContainer(domId) {
             this.container = document.getElementById(domId);
+        }
+        render() {
+            this.container.innerHTML = this.template;
         }
     }
     exports.default = BasePage;
