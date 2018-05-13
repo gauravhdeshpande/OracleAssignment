@@ -31,31 +31,35 @@
       <h1>Men's Athletic Shoes</h1>
       <!--  Content Area  -->
       <!--  Aside Section - Filter Nav Begin -->
-      <div class="row col-3">
-         
-        <!--  Department Section Begin  -->
-        <ul class="department-section">
-        <h2>Department</h2>
-            <li><a href="#"> Running </a></li>
-            <li><a href="#"> Cleats </a></li>
-        </ul>
-        <!--  Brand Section Begin -->
-        <form class="brand-section" id="filterby">
-        <h2>Brand</h2>
-            <input type="checkbox" name="361 Degrees" id="checkbox1"> 361 Degrees
-            <br>
-            <input type="checkbox" name="Adidas" id="checkbox2"> Adidas
-        </form>
-         
-      </div>
+      <div class="main-wrapper">
+        <div class="col">
+            
+            <!--  Department Section Begin  -->
+            <h2>Department</h2>
+            <ul class="department-section">
+                <li><a href="#"> Running </a></li>
+                <li><a href="#"> Cleats </a></li>
+            </ul>
+            <!--  Brand Section Begin -->
+            <form class="brand-section">
+            <h2>Brand</h2>
+            <div id="filterby">
+                <input type="checkbox" name="361 Degrees" id="checkbox1"> 361 Degrees
+                <br>
+                <input type="checkbox" name="Adidas" id="checkbox2"> Adidas
+            </div>
+                
+            </form>
+            
+        </div>
       <!--  Aside Section - Filter Nav End -->
       <!-- Main Content Area - PLP  -->
-        <div class="row col-6">
-            <div class="nav-product">
-                <div class="row col-custom">
+        <div class="col">
+            <div class="product-group-heading">
+                <div class="heading">
                     <p>Viewing 1-24 of 24</p>
                 </div>
-                <form class="row col-custom sort" id="sortby">
+                <form id="sortby">
                     <label class="ax-hidden">Sort</label>
                     <select name="Recommended" id="select-sort">
                         <option value="" selected disabled hidden>Choose here</option>
@@ -70,6 +74,7 @@
 
             <section id="plp-listing"></section>
         </div>
+    </div>
       <!-- Footer -->
       <footer>
          <h2>Footer</h2>

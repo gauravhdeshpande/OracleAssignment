@@ -8,10 +8,39 @@
 @secondary_Color: #043c63;
 @leading: 1.5; 
 
+@color_links:#000;
 html {
     font-family: @font-family;
     line-height: @leading;
-    font-weight: @weight_regular;
+	font-weight: @weight_regular;
+	font-size:16px;
+		h1{padding:10px;}
+		h2 {
+			position: relative;
+			font-size:1.2rem;
+			padding:0;
+			margin:0;
+		}
+		a{
+			text-decoration: none;
+			color:@color_links;
+		}
+		input[type="checkbox"]{
+			/*position: absolute;
+			opacity: 0;*/
+			width:20px;
+			height:20px;
+		}
+		input[type="checkbox"]+label{
+			
+		}
+		input[type="checkbox"]:checked{
+			/*background-color: tomato;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 25px;*/
+		}
 	}
 .ax-hidden{
 	text-indent: -9999px;
@@ -19,6 +48,9 @@ html {
 	left:0;
 	top:0;
 }
+.fa{color:#2e2e2e;}
+.fa.checked{color:rgb(201, 201, 8);}
+
 // Header / Footer Styles 
 
 @color_1: white;
@@ -29,10 +61,6 @@ header {
 	background: black;
 	color: @color_1;
 	text-align: center;
-	h2 {
-		position: relative;
-		top: 2.8em;
-	}
 }
 footer {
 	width: 100%;
@@ -67,6 +95,52 @@ footer {
 		}
 	}
 }
+.hotPrice{
+	color:tomato;
+}
+.main-wrapper{
+	display: grid;
+	grid-template-columns: 33% 66%;
+	
+	//grid-template-rows: 50px 50px;
+	.col{
+		padding:10px 10px;
+		h2{
+			padding-bottom: 10px;
+		}
+		form.brand-section{
+			padding:10px 0 0 0;
+		}
+	}
+	a{
+		span{
+			display:block;
+		}
+	}
+	.product-group-heading{
+		background:#9c9c9c;
+		padding:10px;
+		grid-template-columns: 33% 66%;
+		.heading{
+			display:inline-block;
+		}
+		form{
+			display:inline-block;
+			float:right;
+			margin:-5px 0 0 0;
+		}
+	}
+	#plp-listing{
+		li{
+			width:20%;
+			display:inline-block;
+			vertical-align:top;
+			padding:2%;
+		}
+	}
+	
+}
+/*
 .row{
 	display:inline-block;
 	vertical-align:top;
@@ -106,3 +180,4 @@ form.sort{
 		}
 	}
 }
+*/

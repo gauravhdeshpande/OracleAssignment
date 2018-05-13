@@ -2,6 +2,33 @@ html {
   font-family: 'Open Sans', sans-seriff;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 16px;
+}
+html h1 {
+  padding: 10px;
+}
+html h2 {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+html a {
+  text-decoration: none;
+  color: #000;
+}
+html input[type="checkbox"] {
+  /*position: absolute;
+			opacity: 0;*/
+  width: 20px;
+  height: 20px;
+}
+html input[type="checkbox"]:checked {
+  /*background-color: tomato;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 25px;*/
 }
 .ax-hidden {
   text-indent: -9999px;
@@ -9,16 +36,18 @@ html {
   left: 0;
   top: 0;
 }
+.fa {
+  color: #2e2e2e;
+}
+.fa.checked {
+  color: #c9c908;
+}
 header {
   width: 100%;
   height: 100px;
   background: black;
   color: white;
   text-align: center;
-}
-header h2 {
-  position: relative;
-  top: 2.8em;
 }
 footer {
   width: 100%;
@@ -46,42 +75,82 @@ footer h2 {
 .breadcrumb a:nth-child(1)::before {
   content: "";
 }
-.row {
+.hotPrice {
+  color: tomato;
+}
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 33% 66%;
+}
+.main-wrapper .col {
+  padding: 10px 10px;
+}
+.main-wrapper .col h2 {
+  padding-bottom: 10px;
+}
+.main-wrapper .col form.brand-section {
+  padding: 10px 0 0 0;
+}
+.main-wrapper a span {
+  display: block;
+}
+.main-wrapper .product-group-heading {
+  background: #9c9c9c;
+  padding: 10px;
+  grid-template-columns: 33% 66%;
+}
+.main-wrapper .product-group-heading .heading {
+  display: inline-block;
+}
+.main-wrapper .product-group-heading form {
+  display: inline-block;
+  float: right;
+  margin: -5px 0 0 0;
+}
+.main-wrapper #plp-listing li {
+  width: 20%;
   display: inline-block;
   vertical-align: top;
+  padding: 2%;
 }
-.col-3 {
-  width: 33%;
+/*
+.row{
+	display:inline-block;
+	vertical-align:top;
 }
-.col-6 {
-  width: 66%;
+.col-3{width:33%;}
+.col-6{width:66%;}
+.nav-product{
+	padding:15px;
+	background:#ececec;
 }
-.nav-product {
-  padding: 15px;
-  background: #ececec;
+form.sort{
+	float:right;
 }
-form.sort {
-  float: right;
+
+#plp-listing{
+
+	li{
+		width:20%;
+		display:inline-grid;
+	}
+	a{
+		text-decoration: none;
+		color:@color_2;
+		display:block;
+		width:100%;
+		span{
+			display:block;
+		}
+		span.hotPrice{
+			color:red;
+		}
+		.fa{
+			color:#cdcdcd;
+		}
+		.fa.checked{
+			color:rgb(208, 255, 0);
+		}
+	}
 }
-#plp-listing li {
-  width: 20%;
-  display: inline-grid;
-}
-#plp-listing a {
-  text-decoration: none;
-  color: #043c63;
-  display: block;
-  width: 100%;
-}
-#plp-listing a span {
-  display: block;
-}
-#plp-listing a span.hotPrice {
-  color: red;
-}
-#plp-listing a .fa {
-  color: #cdcdcd;
-}
-#plp-listing a .fa.checked {
-  color: #d0ff00;
-}
+*/
