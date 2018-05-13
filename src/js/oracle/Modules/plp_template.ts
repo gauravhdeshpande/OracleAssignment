@@ -1,14 +1,17 @@
 class Template{
     productJson;
     list;
+    activeSort;
+    backupJson;
     constructor(products){
         this.productJson = products;
-                        
+        this.backupJson = products;
+        this.activeSort = undefined;
     }
     getTemplate(){
-        this.list = '';
         let rating;
         let pricing;
+        this.list = '';
         this.productJson.map((obj,index)=>{
         rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`,0,obj.rating).join('')+`(${obj.rating})`;
         pricing = `
@@ -28,8 +31,24 @@ class Template{
         </li>`});
         return this.list;
     }
+    filterBy(brand:string,show:boolean){
+        if(!show){
+            this.productJson = this.productJson.filter(function(a){
+                if(a.brand == brand) {return show;}
+                return true;
+            });
+        }
+        else{
+            this.productJson = this.productJson.concat(this.backupJson.filter(function(a){
+                if(a.brand == brand) {return true;}
+                return false;
+            }));
+        }
+        this.sortyBy(this.activeSort);        
+    }
     sortyBy(param){
         //console.log('before',this.productJson);
+        this.activeSort = param;
         switch(param){
             case 'A-Z':
                 this.productJson.sort((a,b)=>{

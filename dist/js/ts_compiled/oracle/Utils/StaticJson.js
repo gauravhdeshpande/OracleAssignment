@@ -24,7 +24,7 @@ define(["require", "exports"], function (require, exports) {
                         "couch_sm_0.jpg"
                     ],
                     colors: ['red', 'green', 'blue'],
-                    sizes: ['s', 'm', 'l', 'xl'],
+                    sizes: ['small', 'medium', 'large', 'xtra large'],
                     description: 'Lorem Ipsum for 1'
                 }
             },
@@ -58,7 +58,7 @@ define(["require", "exports"], function (require, exports) {
                 id: "3",
                 name: "Badidas Outdoor Men's Caprock Trail Hiking Shoes",
                 image: "product-image_1.png",
-                brand: "adidas",
+                brand: "360 degrees",
                 price: {
                     currency: "$",
                     sellingPrice: "2499.00",
