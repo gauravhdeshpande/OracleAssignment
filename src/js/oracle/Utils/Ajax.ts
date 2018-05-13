@@ -1,9 +1,8 @@
 import parentJson from './StaticJson';
-import Ejson from './Ejson';
 class Ajax{
-    pr:Ejson;
+    
     constructor(){
-        this.pr = new Ejson({kiko:[{name:'kd'},{name:'jd'}]});
+        
     }
     getFromUrl(url:String,id?:number){
         var promise = new Promise((resolve, reject) => {

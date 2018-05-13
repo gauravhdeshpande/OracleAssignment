@@ -22,7 +22,7 @@ const parentJson = {
                     "couch_sm_0.jpg"
                 ],
                 colors:['red','green','blue'],
-                sizes:['small','medium','large','xtra large']
+                sizes:['small','medium','large','xtra large'],
                 description:'Lorem Ipsum for 1'
             }            
         },

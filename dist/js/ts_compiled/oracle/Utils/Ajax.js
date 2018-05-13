@@ -1,9 +1,8 @@
-define(["require", "exports", "./StaticJson", "./Ejson"], function (require, exports, StaticJson_1, Ejson_1) {
+define(["require", "exports", "./StaticJson"], function (require, exports, StaticJson_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     class Ajax {
         constructor() {
-            this.pr = new Ejson_1.default({ kiko: [{ name: 'kd' }, { name: 'jd' }] });
         }
         getFromUrl(url, id) {
             var promise = new Promise((resolve, reject) => {

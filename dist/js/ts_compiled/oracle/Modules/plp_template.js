@@ -54,6 +54,7 @@ define(["require", "exports"], function (require, exports) {
             //console.log('before',this.productJson);
             this.activeSort = param;
             switch (param) {
+                default:
                 case 'A-Z':
                     this.productJson.sort((a, b) => {
                         return a.name > b.name;
@@ -78,8 +79,6 @@ define(["require", "exports"], function (require, exports) {
                     this.productJson.sort((a, b) => {
                         return Number(a.rating) < Number(b.rating);
                     });
-                    break;
-                default:
                     break;
             }
             //console.log('after',this.productJson);

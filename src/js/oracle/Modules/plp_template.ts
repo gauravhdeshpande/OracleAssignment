@@ -29,6 +29,7 @@ class Template{
             <span>${rating}</span>
             </a>
         </li>`});
+        
         return this.list;
     }
     filterBy(brand:string,show:boolean){
@@ -44,12 +45,13 @@ class Template{
                 return false;
             }));
         }
-        this.sortyBy(this.activeSort);        
+        this.sortyBy(this.activeSort); 
     }
     sortyBy(param){
         //console.log('before',this.productJson);
         this.activeSort = param;
         switch(param){
+            default:
             case 'A-Z':
                 this.productJson.sort((a,b)=>{
                     return a.name>b.name;
@@ -74,9 +76,6 @@ class Template{
                 this.productJson.sort((a,b)=>{
                     return Number(a.rating)<Number(b.rating);
                 });
-            break;
-            default:
-                
             break;
         }
         //console.log('after',this.productJson);
