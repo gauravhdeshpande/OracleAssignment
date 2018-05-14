@@ -97,12 +97,12 @@ define(["require", "exports"], function (require, exports) {
             }).join('')}
              </div>
              <br>
-             <div class="color-area">
-                <p class="color-title">Color: </p>
+             <p class="color-title">Color: </p>
+             <ul class="color-area">
                 ${this.json.colors.map((el) => {
-                return '<button style="background:#' + this.colorCodes[el] + ';"><span class="ax-hidden">' + el + '</span></button>';
+                return '<li><button style="background:#' + this.colorCodes[el] + ';"><span class="ax-hidden">' + el + '</span></button></li>';
             }).join('')}
-             </div>
+             </ul>
           </div>
           <div class="product-description">
              <p class="product-desc">${this.json.description}</p>
