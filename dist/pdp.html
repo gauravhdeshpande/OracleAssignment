@@ -4,19 +4,17 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <!-- Font Awesome  -->
       <link rel="stylesheet" href="css/reset.css">
       <link rel="stylesheet" href="css/normalize.min.css">
+      <link rel="stylesheet" href="css/customflex.css">
       <link rel="stylesheet" href="css/index.css">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="js/ts_compiled/main.js"></script>
-
       <title> PDP Page</title>
    </head>
    <body>
@@ -26,137 +24,186 @@
       </header>
       <!-- / Header -->
       <!--  Breadcrumb -->
-      <div class="container">
-         <div class="breadcrumb">
-            <a href="#">Exchange</a>
-            <a href="#">Home &amp; Appliances </a>
-            <a href="#">Furniture &amp; Mattresses </a>
-            <a href="#">Living Room Furniture </a>            
-            <a href="#" class="active-link"> Sofas &amp; Couches </a>            
+      <div class="container-fluid">
+         <div class="row">
+            <div class="breadcrumb">
+               <a href="#">Exchange</a>
+               <a href="#">Home &amp; Appliances </a>
+               <a href="#">Furniture &amp; Mattresses </a>
+               <a href="#">Living Room Furniture </a>            
+               <a href="#" class="active-link"> Sofas &amp; Couches </a>            
+            </div>
          </div>
       </div>
       <!-- Images Area  -->
-      <div class="container">
-         <div class="main-img">
-            <div class="img-section-6">
-               <img src="images/couch_lg_0.jpg" alt="Product Image">
-            </div>
-            <div class="small-pdp-img">
-               <div class="img-section-6">
-                  <img src="images/couch_sm_0.jpg" alt="Product Image">
-                  <img src="images/couch_sm_1.jpg" alt="Product Image">
-                  <img src="images/couch_sm_0.jpg" alt="Product Image">
-                  <img src="images/couch_sm_1.jpg" alt="Product Image">
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- / Side Image Area  -->
-      <div class="container section-6">
-         <!-- Product type -->
-         <div class="product-title">
-            <h3></h3>
-            <p class="item-details"></p>
-            <p class="rating"></p>
-            <span>
-               <p>Reviews</p>
-            </span>
-         </div>
-         <div class="price-block">
-            <h2 class="list-price"></h2>
-            <h2 class="sale-price"></h2>
-         </div>
-         <div class="btn-size">
-            <button>S</button>
-            <button>M</button>
-            <button>L</button>
-            <button>XL</button>
-         </div>
-         <br>
-         <div class="color-area">
-            <p class="color-title">Color: </p>
-            <button class="c1"></button>
-            <button class="c2"></button>
-            <button class="c3"></button>
-            <button class="c4"></button>
-            <button class="c5"></button>
-            <button class="c6"></button>
-
-         </div>
-      </div>
-      <br>
-      <!-- Quantity Stepper  -->
-      <div class="container">
+      <div class="container-fluid">
          <div class="row">
-            <p>Quantity: </p>
-            <div class="col-lg-2 quantity-btn">
-               <div class="input-group">
-                  <span class="input-group-btn">
-                  <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
-                  <span class="glyphicon glyphicon-minus">-</span>
-                  </button>
-                  </span>
-                  <input type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100">
-                  <span class="input-group-btn">
-                  <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
-                  <span class="glyphicon glyphicon-plus">+</span>
-                  </button>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+               <div class="img-section-6">
+                  <img src="images/couch_lg_0.jpg" class="responsive-img" alt="Product Image">
+               </div>
+               <div class="small-pdp-img">
+                  <div class="img-section-6">
+                     <img src="images/couch_sm_0.jpg" class="small-res" alt="Product Image">
+                     <img src="images/couch_sm_1.jpg" class="small-res" alt="Product Image">
+                     <img src="images/couch_sm_0.jpg" class="small-res" alt="Product Image">
+                     <img src="images/couch_sm_1.jpg" class="small-res" alt="Product Image">
+                  </div>
+               </div>
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- / Side Image Area section-6  -->
+            <!-- <div class="container-fluid "> -->
+            <!-- <div class="row"> -->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+               <div id="prd-title">
+                  <h2>Couch</h2>
+               </div>
+               <!-- Product type -->
+               <div class="product-title">
+                  <h3></h3>
+                  <p class="item-details"></p>
+                  <p class="rating"></p>
+                  <span>
+                     <p>Reviews</p>
                   </span>
                </div>
-               <div class="cart-btn">
-                  <button class="add-cart">Add to Cart</button>
+               <div class="price-block">
+                  <h2 class="list-price"></h2>
+                  <h2 class="sale-price"></h2>
+               </div>
+               <div class="btn-size">
+                  <button>S</button>
+                  <button>M</button>
+                  <button>L</button>
+                  <button>XL</button>
+               </div>
+               <br>
+               <div class="color-area">
+                  <p class="color-title">Color: </p>
+                  <button class="c1"></button>
+                  <button class="c2"></button>
+                  <button class="c3"></button>
+                  <button class="c4"></button>
+                  <button class="c5"></button>
+                  <button class="c6"></button>
+               </div>
+               <br>
+               <!-- Quantity Stepper  -->
+               <div class="container-fluid">
+                  <p>Quantity: </p>
+                  <br>
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <!-- <div class="col-lg-6 quantity-btn"> -->
+                        <div class="input-group">
+                           <span class="input-group-btn">
+                           <button type="button" onclick="decrementValue()"  class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                           <span class="glyphicon glyphicon-minus">-</span>
+                           </button>
+                           </span>
+                           <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number"  />
+
+                           <!-- <input type="text" id="quantity" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" class="form-control input-number" value="10" min="1" max="100"> -->
+                           <span class="input-group-btn">
+                           <button type="button" onclick="incrementValue()" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                           <span class="glyphicon glyphicon-plus">+</span>
+                           </button>
+                           </span>
+                        </div>
+                        <!-- </div> -->
+                     </div>
+                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="cart-btn">
+                           <button class="add-cart" onclick="myFunction()">Add to Cart</button>
+                            <div id="cart-alert">Items has been added to the Cart.</div>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <br><br>
+               <!-- / Quantity Stepper  -->
+               <div class="product-description">
+                  <p class="product-desc">
+                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
                </div>
             </div>
          </div>
-      </div>
-      <br><br>
-      <!-- / Quantity Stepper  -->
-      <div class="product-description">
-         <p class="product-desc">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-         </p>
       </div>
       <br><br>
       <!-- Tabs for PDP  -->
       <div class="container-tab">
-        <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Spec')">Specifications</button>
-  <button class="tablinks" onclick="openCity(event, 'RateReview')">Ratings &amp; Reviews</button>
-  <button class="tablinks" onclick="openCity(event, 'Warranty')">Warranty</button>
-</div>
-
-            <div id="Spec" class="tabcontent">
+         <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Spec')">Specifications</button>
+            <button class="tablinks" onclick="openCity(event, 'RateReview')">Ratings &amp; Reviews</button>
+            <button class="tablinks" onclick="openCity(event, 'Warranty')">Warranty</button>
+         </div>
+         <div id="Spec" class="tabcontent">
             <p>Specifications</p>
-            </div>
-
-            <div id="RateReview" class="tabcontent">
-            <p>Ratings  &amp; Reviews</p> 
-            </div>
-
-            <div id="Warranty" class="tabcontent">
+         </div>
+         <div id="RateReview" class="tabcontent">
+            <p>Ratings  &amp; Reviews</p>
+         </div>
+         <div id="Warranty" class="tabcontent">
             <p>Warranty</p>
-            </div>
+         </div>
       </div>
       <!-- Footer -->
       <footer>
          <h2>Footer</h2>
       </footer>
-
       <script>
-      function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-      
+         function openCity(evt, cityName) {
+         var i, tabcontent, tablinks;
+         tabcontent = document.getElementsByClassName("tabcontent");
+         for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+         }
+         tablinks = document.getElementsByClassName("tablinks");
+         for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+         }
+         document.getElementById(cityName).style.display = "block";
+         evt.currentTarget.className += " active";
+         }
+         
       </script>
+      <!-- Quantity Stepper Code  -->
+      <script>
+         function incrementValue()
+         {
+         var value = parseInt(document.getElementById('number').value, 10);
+         value = isNaN(value) ? 0 : value;
+         if(value<10){
+             value++;
+                 document.getElementById('number').value = value;
+         }
+         }
+         function decrementValue()
+         {
+         var value = parseInt(document.getElementById('number').value, 10);
+         value = isNaN(value) ? 0 : value;
+         if(value>1){
+             value--;
+                 document.getElementById('number').value = value;
+         }
+         
+         }
+      </script>
+      <!-- <script>
+         function submitHandler() {
+             alert("Your Item has been added to cart Successfully.");
+         }
+      </script> -->
+      <script>
+            function myFunction() {
+                var x = document.getElementById("cart-alert");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }
+            </script>
    </body>
 </html>

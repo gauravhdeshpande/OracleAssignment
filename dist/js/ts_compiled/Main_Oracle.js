@@ -7,9 +7,10 @@ define(["require", "exports", "./oracle/Utils/Router"], function (require, expor
             component: 'Plp'
         },
         {
-            link: 'kdPdp.html',
+            link: 'pdp.html',
             component: 'Pdp'
         }
     ]);
     m.init();
 });
+

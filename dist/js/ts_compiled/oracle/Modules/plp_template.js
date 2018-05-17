@@ -20,7 +20,7 @@ define(["require", "exports"], function (require, exports) {
             ${obj.price.sale ? '' : "<span>&nbsp;</span>"}
         `;
                 this.list += `<li class="product-col" data-id="${obj.id}">
-            <a href="kdPdp.html?id=${obj.id}">
+            <a href="pdp.html?id=${obj.id}">
             <img src="images/${obj.image}"/>
             <span class="product-details">${obj.name}</span>
             ${pricing}
