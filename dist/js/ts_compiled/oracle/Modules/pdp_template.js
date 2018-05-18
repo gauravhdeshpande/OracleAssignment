@@ -49,6 +49,9 @@ define(["require", "exports"], function (require, exports) {
     }
     class Template {
         constructor(json, colorCodes) {
+            this.showImage = (event) => {
+                console.log('in thumbail ....');
+            };
             this.json = json;
             this.activeImage = this.json.images[0];
             this.json.images.splice(0, 1);
@@ -65,12 +68,12 @@ define(["require", "exports"], function (require, exports) {
         <div class="container">
         <div class="main-img">
             <div class="img-section-6">
-            <img src="images/${this.activeImage}" alt="Product Image">
+            <img id="main-image" src="images/${this.activeImage}" alt="Product Image">
             </div>
             <div class="small-pdp-img">
             <div class="img-section-6">
             ${this.json.images.map((el) => {
-                return '<img src="images/' + el + '" alt="Product Image">';
+                return '<a class="thumbnails" onclick="' + this.showImage + '"><img src="images/' + el + '" alt="Product Image"></a>';
             }).join('')}
             </div>
             </div>
