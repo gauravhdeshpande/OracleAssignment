@@ -6,8 +6,12 @@ var m = new Router([
         component:'Plp'
     },
     {
-        link:'kdPdp.html',
+        link:'pdp.html',
         component:'Pdp'
+    },
+    {
+        link:'odp.html',
+        component:'Odp'
     }
 ]);
 m.init();

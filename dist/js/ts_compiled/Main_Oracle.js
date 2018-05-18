@@ -9,8 +9,11 @@ define(["require", "exports", "./oracle/Utils/Router"], function (require, expor
         {
             link: 'pdp.html',
             component: 'Pdp'
+        },
+        {
+            link: 'odp.html',
+            component: 'Odp'
         }
     ]);
     m.init();
 });
-

@@ -42,6 +42,7 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/plp_tem
                 filters[el.brand] = filters[el.brand] ? Number(filters[el.brand] + 1) : 1;
             });
             document.getElementById('filterby').innerHTML = '';
+            //Populate Brand Filters. 
             for (let k in filters) {
                 document.getElementById('filterby').innerHTML += `
             <p><input checked="true" id="${k}" value="${k}" type="checkbox">
