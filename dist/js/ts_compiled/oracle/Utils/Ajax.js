@@ -19,7 +19,8 @@ define(["require", "exports", "./StaticJson"], function (require, exports, Stati
                                     product = el;
                                 }
                             });
-                            resolve({ json: product.details, colors: StaticJson_1.default.colorCodes });
+                            //console.log('JOJO',{json:product.details,price:product.price,rating:product.rating,colors:parentJson.colorCodes});
+                            resolve({ json: product, colors: StaticJson_1.default.colorCodes });
                             break;
                     }
                 }, 0);

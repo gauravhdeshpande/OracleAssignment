@@ -10,7 +10,7 @@ class Pdp extends BasePage{
     constructor(args){
         super(args);
         this.setContainer('pdp');
-       // document.getElementById('pdp').addEventListener("click",this.clickHanlder);
+        document.getElementById('pdp').addEventListener("click",this.clickHanlder);
         if(this.getParams.id){
             ajax.getFromUrl('/product-details',this.getParams.id).then(this.ajaxSuccess,this.ajaxFailure);
         }
@@ -22,6 +22,7 @@ class Pdp extends BasePage{
         data.colors.map((el)=>{
             this.colorCodes[el.name]=el.code;
         });
+        
         this.setTemplate();
         this.render();
     }
@@ -29,7 +30,15 @@ class Pdp extends BasePage{
         
     }
     clickHanlder=(event)=>{
-        console.log('heya');
+        switch(event.target.getAttribute('class')){
+            case 'thumbnails':
+                document.getElementById('main-image').setAttribute('src',event.target.getAttribute('src'));
+                break;
+            default: 
+                break;
+        }
+        event.preventDefault();
+        event.stopPropagation();
     }
     setTemplate(){
         try{
