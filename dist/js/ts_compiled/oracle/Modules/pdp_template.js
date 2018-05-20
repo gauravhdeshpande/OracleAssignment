@@ -1,4 +1,4 @@
-define(["require", "exports", "./ReviewStars", "./ReviewStars"], function (require, exports, ReviewStars_1, ReviewStars_2) {
+define(["require", "exports", "./CommonComponents"], function (require, exports, CommonComponents_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     class Template {
@@ -6,18 +6,21 @@ define(["require", "exports", "./ReviewStars", "./ReviewStars"], function (requi
             this.showImage = (event) => {
                 console.log('in thumbail ....');
             };
+            this.getCount = () => {
+                return this.qs.count.value;
+            };
             this.json = json;
             this.activeImage = this.json.details.images[0];
             this.json.details.images.splice(0, 1);
             this.colorCodes = colorCodes;
-            this.qs = new ReviewStars_2.QuantityStepper();
-            console.log(this.json);
+            this.qs = new CommonComponents_1.QuantityStepper();
         }
-        doSomething() {
+        resovePostRender() {
+            this.qs.appendto('quanitityStepper');
         }
         getTemplate() {
             return `
-    <form>
+    <form action="odp.html" id="productDetailForm">
         <div class="container">
             <div class="col">
                 <img id="main-image" src="images/${this.activeImage}" alt="Product Image">
@@ -31,7 +34,7 @@ define(["require", "exports", "./ReviewStars", "./ReviewStars"], function (requi
                 <div class="product-title">
                     <h1>${this.json.details.title}</h1>
                     <p class="item-details">Item #:${this.json.id}</p>
-                    <p class="rating">${new ReviewStars_1.default(this.json.rating).html}</p><a>Reviews(0)</a>
+                    <p class="rating">${new CommonComponents_1.default(this.json.rating).html}</p><a>Reviews(0)</a>
                 </div>
                 <!-- Product type -->
                 <div class="price-block">
@@ -53,10 +56,10 @@ define(["require", "exports", "./ReviewStars", "./ReviewStars"], function (requi
             }).join('')}
                     </ul>
                 </div>
-                <div>
+                <div id="quanitityStepper">
                     <!-- Quantity Stepper -->
-                    
                 </div>
+                <input type="submit" value="Add To Cart"/>
                 <div>
                     <h3>Overview</h3>
                     <p class="product-desc">${this.json.details.description}</p>

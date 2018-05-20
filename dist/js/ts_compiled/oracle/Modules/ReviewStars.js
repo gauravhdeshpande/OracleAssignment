@@ -8,6 +8,9 @@ define(["require", "exports"], function (require, exports) {
         }
     }
     class QuantityStepper {
+        constructor() {
+            this.html = 'In Quantity Stepper';
+        }
     }
     exports.QuantityStepper = QuantityStepper;
     exports.default = Stars;

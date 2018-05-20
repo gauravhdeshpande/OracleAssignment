@@ -11,6 +11,7 @@ class Pdp extends BasePage{
         super(args);
         this.setContainer('pdp');
         document.getElementById('pdp').addEventListener("click",this.clickHanlder);
+        document.getElementById('pdp').addEventListener("submit",this.submitHanlder);
         if(this.getParams.id){
             ajax.getFromUrl('/product-details',this.getParams.id).then(this.ajaxSuccess,this.ajaxFailure);
         }
@@ -30,6 +31,7 @@ class Pdp extends BasePage{
         
     }
     clickHanlder=(event)=>{
+        
         switch(event.target.getAttribute('class')){
             case 'thumbnails':
                 document.getElementById('main-image').setAttribute('src',event.target.getAttribute('src'));
@@ -37,6 +39,15 @@ class Pdp extends BasePage{
             default: 
                 break;
         }
+        if(event.target.getAttribute('type') != "submit"){
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        
+    }
+    submitHanlder=(event)=>{
+        console.log("in submit hanlder for Add to cart", this.json.id,this.templateObj.getCount());
+        //Get id color size and quantity here
         event.preventDefault();
         event.stopPropagation();
     }
@@ -54,7 +65,7 @@ class Pdp extends BasePage{
         this.postRender();
     }
     postRender(){
-        this.templateObj.doSomething();
+        this.templateObj.resovePostRender();
     }
 }
 

@@ -1,29 +1,33 @@
-import Stars from './ReviewStars';
-import {QuantityStepper as Quantity} from './ReviewStars';
+import Stars, { QuantityStepper } from './CommonComponents';
+
 class Template{
     json;
     activeImage;
     qs;
+    qs2;
     colorCodes;
     stars;
+
     constructor(json,colorCodes){
         this.json=json;
         this.activeImage = this.json.details.images[0];
         this.json.details.images.splice(0,1);
         this.colorCodes = colorCodes;
-        this.qs=new Quantity();
-        console.log(this.json);
+        this.qs = new QuantityStepper();
     }
-    doSomething(){
-        
+    resovePostRender(){
+        this.qs.appendto('quanitityStepper');
     }
     showImage=(event)=>{
        console.log('in thumbail ....');
         
     }
+    getCount=()=>{
+        return this.qs.count.value;
+    }
     getTemplate(){
         return `
-    <form>
+    <form action="odp.html" id="productDetailForm">
         <div class="container">
             <div class="col">
                 <img id="main-image" src="images/${this.activeImage}" alt="Product Image">
@@ -59,10 +63,10 @@ class Template{
                     }).join('')}
                     </ul>
                 </div>
-                <div>
+                <div id="quanitityStepper">
                     <!-- Quantity Stepper -->
-                    
                 </div>
+                <input type="submit" value="Add To Cart"/>
                 <div>
                     <h3>Overview</h3>
                     <p class="product-desc">${this.json.details.description}</p>
