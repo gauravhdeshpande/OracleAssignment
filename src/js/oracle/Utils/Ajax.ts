@@ -19,7 +19,6 @@ class Ajax{
                                 product = el;
                             }
                         });
-                        
                         //console.log('JOJO',{json:product.details,price:product.price,rating:product.rating,colors:parentJson.colorCodes});
                         resolve({json:product,colors:parentJson.colorCodes});
                         break;

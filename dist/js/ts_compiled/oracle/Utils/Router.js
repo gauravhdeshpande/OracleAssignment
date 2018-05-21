@@ -43,9 +43,11 @@ define(["require", "exports"], function (require, exports) {
                         this.currentRoute = a;
                     }
                 });
-                new Promise((resolve_1, reject_1) => { require(['../Pages/' + this.currentRoute.component], resolve_1, reject_1); }).then((widget) => {
-                    this.activeComponent = new widget.default(this.get);
-                });
+                if (this.currentRoute) {
+                    new Promise((resolve_1, reject_1) => { require(['../Pages/' + this.currentRoute.component], resolve_1, reject_1); }).then((widget) => {
+                        this.activeComponent = new widget.default(this.get);
+                    });
+                }
             };
             this.routes = paths;
             this.breakURL();

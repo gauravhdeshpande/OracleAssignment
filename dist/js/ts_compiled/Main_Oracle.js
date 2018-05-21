@@ -11,7 +11,7 @@ define(["require", "exports", "./oracle/Utils/Router"], function (require, expor
             component: 'Pdp'
         },
         {
-            link: 'odp.html',
+            link: 'kdOdp.html',
             component: 'Odp'
         }
     ]);

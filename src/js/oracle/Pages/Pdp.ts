@@ -47,9 +47,13 @@ class Pdp extends BasePage{
     }
     submitHanlder=(event)=>{
         console.log("in submit hanlder for Add to cart", this.json.id,this.templateObj.getCount());
+        //If session storage is there, store it 
+        if(window.sessionStorage){
+            window.sessionStorage.setItem("item_"+this.json.id,this.templateObj.getCount());
+        }
         //Get id color size and quantity here
-        event.preventDefault();
-        event.stopPropagation();
+        //event.preventDefault();
+        //event.stopPropagation();
     }
     setTemplate(){
         try{

@@ -43,9 +43,12 @@ class Router {
         this.routes.forEach((a:RouteData,b:Number)=>{
             if(a.link == this.filename){this.currentRoute = a;} 
         });
-        import('../Pages/'+this.currentRoute.component).then((widget) => {
-            this.activeComponent = new widget.default(this.get);
-        });
+
+        if(this.currentRoute){
+            import('../Pages/'+this.currentRoute.component).then((widget) => {
+                this.activeComponent = new widget.default(this.get);
+            });
+        }
     }
 
 }

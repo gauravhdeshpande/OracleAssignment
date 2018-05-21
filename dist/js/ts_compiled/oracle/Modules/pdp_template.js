@@ -20,7 +20,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
         }
         getTemplate() {
             return `
-    <form action="odp.html" id="productDetailForm">
+    <form action="kdOdp.html" id="productDetailForm">
         <div class="container">
             <div class="col">
                 <img id="main-image" src="images/${this.activeImage}" alt="Product Image">
