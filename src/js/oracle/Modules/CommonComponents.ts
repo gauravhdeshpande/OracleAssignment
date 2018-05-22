@@ -14,10 +14,12 @@ class QuantityStepper{
     container:HTMLDivElement;
     count:any;
     id;
-    constructor(){
+    predefinedQuantity;
+    constructor(quantity?:number){
         this.create();
         this.addHtml();
         this.addListeners();
+        if(quantity){this.predefinedQuantity = quantity;}
     }
     create(){
         this.inputElement = document.createElement("input");
@@ -49,7 +51,7 @@ class QuantityStepper{
         this.container.appendChild(this.inputElement);
         this.container.appendChild(this.plus);
         document.getElementById(id)?document.getElementById(id).appendChild(this.container):'';
-        
+        if(this.predefinedQuantity){this.count.value=this.predefinedQuantity;}
     }
     changeHandler=(event)=>{
         if(event.target.value <= 10 && event.target.value > 0){

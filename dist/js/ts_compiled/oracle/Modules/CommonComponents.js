@@ -8,7 +8,7 @@ define(["require", "exports"], function (require, exports) {
         }
     }
     class QuantityStepper {
-        constructor() {
+        constructor(quantity) {
             this.changeHandler = (event) => {
                 if (event.target.value <= 10 && event.target.value > 0) {
                 }
@@ -27,6 +27,9 @@ define(["require", "exports"], function (require, exports) {
             this.create();
             this.addHtml();
             this.addListeners();
+            if (quantity) {
+                this.predefinedQuantity = quantity;
+            }
         }
         create() {
             this.inputElement = document.createElement("input");
@@ -57,6 +60,9 @@ define(["require", "exports"], function (require, exports) {
             this.container.appendChild(this.inputElement);
             this.container.appendChild(this.plus);
             document.getElementById(id) ? document.getElementById(id).appendChild(this.container) : '';
+            if (this.predefinedQuantity) {
+                this.count.value = this.predefinedQuantity;
+            }
         }
     }
     exports.QuantityStepper = QuantityStepper;
