@@ -22,6 +22,26 @@ define(["require", "exports", "./StaticJson"], function (require, exports, Stati
                             //console.log('JOJO',{json:product.details,price:product.price,rating:product.rating,colors:parentJson.colorCodes});
                             resolve({ json: product, colors: StaticJson_1.default.colorCodes });
                             break;
+                        case 'order-products':
+                            let products = [];
+                            console.log('In Ajax', id.length);
+                            if (id.length) {
+                                while (id.length) {
+                                    let k = id.pop();
+                                    StaticJson_1.default.productList.map((el, index) => {
+                                        if (el.id == k.id) {
+                                            el.quantity = k.count;
+                                            products.push(el);
+                                        }
+                                    });
+                                }
+                            }
+                            else {
+                                products.push(StaticJson_1.default.productList[0]);
+                                products[0].quantity = 1;
+                            }
+                            resolve(products);
+                            break;
                     }
                 }, 0);
             });

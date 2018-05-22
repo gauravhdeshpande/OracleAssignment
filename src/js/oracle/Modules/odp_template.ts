@@ -3,10 +3,10 @@ class Template{
     list;
     activeSort;
     backupJson;
-    constructor(){
-        //this.productJson = products;
-        //this.backupJson = products;
-        //this.activeSort = undefined;
+    constructor(products){
+        this.productJson = products;
+        this.backupJson = products;
+        this.activeSort = undefined;
     }
     getTemplate(){
         let rating;
@@ -28,7 +28,6 @@ class Template{
             <span>${rating}</span>
             </a>
         </li>`});
-        
         return this.list;
     }
     filterBy(brand:string,show:boolean){

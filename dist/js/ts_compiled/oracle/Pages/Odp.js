@@ -1,9 +1,41 @@
-define(["require", "exports", "./BasePage", "../Modules/odp_template"], function (require, exports, BasePage_1, odp_template_1) {
+define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/odp_template"], function (require, exports, BasePage_1, Ajax_1, odp_template_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     class Odp extends BasePage_1.default {
         constructor(props) {
             super(props);
+            this.ajaxSuccess = (data) => {
+                this.productJson = data;
+                this.templateObj = new odp_template_1.default(data);
+                this.setTemplate();
+                this.render();
+                this.setupFiltersOnHtml();
+                document.getElementById('sortby').addEventListener("change", this.sortHandler);
+                document.getElementById('filterby').addEventListener('change', this.filterHandler);
+            };
+            this.ajaxFail = (err) => {
+            };
+            this.sortHandler = (event) => {
+                switch (event.target.getAttribute('id')) {
+                    case 'select-sort':
+                        this.templateObj.sortyBy(event.target.value);
+                        break;
+                    default:
+                        break;
+                }
+                this.setTemplate();
+                this.render();
+            };
+            this.filterHandler = (event) => {
+                if (event.target.getAttribute('type') == 'checkbox') {
+                    this.templateObj.filterBy(event.target.getAttribute('value'), event.target.checked);
+                    this.setTemplate();
+                    this.render();
+                }
+            };
+            /**
+             *
+             */
             this.makeCart = () => {
                 let obj = [];
                 if (window.sessionStorage) {
@@ -18,19 +50,33 @@ define(["require", "exports", "./BasePage", "../Modules/odp_template"], function
                             });
                         }
                     }
-                    console.log("JOJO", obj);
-                }
-                else {
-                    //If no sessionStorage support
-                    obj = [{}, {}];
                 }
                 return obj;
             };
             this.setContainer('odp-listing');
             this.cart = this.makeCart();
-            this.templateObj = new odp_template_1.default();
-            this.template = `What is this?`;
-            this.render();
+            Ajax_1.default.getFromUrl('order-products', this.cart).then(this.ajaxSuccess, this.ajaxFail);
+        }
+        /**
+         *
+         */
+        setupFiltersOnHtml() {
+            let filters = {};
+            this.productJson.map((el) => {
+                filters[el.brand] = filters[el.brand] ? Number(filters[el.brand] + 1) : 1;
+            });
+            document.getElementById('filterby').innerHTML = '';
+            //Populate Brand Filters. 
+            for (let k in filters) {
+                document.getElementById('filterby').innerHTML += `
+        <p><input checked="true" id="${k}" value="${k}" type="checkbox">
+        <label for="${k}"><span class="ax-hidden">Brand Name:</span>${k}</label>
+        </p>
+        `;
+            }
+        }
+        setTemplate() {
+            this.template = `<ul>${this.templateObj.getTemplate()}</ul>`;
         }
     }
     exports.default = Odp;

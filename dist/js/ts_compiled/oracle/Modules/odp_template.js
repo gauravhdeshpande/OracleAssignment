@@ -2,10 +2,10 @@ define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     class Template {
-        constructor() {
-            //this.productJson = products;
-            //this.backupJson = products;
-            //this.activeSort = undefined;
+        constructor(products) {
+            this.productJson = products;
+            this.backupJson = products;
+            this.activeSort = undefined;
         }
         getTemplate() {
             let rating;
