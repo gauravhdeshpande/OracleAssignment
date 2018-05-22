@@ -1,18 +1,28 @@
+import {QuantityStepper} from './CommonComponents';
 class Template{
     productJson;
     list;
     activeSort;
     backupJson;
+    quantitySteppers;
     constructor(products){
         this.productJson = products;
         this.backupJson = products;
         this.activeSort = undefined;
+        this.quantitySteppers = {};
     }
     getTemplate(){
         let rating;
         let pricing;
         this.list = '';
         this.productJson.map((obj,index)=>{
+            let qsid = 'qs_'+obj.id;
+            if(!this.quantitySteppers[obj.id]){
+                this.quantitySteppers[obj.id] = {
+                    qs:new QuantityStepper(),
+                    parent:qsid
+                }
+            }
         rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`,0,obj.rating).join('')+`(${obj.rating})`;
         pricing = `
             <del>${obj.price.currency+' '+obj.price.sellingPrice}</del>
@@ -27,8 +37,21 @@ class Template{
             ${pricing}
             <span>${rating}</span>
             </a>
+            <div id=${qsid}></div>
         </li>`});
         return this.list;
+    }
+    resovePostRender=()=>{
+        let qss:any = Object.keys(this.quantitySteppers);
+        for(let i=0;i<qss.length;i++){
+            let id = this.quantitySteppers[qss[i]].parent;
+            let obj = this.quantitySteppers[qss[i]].qs;
+            obj.appendto(id);
+        }
+        // this.quantitySteppers.map=(el,id)=>{
+        //     console.log('Resolve all quantitiy steppers here',el,id);
+        // }
+        //this.qs.appendto('quanitityStepper');
     }
     filterBy(brand:string,show:boolean){
         if(!show){

@@ -1,17 +1,37 @@
-define(["require", "exports"], function (require, exports) {
+define(["require", "exports", "./CommonComponents"], function (require, exports, CommonComponents_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     class Template {
         constructor(products) {
+            this.resovePostRender = () => {
+                let qss = Object.keys(this.quantitySteppers);
+                for (let i = 0; i < qss.length; i++) {
+                    let id = this.quantitySteppers[qss[i]].parent;
+                    let obj = this.quantitySteppers[qss[i]].qs;
+                    obj.appendto(id);
+                }
+                // this.quantitySteppers.map=(el,id)=>{
+                //     console.log('Resolve all quantitiy steppers here',el,id);
+                // }
+                //this.qs.appendto('quanitityStepper');
+            };
             this.productJson = products;
             this.backupJson = products;
             this.activeSort = undefined;
+            this.quantitySteppers = {};
         }
         getTemplate() {
             let rating;
             let pricing;
             this.list = '';
             this.productJson.map((obj, index) => {
+                let qsid = 'qs_' + obj.id;
+                if (!this.quantitySteppers[obj.id]) {
+                    this.quantitySteppers[obj.id] = {
+                        qs: new CommonComponents_1.QuantityStepper(),
+                        parent: qsid
+                    };
+                }
                 rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`, 0, obj.rating).join('') + `(${obj.rating})`;
                 pricing = `
             <del>${obj.price.currency + ' ' + obj.price.sellingPrice}</del>
@@ -26,6 +46,7 @@ define(["require", "exports"], function (require, exports) {
             ${pricing}
             <span>${rating}</span>
             </a>
+            <div id=${qsid}></div>
         </li>`;
             });
             return this.list;

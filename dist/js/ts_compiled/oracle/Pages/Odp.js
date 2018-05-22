@@ -9,6 +9,7 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/odp_tem
                 this.templateObj = new odp_template_1.default(data);
                 this.setTemplate();
                 this.render();
+                this.templateObj.resovePostRender();
                 this.setupFiltersOnHtml();
                 document.getElementById('sortby').addEventListener("change", this.sortHandler);
                 document.getElementById('filterby').addEventListener('change', this.filterHandler);
@@ -25,12 +26,14 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/odp_tem
                 }
                 this.setTemplate();
                 this.render();
+                this.templateObj.resovePostRender();
             };
             this.filterHandler = (event) => {
                 if (event.target.getAttribute('type') == 'checkbox') {
                     this.templateObj.filterBy(event.target.getAttribute('value'), event.target.checked);
                     this.setTemplate();
                     this.render();
+                    this.templateObj.resovePostRender();
                 }
             };
             /**

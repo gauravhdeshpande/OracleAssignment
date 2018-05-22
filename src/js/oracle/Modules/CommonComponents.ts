@@ -48,7 +48,7 @@ class QuantityStepper{
         this.container.appendChild(this.minus);
         this.container.appendChild(this.inputElement);
         this.container.appendChild(this.plus);
-        document.getElementById(id).appendChild(this.container);
+        document.getElementById(id)?document.getElementById(id).appendChild(this.container):'';
         
     }
     changeHandler=(event)=>{
