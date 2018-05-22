@@ -23,9 +23,7 @@ class Ajax{
                         resolve({json:product,colors:parentJson.colorCodes});
                         break;
                     case 'order-products':
-                        let products = []
-                        console.log('In Ajax',id.length);
-                        
+                        let products = [];                        
                         if(id.length){
                             while(id.length){
                                 let k = id.pop();

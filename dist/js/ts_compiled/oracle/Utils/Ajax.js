@@ -24,7 +24,6 @@ define(["require", "exports", "./StaticJson"], function (require, exports, Stati
                             break;
                         case 'order-products':
                             let products = [];
-                            console.log('In Ajax', id.length);
                             if (id.length) {
                                 while (id.length) {
                                     let k = id.pop();

@@ -10,7 +10,7 @@ var m = new Router([
         component:'Pdp'
     },
     {
-        link:'kdOdp.html',
+        link:'odp.html',
         component:'Odp'
     }
 ]);

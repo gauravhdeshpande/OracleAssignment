@@ -27,7 +27,6 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             this.productJson.map((obj, index) => {
                 let qsid = 'qs_' + obj.id;
                 if (!this.quantitySteppers[obj.id]) {
-                    console.log("KOKO", obj.quantity);
                     this.quantitySteppers[obj.id] = {
                         qs: new CommonComponents_1.QuantityStepper(obj.quantity),
                         parent: qsid

@@ -60,9 +60,7 @@ define(["require", "exports"], function (require, exports) {
             this.container.appendChild(this.inputElement);
             this.container.appendChild(this.plus);
             document.getElementById(id) ? document.getElementById(id).appendChild(this.container) : '';
-            if (this.predefinedQuantity) {
-                this.count.value = this.predefinedQuantity;
-            }
+            this.count.value = this.predefinedQuantity ? this.predefinedQuantity : 1;
         }
     }
     exports.QuantityStepper = QuantityStepper;
