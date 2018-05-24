@@ -238,6 +238,9 @@ footer h2 {
   border-radius: 13px;
   border: none;
 }
+.color-area :first-child {
+  padding-left: 0;
+}
 input#quantity {
   margin: 2% 0;
   text-align: center;
