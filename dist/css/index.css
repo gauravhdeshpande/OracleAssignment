@@ -376,6 +376,22 @@ input#number {
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
+.reward-animation {
+  width: 230px;
+  margin-left: -4em;
+}
+.reward-animation .circular-chart {
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+.reward-animation .circular-chart .circle {
+  stroke: slategray;
+  fill: none;
+  stroke-width: 3.3px;
+  stroke-linecap: round;
+  animation: progress 2s ease-out forwards;
+}
 @media screen and (max-width: 587px) {
   .hide {
     display: none;
