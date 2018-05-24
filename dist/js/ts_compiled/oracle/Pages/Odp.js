@@ -11,48 +11,10 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/odp_tem
                 this.render();
                 this.templateObj.resovePostRender();
                 //this.setupFiltersOnHtml();
-                document.getElementById('sortby').addEventListener("change", this.sortHandler);
+                //document.getElementById('sortby').addEventListener("change",this.sortHandler);
                 //document.getElementById('filterby').addEventListener('change',this.filterHandler);
             };
             this.ajaxFail = (err) => {
-            };
-            /**
-             *
-             */
-            // setupFiltersOnHtml(){
-            //     let filters = {};
-            //     this.productJson.map((el)=>{
-            //         filters[el.brand] = filters[el.brand]?Number(filters[el.brand] + 1):1;
-            //     });
-            //     document.getElementById('filterby').innerHTML = '';
-            //     //Populate Brand Filters. 
-            //     for(let k in filters){
-            //         document.getElementById('filterby').innerHTML += `
-            //         <p><input checked="true" id="${k}" value="${k}" type="checkbox">
-            //         <label for="${k}"><span class="ax-hidden">Brand Name:</span>${k}</label>
-            //         </p>
-            //         `;
-            //     }
-            // }
-            this.sortHandler = (event) => {
-                switch (event.target.getAttribute('id')) {
-                    case 'select-sort':
-                        this.templateObj.sortyBy(event.target.value);
-                        break;
-                    default:
-                        break;
-                }
-                this.setTemplate();
-                this.render();
-                this.templateObj.resovePostRender();
-            };
-            this.filterHandler = (event) => {
-                if (event.target.getAttribute('type') == 'checkbox') {
-                    this.templateObj.filterBy(event.target.getAttribute('value'), event.target.checked);
-                    this.setTemplate();
-                    this.render();
-                    this.templateObj.resovePostRender();
-                }
             };
             /**
              *
@@ -78,6 +40,44 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/odp_tem
             this.cart = this.makeCart();
             Ajax_1.default.getFromUrl('order-products', this.cart).then(this.ajaxSuccess, this.ajaxFail);
         }
+        /**
+         *
+         */
+        // setupFiltersOnHtml(){
+        //     let filters = {};
+        //     this.productJson.map((el)=>{
+        //         filters[el.brand] = filters[el.brand]?Number(filters[el.brand] + 1):1;
+        //     });
+        //     document.getElementById('filterby').innerHTML = '';
+        //     //Populate Brand Filters. 
+        //     for(let k in filters){
+        //         document.getElementById('filterby').innerHTML += `
+        //         <p><input checked="true" id="${k}" value="${k}" type="checkbox">
+        //         <label for="${k}"><span class="ax-hidden">Brand Name:</span>${k}</label>
+        //         </p>
+        //         `;
+        //     }
+        // }
+        // sortHandler=(event)=>{
+        //     switch(event.target.getAttribute('id')){
+        //         case 'select-sort':
+        //             this.templateObj.sortyBy(event.target.value);
+        //         break;
+        //         default:
+        //         break;
+        //     }
+        //     this.setTemplate();
+        //     this.render();
+        //     this.templateObj.resovePostRender();
+        // }
+        // filterHandler=(event)=>{
+        //     if(event.target.getAttribute('type')=='checkbox'){
+        //         this.templateObj.filterBy(event.target.getAttribute('value'),event.target.checked);
+        //         this.setTemplate();
+        //         this.render();
+        //         this.templateObj.resovePostRender();
+        //     }
+        // }
         setTemplate() {
             this.template = this.templateObj.getTemplate();
         }
