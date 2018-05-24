@@ -47,7 +47,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 <span>${rating}</span>            
             </div>  
             <div class="col-lg-3" id=${qsid}></div>
-            <div class="col-lg-2"> <button>Buy Again</button></div>      
+            <div class="col-lg-2"> <button class="primaryBtn">Buy Again</button></div>      
         </li>`;
             });
             return this.list;
