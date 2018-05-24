@@ -120,7 +120,11 @@ define(["require", "exports"], function (require, exports) {
                 name: 'blue',
                 code: '0000ff'
             }
-        ]
+        ],
+        orderDetails: {
+            percentage: 20,
+            taxPercentage: 2
+        }
     };
     exports.default = parentJson;
 });

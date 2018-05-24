@@ -39,7 +39,7 @@ define(["require", "exports", "./StaticJson"], function (require, exports, Stati
                                 products.push(StaticJson_1.default.productList[0]);
                                 products[0].quantity = 1;
                             }
-                            resolve(products);
+                            resolve({ products: products, orderDetails: StaticJson_1.default.orderDetails });
                             break;
                     }
                 }, 0);

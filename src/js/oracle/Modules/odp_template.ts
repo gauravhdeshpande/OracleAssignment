@@ -5,11 +5,21 @@ class Template{
     activeSort;
     backupJson;
     quantitySteppers;
-    constructor(products){
+    circle;
+    box;
+    orderDetails
+    constructor(products,od){
         this.productJson = products;
         this.backupJson = products;
         this.activeSort = undefined;
         this.quantitySteppers = {};
+        this.box = 36;
+        this.circle={
+            diameter:30,
+            x:this.box/2,
+            y:(this.box-30)/2
+        }
+        this.orderDetails = od;
     }
     getTemplate(){
         let rating;
@@ -65,12 +75,12 @@ class Template{
         `;
         this.list +=`<div class="reward-animation">
                    
-<svg viewBox="0 0 36 36" class="circular-chart">
+<svg viewBox="0 0 ${this.box} ${this.box}" class="circular-chart">
   
-    <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
-        a 15.9155 15.9155 0 0 1 0 31.831
-        a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="10px" font-family="Open Sans" dy=".3em">75</text>
+    <path class="circle" stroke-dasharray="${this.orderDetails.percentage}, 100" d="M${this.circle.x} ${this.circle.y}
+        a ${this.circle.diameter/2} ${this.circle.diameter/2} 0 0 1 0 ${this.circle.diameter}
+        a ${this.circle.diameter/2} ${this.circle.diameter/2} 0 0 1 0 -${this.circle.diameter}"></path>
+    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="10px" font-family="Open Sans" dy=".3em">${this.orderDetails.percentage}</text>
   </svg>
               </div> `;
       

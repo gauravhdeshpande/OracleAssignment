@@ -118,6 +118,10 @@ const parentJson = {
             name:'blue',
             code:'0000ff'
         }
-    ]
+    ],
+    orderDetails:{
+        percentage:20,
+        taxPercentage:2
+    }
 }
 export default parentJson;

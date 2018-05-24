@@ -5,8 +5,8 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/odp_tem
         constructor(props) {
             super(props);
             this.ajaxSuccess = (data) => {
-                this.productJson = data;
-                this.templateObj = new odp_template_1.default(data);
+                this.productJson = data.products;
+                this.templateObj = new odp_template_1.default(data.products, data.orderDetails);
                 this.setTemplate();
                 this.render();
                 this.templateObj.resovePostRender();

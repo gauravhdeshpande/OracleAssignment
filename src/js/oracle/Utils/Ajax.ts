@@ -39,7 +39,7 @@ class Ajax{
                             products.push(parentJson.productList[0]);
                             products[0].quantity = 1;
                         }
-                        resolve(products);
+                        resolve({products:products,orderDetails:parentJson.orderDetails});
                     break;
                 }
             }, 0);

@@ -2,7 +2,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     class Template {
-        constructor(products) {
+        constructor(products, od) {
             this.resovePostRender = () => {
                 let qss = Object.keys(this.quantitySteppers);
                 for (let i = 0; i < qss.length; i++) {
@@ -15,6 +15,13 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             this.backupJson = products;
             this.activeSort = undefined;
             this.quantitySteppers = {};
+            this.box = 36;
+            this.circle = {
+                diameter: 30,
+                x: this.box / 2,
+                y: (this.box - 30) / 2
+            };
+            this.orderDetails = od;
         }
         getTemplate() {
             let rating;
@@ -71,12 +78,12 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
         `;
             this.list += `<div class="reward-animation">
                    
-<svg viewBox="0 0 36 36" class="circular-chart">
+<svg viewBox="0 0 ${this.box} ${this.box}" class="circular-chart">
   
-    <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
-        a 15.9155 15.9155 0 0 1 0 31.831
-        a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="10px" font-family="Open Sans" dy=".3em">75</text>
+    <path class="circle" stroke-dasharray="${this.orderDetails.percentage}, 100" d="M${this.circle.x} ${this.circle.y}
+        a ${this.circle.diameter / 2} ${this.circle.diameter / 2} 0 0 1 0 ${this.circle.diameter}
+        a ${this.circle.diameter / 2} ${this.circle.diameter / 2} 0 0 1 0 -${this.circle.diameter}"></path>
+    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="10px" font-family="Open Sans" dy=".3em">${this.orderDetails.percentage}</text>
   </svg>
               </div> `;
             return this.list;

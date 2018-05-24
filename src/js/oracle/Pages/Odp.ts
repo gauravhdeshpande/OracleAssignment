@@ -14,8 +14,8 @@ class Odp extends BasePage{
         ajax.getFromUrl('order-products',this.cart).then(this.ajaxSuccess,this.ajaxFail);     
     }
     ajaxSuccess=(data)=>{
-        this.productJson = data;
-        this.templateObj = new Template(data);
+        this.productJson = data.products;
+        this.templateObj = new Template(data.products,data.orderDetails);
         this.setTemplate();
         this.render();
         this.templateObj.resovePostRender();
