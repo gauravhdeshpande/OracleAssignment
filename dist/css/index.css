@@ -265,7 +265,7 @@ span.input-group-btn > button {
   width: 50%;
   float: left;
 }
-.cart-btn > button {
+.primaryBtn {
   outline: none;
   border: none;
   height: 45px;
