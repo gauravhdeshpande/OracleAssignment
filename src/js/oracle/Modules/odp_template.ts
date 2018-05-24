@@ -14,7 +14,7 @@ class Template{
     getTemplate(){
         let rating;
         let pricing;
-        this.list = '<ul class="row">';
+        this.list = '<ul class="container-fluid">';
         this.productJson.map((obj,index)=>{
             let qsid = 'qs_'+obj.id;
             if(!this.quantitySteppers[obj.id]){
@@ -30,7 +30,7 @@ class Template{
             <span class="${obj.price.sale?'hotPrice':''}">${obj.price.currency+' '+obj.price.low} - ${obj.price.high} ${obj.price.sale?'SALE':''}</span>
             ${obj.price.sale?'':"<span>&nbsp;</span>"}
         `;
-        this.list+=`<li class="col-lg-12" data-id="${obj.id}">
+        this.list+=`<li class="col-lg-12 row" data-id="${obj.id}">
             <div class="col-lg-2 col-xs-6"><img src="images/${obj.image}"/></div>
             <div class="col-lg-5 col-xs-6">
                 <a href="pdp.html?id=${obj.id}"><span class="product-details">${obj.name}</span></a>
