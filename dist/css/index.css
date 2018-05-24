@@ -1,5 +1,5 @@
 /* PDP for Desktop  */
-#quanitityStepper_qs {
+.qtyStpr input {
   width: 45px;
   height: 34px;
   text-align: center;
@@ -78,6 +78,7 @@ html {
 }
 html h1 {
   padding: 10px;
+  font-size: 22px;
 }
 html h2 {
   position: relative;
