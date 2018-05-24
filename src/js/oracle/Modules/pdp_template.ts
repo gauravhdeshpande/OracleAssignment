@@ -39,7 +39,7 @@ class Template{
             </div>
             <div class="col">
                 <div class="product-title">
-                    <h1>${this.json.details.title}</h1>
+                    <h1>${this.json.name}</h1>
                     <p class="item-details">Item #:${this.json.id}</p>
                     <p class="rating">${new Stars(this.json.rating).html}</p><a>Reviews(0)</a>
                 </div>

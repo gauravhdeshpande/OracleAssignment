@@ -40,14 +40,14 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             ${obj.price.sale ? '' : "<span>&nbsp;</span>"}
         `;
                 this.list += `<li class="product-col" data-id="${obj.id}">
-            <img src="images/${obj.image}"/>
-            <a href="pdp.html?id=${obj.id}">
-            
-            <span class="product-details">${obj.name}</span>
-            ${pricing}
-            <span>${rating}</span>
-            </a>
-            <div id=${qsid}></div>
+            <div class="order-col"><img src="images/${obj.image}"/></div>
+            <div class="order-col">
+                <a href="pdp.html?id=${obj.id}"><span class="product-details">${obj.name}</span></a>
+                <span> ${pricing}</span>
+                <span>${rating}</span>            
+            </div>  
+            <div class="order-col" id=${qsid}></div>
+            <div class="order-col"> <button>Buy Again</button></div>      
         </li>`;
             });
             return this.list;
