@@ -227,19 +227,16 @@ footer h2 {
   border-radius: 3px;
 }
 .color-area {
-  position: relative;
-  width: 212px;
-  white-space: nowrap;
+  display: block;
 }
-.color-area > button {
-  width: 25px;
-  display: inline-flex;
-  margin: 6% 6%;
-  height: 25px;
+.color-area li {
+  padding: 5px;
+}
+.color-area li button {
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
   border: none;
-  outline: none;
-  border-radius: 50%;
-  padding: 6px 12px;
 }
 input#quantity {
   margin: 2% 0;
@@ -403,22 +400,6 @@ input#number {
   .small-res {
     width: 25%;
     margin: auto;
-  }
-  .color-area {
-    overflow-x: scroll;
-    position: relative;
-    width: 212px;
-    white-space: nowrap;
-  }
-  .color-area > button {
-    width: 25px;
-    display: inline-flex;
-    margin: 6% 6%;
-    height: 25px;
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    padding: 6px 12px;
   }
   p.product-desc {
     font-size: 14px;
