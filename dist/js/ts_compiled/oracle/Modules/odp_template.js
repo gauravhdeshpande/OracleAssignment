@@ -10,10 +10,6 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                     let obj = this.quantitySteppers[qss[i]].qs;
                     obj.appendto(id);
                 }
-                // this.quantitySteppers.map=(el,id)=>{
-                //     console.log('Resolve all quantitiy steppers here',el,id);
-                // }
-                //this.qs.appendto('quanitityStepper');
             };
             this.productJson = products;
             this.backupJson = products;

@@ -28,8 +28,9 @@ class Template{
     getTemplate(){
         return `
     <form action="odp.html" id="productDetailForm">
-        <div class="container">
-            <div class="col">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-xs-12">
                 <img id="main-image" src="images/${this.activeImage}" alt="Product Image">
                 <div>
                     ${this.json.details.images.map((el)=>{
@@ -37,7 +38,7 @@ class Template{
                     }).join('')}
                 </div>
             </div>
-            <div class="col">
+            <div class="col-lg-6 col-xs-12">
                 <div class="product-title">
                     <h1>${this.json.name}</h1>
                     <p class="item-details">Item #:${this.json.id}</p>
@@ -71,6 +72,7 @@ class Template{
                     <h3>Overview</h3>
                     <p class="product-desc">${this.json.details.description}</p>
                 </div>
+            </div>
             </div>
         </div>
     </form>
