@@ -64,10 +64,12 @@ class Template{
                     }).join('')}
                     </ul>
                 </div>
-                <div id="quanitityStepper">
-                    <!-- Quantity Stepper -->
+                <div class="row">
+                    <div class="col-lg-4" id="quanitityStepper">
+                        <!-- Quantity Stepper -->
+                    </div>
+                    <input class="col-lg-4" type="submit" value="Add To Cart"/>
                 </div>
-                <input type="submit" value="Add To Cart"/>
                 <div>
                     <h3>Overview</h3>
                     <p class="product-desc">${this.json.details.description}</p>

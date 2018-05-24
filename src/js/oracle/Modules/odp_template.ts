@@ -38,7 +38,7 @@ class Template{
                 <span>${rating}</span>            
             </div>  
             <div class="col-lg-3" id=${qsid}></div>
-            <div class="col-lg-2"> <button class="primaryBtn">Buy Again</button></div>      
+            <div class="col-lg-2"> <button class="primaryBtn"><span>Buy Again</span></button></div>      
         </li>`});
         this.list += '</ul>';
         this.list += `
