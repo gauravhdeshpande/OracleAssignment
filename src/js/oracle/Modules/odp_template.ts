@@ -41,6 +41,28 @@ class Template{
             <div class="col-lg-2"> <button class="primaryBtn">Buy Again</button></div>      
         </li>`});
         this.list += '</ul>';
+        this.list += `
+            <table>
+                <tbody>
+                    <tr>
+                        <td><b>Subtotal</b></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b>Taxes</b></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b>Shipping<br/>Standard</b></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b>Promo<br/>SPRINGSHI</b></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
         this.list +=`<div class="reward-animation">
                    
 <svg viewBox="0 0 36 36" class="circular-chart">
