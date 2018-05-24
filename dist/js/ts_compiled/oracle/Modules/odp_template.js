@@ -23,7 +23,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
         getTemplate() {
             let rating;
             let pricing;
-            this.list = '';
+            this.list = '<ul class="row">';
             this.productJson.map((obj, index) => {
                 let qsid = 'qs_' + obj.id;
                 if (!this.quantitySteppers[obj.id]) {
@@ -50,6 +50,17 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             <div class="col-lg-2"> <button class="primaryBtn">Buy Again</button></div>      
         </li>`;
             });
+            this.list += '</ul>';
+            this.list += `<div class="reward-animation">
+                   
+<svg viewBox="0 0 36 36" class="circular-chart">
+  
+    <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
+        a 15.9155 15.9155 0 0 1 0 31.831
+        a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="10px" font-family="Open Sans" dy=".3em">75</text>
+  </svg>
+              </div> `;
             return this.list;
         }
         filterBy(brand, show) {

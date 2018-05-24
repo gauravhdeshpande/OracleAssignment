@@ -79,7 +79,7 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/odp_tem
             Ajax_1.default.getFromUrl('order-products', this.cart).then(this.ajaxSuccess, this.ajaxFail);
         }
         setTemplate() {
-            this.template = `<ul class="row">${this.templateObj.getTemplate()}</ul>`;
+            this.template = this.templateObj.getTemplate();
         }
     }
     exports.default = Odp;

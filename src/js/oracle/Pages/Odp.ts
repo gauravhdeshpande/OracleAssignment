@@ -68,7 +68,7 @@ filterHandler=(event)=>{
     
 }
 setTemplate(){
-    this.template=`<ul class="row">${this.templateObj.getTemplate()}</ul>`;
+    this.template=this.templateObj.getTemplate();
 }
 /**
  * 
