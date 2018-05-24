@@ -34,8 +34,11 @@ define(["require", "exports"], function (require, exports) {
         create() {
             this.inputElement = document.createElement("input");
             this.minus = document.createElement("button");
+            this.minus.setAttribute('class', 'minus');
             this.plus = document.createElement("button");
+            this.plus.setAttribute('class', 'plus');
             this.container = document.createElement("div");
+            this.container.setAttribute('class', 'qtyStpr');
         }
         addHtml() {
             this.minus.innerHTML = `-<span class="ax-hidden">Decrease quantity by 1<span>`;

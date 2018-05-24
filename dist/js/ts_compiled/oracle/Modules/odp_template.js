@@ -40,8 +40,9 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             ${obj.price.sale ? '' : "<span>&nbsp;</span>"}
         `;
                 this.list += `<li class="product-col" data-id="${obj.id}">
-            <a href="pdp.html?id=${obj.id}">
             <img src="images/${obj.image}"/>
+            <a href="pdp.html?id=${obj.id}">
+            
             <span class="product-details">${obj.name}</span>
             ${pricing}
             <span>${rating}</span>
