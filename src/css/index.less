@@ -1,171 +1,14 @@
-@font-family: 'Open Sans', sans-seriff;
-@weight_light: 300;
-@weight_regular: 400;
-@weight_light: 600;
-@heading-size: 1.2em;
-@text-size: 1em;
-@primary_color: #333333;
-@secondary_Color: #043c63;
-@leading: 1.5; 
-
-@color_links:#000;
-html {
-    font-family: @font-family;
-    line-height: @leading;
-	font-weight: @weight_regular;
-	font-size:16px;
-		h1{padding:10px;}
-		h2 {
-			position: relative;
-			font-size:1.2rem;
-			padding:0;
-			margin:0;
-		}
-		a{
-			text-decoration: none;
-			color:@color_links;
-		}
-		input[type="checkbox"]{
-			/*position: absolute;
-			opacity: 0;*/
-			width:20px;
-			height:20px;
-		}
-		input[type="checkbox"]+label{
-			
-		}
-		input[type="checkbox"]:checked{
-			/*background-color: tomato;
-			top: 0;
-			left: 0;
-			height: 25px;
-			width: 25px;*/
-		}
-		li{
-			display:inline-block;
-			vertical-align:top;
-		}
-		.color-area li{
-			padding:5px;
-		}
-		.color-area button{
-			width:26px;
-			height:26px;
-			border:1px solid #000;
-			border-radius:13px;
-		}
-		div{
-			//vertical-align:top;
-		}
-	}
-.ax-hidden{
-	text-indent: -9999px;
-	position:absolute;
-	left:0;
-	top:0;
-}
-.fa{color:#2e2e2e;}
-.fa.checked{color:rgb(201, 201, 8);}
-
-// Header / Footer Styles 
-
-@color_1: white;
-
-header {
-	width: 100%;
-	height: 100px;
-	background: black;
-	color: @color_1;
-	text-align: center;
-}
-footer {
-	width: 100%;
-	height: 100px;
-	background: black;
-	color: @color_1;
-	text-align: center;
-	h2 {
-		position: relative;
-		top: 2.8em;
-	}
-}
-// Breadcrumb
-
-@color_2:#043c63; 
-
-.breadcrumb {
-	margin: 3% 1%;
-	font-size: 14px;
-	a {
-		text-decoration: none;
-        color: @color_2;
-        text-decoration: none;
-		&:before {
-			content: "/";
-			margin-right: 10px;
-		}
-		&:nth-child(1) {
-			&::before {
-				content: "";
-			}
-		}
-	}
-}
-.hotPrice{
-	color:tomato;
-}
-.main-wrapper{
-	/*display: grid;
-	grid-template-columns: 33% 66%;
-	margin: 0% 5%;*/
-	
-	//grid-template-rows: 50px 50px;
-	.col{
-		padding:10px 10px;
-		h2{
-			padding-bottom: 10px;
-		}
-		form.brand-section{
-			padding:10px 0 0 0;
-		}
-	}
-	a{
-		span{
-			display:block;
-		}
-	}
-	.product-group-heading{
-		background:#9c9c9c;
-		padding:10px;
-		grid-template-columns: 33% 66%;
-		.heading{
-			display:inline-block;
-		}
-		form{
-			display:inline-block;
-			float:right;
-			margin:-5px 0 0 0;
-		}
-	}
-	#plp-listing{
-		li{
-			width:20%;
-			padding:2%;
-		}
-	}
-	
-}
+@color_1: #000;
+@color_2: #2e2e2e;
+@color_3: #c9c908;
+@color_4: white;
+@color_5: #043c63;
+@color_6: tomato;
+@font_family_1: 'Open Sans', sans-seriff;
 
 /*
 	PDP Page
 */
-#pdp{
-	.col{
-		width:47%;
-		display:inline-block;
-		vertical-align:top;
-	}
-}
 /*
 .row{
 	display:inline-block;
@@ -207,3 +50,132 @@ form.sort{
 	}
 }
 */
+html {
+	font-family: @font_family_1;
+	line-height: 1.5;
+	font-weight: 400;
+	font-size: 16px;
+	h1 {
+		padding: 10px;
+	}
+	h2 {
+		position: relative;
+		font-size: 1.2rem;
+		padding: 0;
+		margin: 0;
+	}
+	a {
+		text-decoration: none;
+		color: @color_1;
+	}
+	input[type="checkbox"] {
+		width: 20px;
+		height: 20px;
+	}
+	li {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.color-area {
+		li {
+			padding: 5px;
+		}
+		button {
+			width: 26px;
+			height: 26px;
+			border: 1px solid #000;
+			border-radius: 13px;
+		}
+	}
+}
+.ax-hidden {
+	text-indent: -9999px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.fa {
+	color: @color_2;
+}
+.fa.checked {
+	color: @color_3;
+}
+header {
+	width: 100%;
+	height: 100px;
+	background: black;
+	color: @color_4;
+	text-align: center;
+}
+footer {
+	width: 100%;
+	height: 100px;
+	background: black;
+	color: @color_4;
+	text-align: center;
+	h2 {
+		position: relative;
+		top: 2.8em;
+	}
+}
+.breadcrumb {
+	margin: 3% 1%;
+	font-size: 14px;
+	a {
+		color: @color_5;
+		text-decoration: none;
+		&:before {
+			content: "/";
+			margin-right: 10px;
+		}
+		&:nth-child(1) {
+			&::before {
+				content: "";
+			}
+		}
+	}
+}
+.hotPrice {
+	color: @color_6;
+}
+.main-wrapper {
+	.col {
+		padding: 10px 10px;
+		h2 {
+			padding-bottom: 10px;
+		}
+		form.brand-section {
+			padding: 10px 0 0 0;
+		}
+	}
+	a {
+		span {
+			display: block;
+		}
+	}
+	.product-group-heading {
+		background: #9c9c9c;
+		padding: 10px;
+		grid-template-columns: 33% 66%;
+		.heading {
+			display: inline-block;
+		}
+		form {
+			float: right;
+			margin: -5px 0 0 0;
+		}
+	}
+	#plp-listing {
+		li {
+			width: 20%;
+			padding: 2%;
+		}
+	}
+}
+#pdp {
+	.col {
+		width: 47%;
+		display: inline-block;
+		vertical-align: top;
+	}
+}

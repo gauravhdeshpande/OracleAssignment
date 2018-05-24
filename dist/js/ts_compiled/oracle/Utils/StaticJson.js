@@ -105,6 +105,32 @@ define(["require", "exports"], function (require, exports) {
                     sizes: ['small', 'medium', 'large', 'xtra large'],
                     description: 'Lorem Ipsum for 2'
                 }
+            },
+            {
+                id: "5",
+                name: "Adidas Outdoor Men's Caprock Trail Hiking Shoes",
+                image: "product-image_1.png",
+                brand: "Gogri",
+                price: {
+                    currency: "$",
+                    sellingPrice: "2499.00",
+                    discountedPrice: "2960.99",
+                    sale: true,
+                    low: "1548.00",
+                    high: "1230.00"
+                },
+                rating: 2,
+                details: {
+                    title: 'Product Title 2',
+                    images: [
+                        "couch_lg_0.jpg",
+                        "couch_sm_1.jpg",
+                        "couch_sm_0.jpg"
+                    ],
+                    colors: ['red', 'green', 'blue'],
+                    sizes: ['small', 'medium', 'large', 'xtra large'],
+                    description: 'Lorem Ipsum for 2'
+                }
             }
         ],
         colorCodes: [
