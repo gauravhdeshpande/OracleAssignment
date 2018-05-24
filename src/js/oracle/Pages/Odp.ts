@@ -19,9 +19,9 @@ class Odp extends BasePage{
         this.setTemplate();
         this.render();
         this.templateObj.resovePostRender();
-        this.setupFiltersOnHtml();
+        //this.setupFiltersOnHtml();
         document.getElementById('sortby').addEventListener("change",this.sortHandler);
-        document.getElementById('filterby').addEventListener('change',this.filterHandler);
+        //document.getElementById('filterby').addEventListener('change',this.filterHandler);
     }
     ajaxFail=(err)=>{
 
@@ -29,22 +29,22 @@ class Odp extends BasePage{
 /**
  * 
  */
-setupFiltersOnHtml(){
-    let filters = {};
-    this.productJson.map((el)=>{
-        filters[el.brand] = filters[el.brand]?Number(filters[el.brand] + 1):1;
-    });
-    document.getElementById('filterby').innerHTML = '';
+// setupFiltersOnHtml(){
+//     let filters = {};
+//     this.productJson.map((el)=>{
+//         filters[el.brand] = filters[el.brand]?Number(filters[el.brand] + 1):1;
+//     });
+//     document.getElementById('filterby').innerHTML = '';
 
-    //Populate Brand Filters. 
-    for(let k in filters){
-        document.getElementById('filterby').innerHTML += `
-        <p><input checked="true" id="${k}" value="${k}" type="checkbox">
-        <label for="${k}"><span class="ax-hidden">Brand Name:</span>${k}</label>
-        </p>
-        `;
-    }
-}
+//     //Populate Brand Filters. 
+//     for(let k in filters){
+//         document.getElementById('filterby').innerHTML += `
+//         <p><input checked="true" id="${k}" value="${k}" type="checkbox">
+//         <label for="${k}"><span class="ax-hidden">Brand Name:</span>${k}</label>
+//         </p>
+//         `;
+//     }
+// }
 sortHandler=(event)=>{
     switch(event.target.getAttribute('id')){
         case 'select-sort':
