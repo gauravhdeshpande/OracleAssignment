@@ -482,3 +482,8 @@ input#number {
     width: 23%;
   }
 }
+.color-area label {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
