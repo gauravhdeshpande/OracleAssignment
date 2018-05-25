@@ -23,7 +23,7 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/pdp_tem
                     default:
                         break;
                 }
-                if (event.target.getAttribute('type') != "submit") {
+                if (event.target.getAttribute('type') != "submit" && event.target.getAttribute('type') != "radio") {
                     event.preventDefault();
                     event.stopPropagation();
                 }
