@@ -1,4 +1,7 @@
 /* PDP for Desktop  */
+.odp_img {
+  width: 100%;
+}
 .qtyStpr input {
   width: 45px;
   height: 34px;
