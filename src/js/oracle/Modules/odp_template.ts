@@ -35,9 +35,9 @@ class Template{
             }
         rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`,0,obj.rating).join('')+`(${obj.rating})`;
         pricing = `
-            <del>${obj.price.currency+' '+obj.price.sellingPrice}</del>
-            <span>${obj.price.currency+' '+obj.price.discountedPrice}</span>
-            <span class="${obj.price.sale?'hotPrice':''}">${obj.price.currency+' '+obj.price.low} - ${obj.price.high} ${obj.price.sale?'SALE':''}</span>
+            <del>${obj.price.currency+' '+obj.price.sellingPrice}</del><br/>
+            <span>${obj.price.currency+' '+obj.price.discountedPrice}</span><br/>
+            <span class="${obj.price.sale?'hotPrice':''}">${obj.price.sale?'SALE':''} ${obj.price.currency+' '+obj.price.low} - ${obj.price.high}</span><br/>
             ${obj.price.sale?'':"<span>&nbsp;</span>"}
         `;
         this.templateHtml+=`<li class="col-lg-12 row" data-id="${obj.id}">
@@ -62,26 +62,38 @@ class Template{
     <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="10px" font-family="Open Sans" dy=".3em">${this.orderDetails.percentage}</text>
   </svg>
 </div>
-        <table class="col-lg-6">
+<div class="col-lg-2">
+            <h2>Payment Method</h2>
+            <div><img class="visaImage" src="images/Visa-icon.png"><p>0123456789ABCDEF</p></div>
+            
+</div>
+<div class="col-lg-4">
+        <table>
         <tbody>
-            <tr>
+            <tr class="subtotal">
                 <td><b>Subtotal</b></td>
-                <td></td>
+                <td>$123.00</td>
             </tr>
-            <tr>
+            <tr class="taxes">
                 <td><b>Taxes</b></td>
-                <td></td>
+                <td>$123.00</td>
             </tr>
-            <tr>
+            <tr class="shipping">
                 <td><b>Shipping<br/>Standard</b></td>
-                <td></td>
+                <td>$123.00</td>
             </tr>
-            <tr>
+            <tr class="promo">
                 <td><b>Promo<br/>SPRINGSHI</b></td>
-                <td></td>
+                <td>$123.00</td>
+            </tr>
+            
+            <tr class="total">
+                <td><b>Total</b></td>
+                <td>$123.00</td>
             </tr>
         </tbody>
     </table>
+    </div>
     `;
       
         return this.templateHtml;
