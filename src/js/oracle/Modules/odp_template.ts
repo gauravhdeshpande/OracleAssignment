@@ -36,8 +36,9 @@ class Template{
         <div id="orderNumber">
             <p><b>Ordder Number</b></p>
             <p>${Math.ceil(Math.random()*1000000000000)}</p>
-            <p><b>Ordder Date</b></p>
+            <p><b>Order Date</b></p>
             <p>${new Date().toDateString()}</p>
+            <p><b>Total </b><span id="top-total"></span></p>
         </div>
         <ul class="container-fluid">`;
         this.productJson.map((obj,index)=>{
@@ -64,7 +65,7 @@ class Template{
                 <span>${rating}</span>            
             </div>  
             <div class="col-lg-3 col-xs-6" id=${qsid}></div>
-            <div class="col-lg-2 col-xs-6"> <button class="primaryBtn"><span>Buy Again</span></button><p>Current Price ${obj.price.currency+' '+obj.price.sellingPrice}</p></div>      
+            <div class="col-lg-2 col-xs-6"> <a class="primaryBtn buyAgain" href="pdp.html?id=${obj.id}">Buy Again</a><p>Current Price ${obj.price.currency+' '+obj.price.sellingPrice}</p></div>      
         </li>`});
         this.templateHtml += '</ul>';
         let priceTable = document.getElementById('final-price');
@@ -129,17 +130,22 @@ class Template{
         this.updateTable();
     }
     clickHanlder=(event)=>{
-        if(event.target.getAttribute('class') == "minus" || event.target.getAttribute('class') == "plus"){
-            Object.keys(this.quantitySteppers).forEach((element)=>{
-                let obj = this.quantitySteppers[element];
-                this.productJson.map((el)=>{
-                    if (el.id == obj.id){
-                        el.quantity = obj.qs.count.value;
-                    }
-                })
-            });
+        switch(event.target.getAttribute('class')){
+            case "minus":
+            case "plus":
+                Object.keys(this.quantitySteppers).forEach((element)=>{
+                    let obj = this.quantitySteppers[element];
+                    this.productJson.map((el)=>{
+                        if (el.id == obj.id){
+                            el.quantity = obj.qs.count.value;
+                        }
+                    })
+                });
+                this.updateTable();
+            break;
+            default:
+            break;
         }
-        this.updateTable();
     }
     updateTable=()=>{
         let grandTotal = 0;
@@ -170,6 +176,7 @@ class Template{
         grandTotal -= promo;
 
         this.total.innerText = this.currency+grandTotal;
+        document.getElementById('top-total').innerText = this.currency+grandTotal;
     }
     // filterBy(brand:string,show:boolean){
     //     if(!show){
