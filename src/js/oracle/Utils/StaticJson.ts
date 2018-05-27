@@ -121,7 +121,9 @@ const parentJson = {
     ],
     orderDetails:{
         percentage:20,
-        taxPercentage:2
+        taxPercentage:20,
+        shippingPercentage:2,
+        promoAmount:50
     }
 }
 export default parentJson;

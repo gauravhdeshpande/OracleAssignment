@@ -10,6 +10,48 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                     let obj = this.quantitySteppers[qss[i]].qs;
                     obj.appendto(id);
                 }
+                this.subtotal = document.querySelectorAll('tr.subtotal td')[1];
+                this.taxes = document.querySelectorAll('tr.taxes td')[1];
+                this.shipping = document.querySelectorAll('tr.shipping td')[1];
+                this.promo = document.querySelectorAll('tr.promo td')[1];
+                this.total = document.querySelectorAll('tr.total td')[1];
+                this.updateTable();
+            };
+            this.clickHanlder = (event) => {
+                if (event.target.getAttribute('class') == "minus" || event.target.getAttribute('class') == "plus") {
+                    Object.keys(this.quantitySteppers).forEach((element) => {
+                        let obj = this.quantitySteppers[element];
+                        this.productJson.map((el) => {
+                            if (el.id == obj.id) {
+                                el.quantity = obj.qs.count.value;
+                            }
+                        });
+                    });
+                }
+                this.updateTable();
+            };
+            this.updateTable = () => {
+                let grandTotal = 0;
+                let cost;
+                let shipping;
+                let promo;
+                let taxes;
+                let temp;
+                cost = this.productJson.reduce((a, b) => {
+                    return Number(a.quantity) * Number(a.price.sellingPrice) + Number(b.quantity) * Number(b.price.sellingPrice);
+                });
+                this.subtotal.innerText = this.currency + cost.toFixed(2);
+                grandTotal = cost;
+                taxes = Number(cost * this.orderDetails.taxPercentage / 100);
+                this.taxes.innerText = this.currency + taxes.toFixed(2);
+                grandTotal += taxes;
+                shipping = Number(cost * this.orderDetails.shippingPercentage / 100);
+                this.shipping.innerText = this.currency + shipping.toFixed(2);
+                grandTotal += shipping;
+                promo = Number(this.orderDetails.promoAmount).toFixed(2);
+                this.promo.innerText = this.currency + promo;
+                grandTotal -= promo;
+                this.total.innerText = this.currency + grandTotal;
             };
             this.productJson = products;
             this.backupJson = products;
@@ -22,17 +64,27 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 y: (this.box - 30) / 2
             };
             this.orderDetails = od;
+            this.currency = this.productJson[0].price.currency;
+            document.getElementById('odp-listing').addEventListener('click', this.clickHanlder);
         }
         getTemplate() {
             let rating;
             let pricing;
-            this.templateHtml = '<ul class="container-fluid">';
+            this.templateHtml = `
+        <div id="orderNumber">
+            <p><b>Ordder Number</b></p>
+            <p>${Math.ceil(Math.random() * 1000000000000)}</p>
+            <p><b>Ordder Date</b></p>
+            <p>${new Date().toDateString()}</p>
+        </div>
+        <ul class="container-fluid">`;
             this.productJson.map((obj, index) => {
                 let qsid = 'qs_' + obj.id;
                 if (!this.quantitySteppers[obj.id]) {
                     this.quantitySteppers[obj.id] = {
                         qs: new CommonComponents_1.QuantityStepper(obj.quantity),
-                        parent: qsid
+                        parent: qsid,
+                        id: obj.id
                     };
                 }
                 rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`, 0, obj.rating).join('') + `(${obj.rating})`;
@@ -50,7 +102,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 <span>${rating}</span>            
             </div>  
             <div class="col-lg-3 col-xs-6" id=${qsid}></div>
-            <div class="col-lg-2 col-xs-6"> <button class="primaryBtn"><span>Buy Again</span></button></div>      
+            <div class="col-lg-2 col-xs-6"> <button class="primaryBtn"><span>Buy Again</span></button><p>Current Price ${obj.price.currency + ' ' + obj.price.sellingPrice}</p></div>      
         </li>`;
             });
             this.templateHtml += '</ul>';
