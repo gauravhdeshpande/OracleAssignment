@@ -31,19 +31,10 @@ class Template{
         
         return this.list;
     }
-    filterBy(brand:string,show:boolean){
-        if(!show){
-            this.productJson = this.productJson.filter(function(a){
-                if(a.brand == brand) {return show;}
-                return true;
-            });
-        }
-        else{
-            this.productJson = this.productJson.concat(this.backupJson.filter(function(a){
-                if(a.brand == brand) {return true;}
-                return false;
-            }));
-        }
+    filterBy(flags){
+        this.productJson = this.backupJson.filter(function(a){
+            return flags[a.brand];
+        });
         this.sortyBy(this.activeSort); 
     }
     sortyBy(param){

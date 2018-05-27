@@ -10,7 +10,32 @@ class Plp extends BasePage{
         this.setContainer('plp-listing');
         document.getElementById('sortby').addEventListener("change",this.sortHandler);
         document.getElementById('filterby').addEventListener('change',this.filterHandler);
+        document.getElementById('brandOnMobile').addEventListener('change',this.filterHandler);
+        document.getElementById('hamburger').addEventListener('click',this.clickHandler);
+        
         ajax.getFromUrl('/Products').then(this.ajaxSuccess,this.ajaxFailure);
+    }
+    clickHandler=(event)=>{
+        switch(event.target.getAttribute('name')){
+            case 'brand':
+
+            case 'price':
+
+            return;
+            case 'toggler':
+                //get Sibling ul
+                let sibling = event.target.nextElementSibling;
+                if(sibling.className.match(/active/gi)){
+                    sibling.removeAttribute('class');
+                }
+                else{
+                    sibling.className += 'active';
+                }
+                event.preventDefault();
+                event.stopPropagation();
+            default:
+            break;
+        }
     }
     ajaxSuccess=(data:any)=>{
         this.productJson = data;
@@ -28,13 +53,16 @@ class Plp extends BasePage{
             filters[el.brand] = filters[el.brand]?Number(filters[el.brand] + 1):1;
         });
         document.getElementById('filterby').innerHTML = '';
-
+        document.getElementById('brandOnMobile').innerHTML = '';
         //Populate Brand Filters. 
         for(let k in filters){
             document.getElementById('filterby').innerHTML += `
-            <p><input checked="true" id="${k}" value="${k}" type="checkbox">
+            <li><input checked="true" id="${k}" value="${k}" type="checkbox">
             <label for="${k}"><span class="ax-hidden">Brand Name:</span>${k}</label>
-            </p>
+            </li>
+            `;
+            document.getElementById('brandOnMobile').innerHTML += `
+            <li><input checked="true" id="mobile${k}" type="checkbox" value="${k}" name="brand"><label for="mobile${k}"><span class="ax-hidden">Brand Name:</span>${k}</label></li>
             `;
         }
     }
@@ -52,11 +80,31 @@ class Plp extends BasePage{
         
     }
     filterHandler=(event)=>{
-        if(event.target.getAttribute('type')=='checkbox'){
+        let flags={};
+        let checkboxes;
+        let noos = 0;
+        checkboxes  = event.target.closest('ul').querySelectorAll('input[type="checkbox"]');
+        
+        checkboxes.forEach(element => {
+            flags[element.getAttribute('value')] = element.checked;
+            if(!element.checked) ++noos;
+        });
+
+        if(checkboxes.length == noos){
+            checkboxes.forEach(element => {
+                flags[element.getAttribute('value')] = true;
+                element.checked = true;
+                element.setAttribute('checked',true);
+            });
+        }
+        this.productToner.filterBy(flags);
+        this.setTemplate();
+        this.render();
+        /*if(event.target.getAttribute('type')=='checkbox'){
             this.productToner.filterBy(event.target.getAttribute('value'),event.target.checked);
             this.setTemplate();
             this.render();
-        }
+        }*/
         
     }
     setTemplate(){
