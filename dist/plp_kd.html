@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- Font Awesome  -->
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/normalize.min.css">
+      <link rel="stylesheet" href="css/customflex.css">
+      <link rel="stylesheet" href="css/index.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script data-main="js/ts_compiled/Main_Oracle" src="js/require.js" type="text/javascript"></script>
+      <title> PLP Page</title>
+   </head>
+   <body>
+      <!--  Header  -->
+      <header>
+         <h2>Header</h2>
+      </header>
+      <!-- / Header -->
+      <!--  Breadcrumb -->
+      <div class="container-fluid">
+          <div class="row">
+         <div class="breadcrumb">
+            <a href="#">Exchange</a>
+            <a href="#">Shoes</a>
+            <a href="#">Athletic Shoes</a>
+            <a href="#" class="active-link">Men's Athletic Shoes</a>            
+         </div>
+        </div>
+      </div>
+      <!--  Content Area  -->
+      <div id="hamburger">
+        <a href="#" name="toggler">Filter Products</a>
+        <ul id="optionList">
+            <li>
+                <a href="#" name="toggler">Categories</a>
+                <ul>
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" name="toggler">Brand</a>
+                <ul id="brandOnMobile" class="filterByBrand">
+                    <li><input type="checkbox" value="1" name="brand"><label>Brand name 1</label></li>
+                    <li><input type="checkbox" value="2" name="brand"><label>Brand name 2</label></li>
+                    <li><input type="checkbox" value="3" name="brand"><label>Brand name 3</label></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" name="toggler">Price</a>
+                <ul>
+                    <li><input type="checkbox" value="1" name="price"><label>Price Range 1</label></li>
+                    <li><input type="checkbox" value="2" name="price"><label>Price Range 2</label></li>
+                    <li><input type="checkbox" value="3" name="price"><label>Price Range 3</label></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" name="toggler">Rating</a>
+                <ul>
+                    <li><input type="checkbox" value="1" name="rating"><label>1 Star</label></li>
+                    <li><input type="checkbox" value="2" name="rating"><label>2 Star</label></li>
+                    <li><input type="checkbox" value="3" name="rating"><label>3 Star</label></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+            <div class="row">
+                  <h1>Men's Athletic Shoes</h1>
+            </div>
+        </div>
+      <!--  Aside Section - Filter Nav Begin -->
+      <div class="main-wrapper">
+          <div class="container-fluid">
+              <div class="row">
+                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <!--  Department Section Begin  -->
+                            <h2>Department</h2>
+                            <ul class="department-section">
+                                <li><a href="#"> Running </a></li>
+                                <li><a href="#"> Cleats </a></li>
+                            </ul>
+                            <!--  Brand Section Begin -->
+                            <form class="brand-section"></form>
+                            <h2>Brand</h2>
+                            <ul id="filterby" class="filterByBrand">
+                                
+                            </ul>
+                            <div>
+                                <a href="#" name="toggler">Price</a>
+                                <ul>
+                                    <li><input type="checkbox" value="1" name="price"><label>Price Range 1</label></li>
+                                    <li><input type="checkbox" value="2" name="price"><label>Price Range 2</label></li>
+                                    <li><input type="checkbox" value="3" name="price"><label>Price Range 3</label></li>
+                                </ul>
+                            </div>                    
+                            </form>
+                            
+                        </div>
+                      <!--  Aside Section - Filter Nav End -->
+                      <!-- Main Content Area - PLP  -->
+                        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                            <div class="product-group-heading">
+                                <div class="heading">
+                                    <p>Viewing 1-24 of 24</p>
+                                </div>
+                                <form id="sortby">
+                                    <label class="ax-hidden">Sort</label>
+                                    <select name="Recommended" id="select-sort">
+                                        <option value="" selected disabled hidden>Choose here</option>
+                                        <option value="A-Z">A-Z</option>
+                                        <option value="Z-A">Z-A</option>
+                                        <option value="price-lh">Price - Low to High</option>
+                                        <option value="price-hl">Price - Hight to Low</option>
+                                        <option value="rated-hl">Highest Rated First</option>
+                                    </select>
+                                </form>
+                            </div>
+                
+                            <section id="plp-listing"></section>
+                        </div>
+                    </div>
+                
+              </div>
+          </div>
+      <!-- Footer -->
+      <footer>
+         <h2>Footer</h2>
+      </footer>
+   </body>
+</html>
