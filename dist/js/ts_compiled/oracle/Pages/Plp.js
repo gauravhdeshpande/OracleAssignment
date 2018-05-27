@@ -45,21 +45,31 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/plp_tem
                 this.render();
             };
             this.filterHandler = (event) => {
-                let flags = {};
+                let flags = {
+                    brand: {}
+                };
                 let checkboxes;
                 let noos = 0;
-                checkboxes = event.target.closest('ul').querySelectorAll('input[type="checkbox"]');
-                checkboxes.forEach(element => {
-                    flags[element.getAttribute('value')] = element.checked;
-                    if (!element.checked)
-                        ++noos;
-                });
-                if (checkboxes.length == noos) {
-                    checkboxes.forEach(element => {
-                        flags[element.getAttribute('value')] = true;
-                        element.checked = true;
-                        element.setAttribute('checked', true);
-                    });
+                let relation;
+                relation = event.target.closest('ul');
+                switch (relation.className) {
+                    case 'filterByBrand':
+                        checkboxes = event.target.closest('ul').querySelectorAll('input[type="checkbox"]');
+                        checkboxes.forEach(element => {
+                            flags.brand[element.getAttribute('value')] = element.checked;
+                            if (!element.checked)
+                                ++noos;
+                        });
+                        if (checkboxes.length == noos) {
+                            checkboxes.forEach(element => {
+                                flags.brand[element.getAttribute('value')] = true;
+                                element.checked = true;
+                                element.setAttribute('checked', true);
+                            });
+                        }
+                        break;
+                    default:
+                        break;
                 }
                 this.productToner.filterBy(flags);
                 this.setTemplate();

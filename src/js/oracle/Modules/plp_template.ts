@@ -33,7 +33,7 @@ class Template{
     }
     filterBy(flags){
         this.productJson = this.backupJson.filter(function(a){
-            return flags[a.brand];
+            return flags.brand[a.brand];
         });
         this.sortyBy(this.activeSort); 
     }
