@@ -5,14 +5,18 @@ import Template from '../Modules/plp_template'
 class Plp extends BasePage{
     productJson:any;
     productToner;
+    filterFlags;
     constructor(args){
         super(args);
         this.setContainer('plp-listing');
+        this.filterFlags = {
+            brands:{},
+            ratings:{}
+        };
         document.getElementById('sortby').addEventListener("change",this.sortHandler);
-        document.getElementById('filterby').addEventListener('change',this.filterHandler);
-        document.getElementById('brandOnMobile').addEventListener('change',this.filterHandler);
+       
         document.getElementById('hamburger').addEventListener('click',this.clickHandler);
-        
+    
         ajax.getFromUrl('/Products').then(this.ajaxSuccess,this.ajaxFailure);
     }
     clickHandler=(event)=>{
@@ -26,10 +30,10 @@ class Plp extends BasePage{
                 //get Sibling ul
                 let sibling = event.target.nextElementSibling;
                 if(sibling.className.match(/active/gi)){
-                    sibling.removeAttribute('class');
+                    sibling.className = sibling.className.replace(/active/gi,'');
                 }
                 else{
-                    sibling.className += 'active';
+                    sibling.className += ' active';
                 }
                 event.preventDefault();
                 event.stopPropagation();
@@ -49,28 +53,54 @@ class Plp extends BasePage{
     }
     setupFiltersOnHtml(){
         let filters = {};
+        let ul = document.querySelectorAll('ul.filterByBrand');
+        let li = '';
         this.productJson.map((el)=>{
             filters[el.brand] = filters[el.brand]?Number(filters[el.brand] + 1):1;
         });
-        document.getElementById('filterby').innerHTML = '';
-        document.getElementById('brandOnMobile').innerHTML = '';
-        //Populate Brand Filters. 
+        //Populate brand filter options
         for(let k in filters){
-            document.getElementById('filterby').innerHTML += `
+            li += `
             <li><input checked="true" id="${k}" value="${k}" type="checkbox">
             <label for="${k}"><span class="ax-hidden">Brand Name:</span>${k}</label>
             </li>
             `;
-            document.getElementById('brandOnMobile').innerHTML += `
-            <li><input checked="true" id="mobile${k}" type="checkbox" value="${k}" name="brand"><label for="mobile${k}"><span class="ax-hidden">Brand Name:</span>${k}</label></li>
+        }
+        for(let i=0; i < ul.length; i++){
+            ul[i].innerHTML = li;
+            ul[i].addEventListener('change',this.filterHandler);
+        }
+
+        ul = document.querySelectorAll('ul.filterByRating');
+        li = '';
+        for(let k of [1,2,3,4,5]){
+            li += `
+            <li><input checked="true" id="rate${k}" value="${k}" type="checkbox">
+            <label for="rate${k}"><span class="ax-hidden">Rating:</span>${k}</label>
+            </li>
             `;
         }
+        for(let i=0; i < ul.length; i++){
+            ul[i].innerHTML = li;
+            ul[i].addEventListener('change',this.filterHandler);
+        }
+        //Populate Brand Filters. 
+        // for(let k in filters){
+        //     document.getElementById('brandFilter').innerHTML += `
+        //     <li><input checked="true" id="${k}" value="${k}" type="checkbox">
+        //     <label for="${k}"><span class="ax-hidden">Brand Name:</span>${k}</label>
+        //     </li>
+        //     `;
+        //     document.getElementById('brandOnMobile').innerHTML += `
+        //     <li><input checked="true" id="mobile${k}" type="checkbox" value="${k}" name="brand"><label for="mobile${k}"><span class="ax-hidden">Brand Name:</span>${k}</label></li>
+        //     `;
+        // }
+        
     }
     sortHandler=(event)=>{
         switch(event.target.getAttribute('id')){
             case 'select-sort':
                 this.productToner.sortyBy(event.target.value);
-                
             break;
             default:
             break;
@@ -80,37 +110,51 @@ class Plp extends BasePage{
         
     }
     filterHandler=(event)=>{
-        let flags={
-            brand:{}
-        };
+        
+        
         let checkboxes;
         let noos = 0;
         let relation;
         relation = event.target.closest('ul');
         switch(relation.className){
             case 'filterByBrand':
+            case 'filterByBrand active':
+                let brands = {}
                 checkboxes  = event.target.closest('ul').querySelectorAll('input[type="checkbox"]');
                 checkboxes.forEach(element => {
-                    flags.brand[element.getAttribute('value')] = element.checked;
+                    brands[element.getAttribute('value')] = element.checked;
                     if(!element.checked) ++noos;
                 });
                 if(checkboxes.length == noos){
                     checkboxes.forEach(element => {
-                        flags.brand[element.getAttribute('value')] = true;
+                        brands[element.getAttribute('value')] = true;
                         element.checked = true;
                         element.setAttribute('checked',true);
                     });
                 }
+                this.filterFlags.brand = brands;
             break;
+            case 'filterByRating':
+            case 'filterByRating active':
+                let ratings = {};
+                checkboxes  = event.target.closest('ul').querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(element => {
+                    ratings[element.getAttribute('value')] = element.checked;
+                    if(!element.checked) ++noos;
+                });
+                if(checkboxes.length == noos){
+                    checkboxes.forEach(element => {
+                        ratings[element.getAttribute('value')] = true;
+                        element.checked = true;
+                        element.setAttribute('checked',true);
+                    });
+                }
+                this.filterFlags.ratings = ratings;
             default:
             break;
         }
         
-        
-        
-
-        
-        this.productToner.filterBy(flags);
+        this.productToner.filterBy(this.filterFlags);
         this.setTemplate();
         this.render();
         /*if(event.target.getAttribute('type')=='checkbox'){

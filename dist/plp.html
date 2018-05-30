@@ -36,14 +36,6 @@
         <a href="#" name="toggler">Filter Products</a>
         <ul id="optionList">
             <li>
-                <a href="#" name="toggler">Categories</a>
-                <ul>
-                    <li><a href="#">Category 1</a></li>
-                    <li><a href="#">Category 2</a></li>
-                    <li><a href="#">Category 3</a></li>
-                </ul>
-            </li>
-            <li>
                 <a href="#" name="toggler">Brand</a>
                 <ul id="brandOnMobile" class="filterByBrand">
                     <li><input type="checkbox" value="1" name="brand"><label>Brand name 1</label></li>
@@ -52,16 +44,8 @@
                 </ul>
             </li>
             <li>
-                <a href="#" name="toggler">Price</a>
-                <ul>
-                    <li><input type="checkbox" value="1" name="price"><label>Price Range 1</label></li>
-                    <li><input type="checkbox" value="2" name="price"><label>Price Range 2</label></li>
-                    <li><input type="checkbox" value="3" name="price"><label>Price Range 3</label></li>
-                </ul>
-            </li>
-            <li>
                 <a href="#" name="toggler">Rating</a>
-                <ul>
+                <ul  id="ratingOnMobile" class="filterByRating">
                     <li><input type="checkbox" value="1" name="rating"><label>1 Star</label></li>
                     <li><input type="checkbox" value="2" name="rating"><label>2 Star</label></li>
                     <li><input type="checkbox" value="3" name="rating"><label>3 Star</label></li>
@@ -78,23 +62,20 @@
       <div class="main-wrapper">
           <div class="container-fluid">
               <div class="row">
-                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                            <!--  Department Section Begin  -->
-                            <h2>Department</h2>
-                            <ul class="department-section">
-                                <li><a href="#"> Running </a></li>
-                                <li><a href="#"> Cleats </a></li>
-                            </ul>
+                    <ul class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                             <!--  Brand Section Begin -->
-                            <form class="brand-section">
-                            <h2>Brand</h2>
-                            <ul id="filterby" class="filterByBrand">
+                            <li>
+                                <h2>Brand</h2>
+                                <ul id="brandFilter" class="filterByBrand">
                                 
-                            </ul>
-                                                          
-                            </form>
-                            
-                        </div>
+                                </ul>
+                            </li> 
+                            <li>
+                                <h2>Rate</h2>
+                                <ul  id="rateFilter" class="filterByRating">
+                                </ul> 
+                            </li> 
+                        </ul>
                       <!--  Aside Section - Filter Nav End -->
                       <!-- Main Content Area - PLP  -->
                         <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
