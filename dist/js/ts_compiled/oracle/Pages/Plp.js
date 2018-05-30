@@ -27,6 +27,7 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/plp_tem
             this.ajaxSuccess = (data) => {
                 this.productJson = data;
                 this.productToner = new plp_template_1.default(data);
+                this.productToner.filterBy(this.filterFlags);
                 this.setTemplate();
                 this.render();
                 this.setupFiltersOnHtml();
@@ -98,10 +99,7 @@ define(["require", "exports", "./BasePage", "../Utils/Ajax", "../Modules/plp_tem
                 }*/
             };
             this.setContainer('plp-listing');
-            this.filterFlags = {
-                brands: {},
-                ratings: {}
-            };
+            this.filterFlags = {};
             document.getElementById('sortby').addEventListener("change", this.sortHandler);
             document.getElementById('hamburger').addEventListener('click', this.clickHandler);
             Ajax_1.default.getFromUrl('/Products').then(this.ajaxSuccess, this.ajaxFailure);

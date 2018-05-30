@@ -9,10 +9,7 @@ class Plp extends BasePage{
     constructor(args){
         super(args);
         this.setContainer('plp-listing');
-        this.filterFlags = {
-            brands:{},
-            ratings:{}
-        };
+        this.filterFlags = {};
         document.getElementById('sortby').addEventListener("change",this.sortHandler);
        
         document.getElementById('hamburger').addEventListener('click',this.clickHandler);
@@ -44,6 +41,7 @@ class Plp extends BasePage{
     ajaxSuccess=(data:any)=>{
         this.productJson = data;
         this.productToner = new Template(data);
+        this.productToner.filterBy(this.filterFlags);
         this.setTemplate();
         this.render();
         this.setupFiltersOnHtml();

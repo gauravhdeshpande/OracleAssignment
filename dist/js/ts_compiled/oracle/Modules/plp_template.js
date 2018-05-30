@@ -32,7 +32,11 @@ define(["require", "exports"], function (require, exports) {
         }
         filterBy(flags) {
             this.productJson = this.backupJson.filter(function (a) {
-                return flags.brand[a.brand];
+                if (flags.brand && !flags.brand[a.brand])
+                    return false;
+                if (flags.ratings && !flags.ratings[a.rating])
+                    return false;
+                return true;
             });
             this.sortyBy(this.activeSort);
         }
