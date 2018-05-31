@@ -45,7 +45,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 </div>
                 <div class="btn-size">
                 <p>Size: <span id="selected"></span></p>
-                <ul>
+                <ul class="btn-ul">
                     ${this.json.details.sizes.map((el, id) => {
                 console.log(el, id);
                 return '<li><input id="radio' + id + '" value="' + el + '" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="customRadio" for="radio' + id + '">' + el.substr(0, 1) + '<span class="ax-hidden">' + el.substr(1) + '</span></label></li>';
@@ -53,9 +53,9 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             }).join('')}
                 </ul>
                 </div>
-                <div>
+                <div class="color-area">
                     <p class="color-title">Color: </p>
-                    <ul class="color-area">
+                    <ul>
                     ${this.json.details.colors.map((el, id) => {
                 return '<li><input id="color' + id + '" value="' + el + '" type="radio" class="colorBtn" name="color"><label for="color' + id + '"style="background:#' + this.colorCodes[el] + ';"><span class="ax-hidden">' + el + '</span></label></li>';
             }).join('')}
