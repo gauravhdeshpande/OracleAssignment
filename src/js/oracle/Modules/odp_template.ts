@@ -76,15 +76,16 @@ class Template{
     <path class="circle" stroke-dasharray="${this.orderDetails.percentage}, 100" d="M${this.circle.x} ${this.circle.y}
         a ${this.circle.diameter/2} ${this.circle.diameter/2} 0 0 1 0 ${this.circle.diameter}
         a ${this.circle.diameter/2} ${this.circle.diameter/2} 0 0 1 0 -${this.circle.diameter}"></path>
-    <text x="50%" y="50%" text-anchor="middle" fill="black" font-size="10px" font-family="Open Sans" dy=".3em">${this.orderDetails.percentage}</text>
+    <text x="50%" y="40%" text-anchor="middle" fill="black" font-size="4px" font-family="Open Sans" dy=".3em">${this.orderDetails.percentage}</text>
+    <text x="50%" y="60%" text-anchor="middle" fill="black" font-size="4px" font-family="Open Sans" dy=".3em">Points</text>
   </svg>
 </div>
-<div class="col-lg-2">
+<div class="col-lg-4">
             <h2>Payment Method</h2>
             <div><img class="visaImage" src="images/Visa-icon.png"><p>0123456789ABCDEF</p></div>
             
 </div>
-<div class="col-lg-4">
+<div class="col-lg-2">
         <table>
         <tbody>
             <tr class="subtotal">

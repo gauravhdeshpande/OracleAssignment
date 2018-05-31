@@ -55,7 +55,7 @@ class Template{
                 <ul class="btn-ul">
                     ${this.json.details.sizes.map((el,id)=>{
                         console.log(el,id);
-                        return '<li><input id="radio'+id+'" value="'+el+'" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="customRadio" for="radio'+id+'">'+el.substr(0,1)+'<span class="ax-hidden">'+el.substr(1)+'</span></label></li>'
+                        return '<li><label style="text-transform:capitalize;" class="customRadio" for="radio'+id+'"><input id="radio'+id+'" value="'+el+'" type="radio" class="sizeBtn" name="size">'+el.substr(0,1)+'<span class="ax-hidden">'+el.substr(1)+'</span></label></li><li><input id="radio'+id+'" value="'+el+'" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="customRadio" for="radio'+id+'">'+el.substr(0,1)+'<span class="ax-hidden">'+el.substr(1)+'</span></label></li>'
                 
                     //return '<button class="sizeBtn" style="text-transform:capitalize;"><span>'+el.substr(0,1)+'</span><span class="ax-hidden">'+el.substr(1)+'</span></button>'
                 }).join('')}
@@ -75,7 +75,7 @@ class Template{
                     </div>
                     <input class="col-lg-4" type="submit" value="Add To Cart"/>
                 </div>
-                <div>
+                <div class="overview">
                     <h3>Overview</h3>
                     <p class="product-desc">${this.json.details.description}</p>
                 </div>

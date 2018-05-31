@@ -72,9 +72,12 @@ class Plp extends BasePage{
         ul = document.querySelectorAll('ul.filterByRating');
         li = '';
         for(let k of [1,2,3,4,5]){
+            //Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`,0,obj.rating).join('')+`(${obj.rating})`
             li += `
             <li><input checked="true" id="rate${k}" value="${k}" type="checkbox">
-            <label for="rate${k}"><span class="ax-hidden">Rating:</span>${k}</label>
+            <label for="rate${k}"><span class="ax-hidden">Rating:${k}</span>
+            ${Array(5).fill(`<i class="fa fa-star" aria-hidden="true"></i>`).fill(`<i class="fa fa-star checked"></i>`,0,k).join('')}
+            </label>
             </li>
             `;
         }

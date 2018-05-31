@@ -120,8 +120,8 @@ const parentJson = {
         }
     ],
     orderDetails:{
-        percentage:20,
-        taxPercentage:20,
+        percentage:75,
+        taxPercentage:75,
         shippingPercentage:2,
         promoAmount:50
     }
