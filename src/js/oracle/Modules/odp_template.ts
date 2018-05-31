@@ -59,13 +59,13 @@ class Template{
         `;
         this.templateHtml+=`<li class="col-lg-12 row" data-id="${obj.id}">
             <div class="col-lg-2 col-xs-6"><img class="odp_img" src="images/${obj.image}"/></div>
-            <div class="col-lg-5 col-xs-6">
+            <div class="col-lg-4 col-xs-6">
                 <a href="pdp.html?id=${obj.id}"><span class="product-details">${obj.name}</span></a>
                 <span> ${pricing}</span>
                 <span>${rating}</span>            
             </div>  
             <div class="col-lg-3 col-xs-6" id=${qsid}></div>
-            <div class="col-lg-2 col-xs-6"> <a class="primaryBtn buyAgain" href="pdp.html?id=${obj.id}">Buy Again</a><p>Current Price ${obj.price.currency+' '+obj.price.sellingPrice}</p></div>      
+            <div class="col-lg-3 col-xs-6"> <a class="primaryBtn buyAgain" href="pdp.html?id=${obj.id}">Buy Again</a><p class="current-price">Current Price ${obj.price.currency+' '+obj.price.sellingPrice}</p></div>      
         </li>`});
         this.templateHtml += '</ul>';
         let priceTable = document.getElementById('final-price');
