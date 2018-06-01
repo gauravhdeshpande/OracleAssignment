@@ -70,7 +70,7 @@ class Template{
                     </ul>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4" id="quanitityStepper">
+                    <div class="col-lg-4 col-xs-6" id="quanitityStepper">
                         <!-- Quantity Stepper -->
                     </div>
                     <input class="col-lg-4" type="submit" value="Add To Cart"/>
