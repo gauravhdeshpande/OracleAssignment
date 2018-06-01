@@ -91,6 +91,9 @@
   outline: none;
   border: 1px solid #e3e3e3;
 }
+.hide-mobile {
+  display: none;
+}
 .plus,
 .minus {
   background: #f9f9f9;
@@ -765,5 +768,11 @@ reward-animation .circular-chart {
   }
   .brand-section {
     display: none;
+  }
+  .hide-desktop {
+    display: none;
+  }
+  .hide-mobile select {
+    width: 100%;
   }
 }
