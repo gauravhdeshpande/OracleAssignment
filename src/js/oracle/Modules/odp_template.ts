@@ -82,7 +82,7 @@ class Template{
 </div>
 <div class="col-lg-4">
             <h2>Payment Method</h2>
-            <div><img class="visaImage" src="images/Visa-icon.png"><p>0123456789ABCDEF</p></div>
+            <div id="visaDiv"><img class="visaImage" src="images/Visa-icon.png"><span>0123456789ABCDEF</span></div>
             
 </div>
 <div class="col-lg-2">
@@ -155,9 +155,16 @@ class Template{
         let promo;
         let taxes;
         let temp;
-        cost = this.productJson.reduce((a,b)=>{
-            return Number(a.quantity)*Number(a.price.sellingPrice) + Number(b.quantity)*Number(b.price.sellingPrice);
-        });
+        if(this.productJson.length==1){
+            cost = Number(this.productJson[0].quantity)*Number(this.productJson[0].price.sellingPrice);
+        }
+        else{
+            cost = this.productJson.reduce((a,b)=>{
+                return Number(a.quantity)*Number(a.price.sellingPrice) + Number(b.quantity)*Number(b.price.sellingPrice);
+            });
+        }
+        
+        
         this.subtotal.innerText = this.currency+cost.toFixed(2); 
         grandTotal = cost;
         
