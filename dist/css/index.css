@@ -772,6 +772,9 @@ reward-animation .circular-chart {
   .hide-desktop {
     display: none;
   }
+  .hide-mobile {
+    display: block;
+  }
   .hide-mobile select {
     width: 100%;
   }
