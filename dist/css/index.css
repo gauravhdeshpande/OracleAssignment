@@ -778,4 +778,7 @@ reward-animation .circular-chart {
   .hide-mobile select {
     width: 100%;
   }
+  .tablinks {
+    width: 100%;
+  }
 }
