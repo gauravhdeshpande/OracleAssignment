@@ -151,7 +151,7 @@ html p {
 html .rating + a {
   font-size: 16px !important;
 }
-html .btn-ul input[type=radio] {
+html input[type=radio] {
   display: none;
   width: 100px;
   height: 100px;
