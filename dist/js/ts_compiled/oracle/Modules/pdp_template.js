@@ -55,7 +55,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 </div>
                 <div class="color-area">
                     <p class="color-title">Color: </p>
-                    <ul>
+                    <ul id="color-ul">
                     ${this.json.details.colors.map((el, id) => {
                 return '<li><input id="color' + id + '" value="' + el + '" type="radio" class="colorBtn" name="color"><label for="color' + id + '"style="background:#' + this.colorCodes[el] + ';"><span class="ax-hidden">' + el + '</span></label></li>';
             }).join('')}
