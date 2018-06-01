@@ -1,7 +1,7 @@
 @color_1: white;
 @color_2: #000;
 @color_3: #2e2e2e;
-@color_4: #c9c908;
+@color_4: #FFC107;
 @color_5: #043c63;
 @color_6: tomato;
 @color_7: #fff;
@@ -756,7 +756,7 @@ reward-animation {
 	}
 	select {
 		text-transform: none;
-		width: 237px;
+		width: 152px;
 		height: 45px;
 	}
 	.btn-size {
@@ -765,7 +765,62 @@ reward-animation {
 		}
 	}
 }
+
+#hamburger {
+	display: block;
+	width: 90%;
+	margin: auto;
+	a {
+	border: 1px solid grey;
+    width: 100%;
+	padding: 2% 30%;
+	margin-bottom: -3px;
+	}
+	ul{display:none;}
+	ul.active{display: block;}
 }
+
+#optionList {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+	ul {
+	  list-style: none;
+	}
+	li {
+		display: block;
+		width: 85.6%;
+		margin-top: 6px;
+	}
+	a {
+	  display: inline-block;
+	  background: #fff;
+	  color: black;
+	  padding: 5px 15px;
+	  border: 1px solid black;
+	  text-decoration: none;
+	  &:hover {
+		border: 1px solid grey;
+		background: white;
+	  }
+	  &:active {
+		background: grey;
+		color: white;
+	  }
+	}
+	select {
+	  display: none;
+	}
+  }
+
+  #brandOnMobile, #ratingOnMobile {
+	text-align: left;
+	width: 100%;
+    border: 1px solid grey;
+    padding: 15px;
+
+  }
 
 .buyAgain {
     outline: none;
@@ -788,21 +843,12 @@ reward-animation {
     margin-right: auto;
     display: flex;
 }
-
-
-
-.tab {
- button
- {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    width: 100% !important;
+.brand-section {
+    display: none;
 }
 
+
 }
+
+
+

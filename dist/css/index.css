@@ -167,7 +167,7 @@ body {
   color: #2e2e2e;
 }
 .fa.checked {
-  color: #c9c908;
+  color: #FFC107;
 }
 header {
   width: 100%;
@@ -680,41 +680,90 @@ reward-animation .circular-chart {
   }
   .main-wrapper select {
     text-transform: none;
-    width: 237px;
+    width: 152px;
     height: 45px;
   }
   .main-wrapper .btn-size > button {
     width: 23%;
   }
-}
-.buyAgain {
-  outline: none;
-  color: white;
-  padding: 9px 18px;
-  border: none;
-  background: #3370a2;
-  border-radius: 3px;
-  position: relative;
-  line-height: 2.6em;
-  font-size: 14px;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  left: 1em;
-}
-.qtyStpr {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-}
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  width: 100% !important;
+  #hamburger {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  #hamburger a {
+    border: 1px solid grey;
+    width: 100%;
+    padding: 2% 30%;
+    margin-bottom: -3px;
+  }
+  #hamburger ul {
+    display: none;
+  }
+  #hamburger ul.active {
+    display: block;
+  }
+  #optionList {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #optionList ul {
+    list-style: none;
+  }
+  #optionList li {
+    display: block;
+    width: 85.6%;
+    margin-top: 6px;
+  }
+  #optionList a {
+    display: inline-block;
+    background: #fff;
+    color: black;
+    padding: 5px 15px;
+    border: 1px solid black;
+    text-decoration: none;
+  }
+  #optionList a:hover {
+    border: 1px solid grey;
+    background: white;
+  }
+  #optionList a:active {
+    background: grey;
+    color: white;
+  }
+  #optionList select {
+    display: none;
+  }
+  #brandOnMobile,
+  #ratingOnMobile {
+    text-align: left;
+    width: 100%;
+    border: 1px solid grey;
+    padding: 15px;
+  }
+  .buyAgain {
+    outline: none;
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    background: #3370a2;
+    border-radius: 3px;
+    position: relative;
+    line-height: 2.6em;
+    font-size: 14px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    left: 1em;
+  }
+  .qtyStpr {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+  .brand-section {
+    display: none;
+  }
 }
