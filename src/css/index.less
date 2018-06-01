@@ -324,7 +324,7 @@ div#quanitityStepper {
 #hamburger {
 	display: none;
 }
-.color-area, .btn-size {
+.color-area {
 	display: block;
 	line-height: 2.8em;
     margin: 3% 0%;
@@ -374,6 +374,60 @@ div#quanitityStepper {
 		padding-left: 0;
 	}
 }
+
+
+.btn-size {
+	display: block;
+	line-height: 2.8em;
+    margin: 3% 0%;
+    
+	li {
+        padding: 5px;
+        width:25px;
+        height:25px;
+        position:relative;
+        
+		button {
+			width: 26px;
+			height: 26px;
+			border-radius: 13px;
+			border: none;
+		}
+		label {
+            width: 10px;
+            height: 30px;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            z-index: 10;
+            
+        }
+        input[type="radio"]
+            {
+                display:block;
+                position:absolute;
+                top:0;
+                left:0;
+                width:25px;
+                height:25px;
+                z-index:11;
+                opacity:0;
+                cursor:pointer;
+            }
+    }
+    li.active{
+        label {
+			border:1px solid #000;
+        }
+    }
+	&:first-child {
+		padding-left: 0;
+	}
+}
+
+
 input#quantity {
 	margin: 2% 0;
 	text-align: center;
@@ -663,20 +717,8 @@ reward-animation {
 			top: 1em;
 			right: 16px;
 		}
-	}
-    .tab 	button {
-			background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-            width: 100% !important;
-		}
-	
-	h1 {
+    }
+    	h1 {
 		font-size: 22px;
 		margin: 0;
 		padding: 0;
@@ -745,4 +787,22 @@ reward-animation {
     margin-left: auto;
     margin-right: auto;
     display: flex;
+}
+
+
+
+.tab {
+ button
+ {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 100% !important;
+}
+
 }

@@ -299,28 +299,24 @@ div#quanitityStepper {
 #hamburger {
   display: none;
 }
-.color-area,
-.btn-size {
+.color-area {
   display: block;
   line-height: 2.8em;
   margin: 3% 0%;
 }
-.color-area li,
-.btn-size li {
+.color-area li {
   padding: 5px;
   width: 25px;
   height: 25px;
   position: relative;
 }
-.color-area li button,
-.btn-size li button {
+.color-area li button {
   width: 26px;
   height: 26px;
   border-radius: 13px;
   border: none;
 }
-.color-area li label,
-.btn-size li label {
+.color-area li label {
   width: 25px;
   height: 25px;
   display: block;
@@ -330,7 +326,50 @@ div#quanitityStepper {
   left: 0;
   z-index: 10;
 }
-.color-area li input[type="radio"],
+.color-area li input[type="radio"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  z-index: 11;
+  opacity: 0;
+  cursor: pointer;
+}
+.color-area li.active label {
+  border: 1px solid #000;
+}
+.color-area:first-child {
+  padding-left: 0;
+}
+.btn-size {
+  display: block;
+  line-height: 2.8em;
+  margin: 3% 0%;
+}
+.btn-size li {
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+.btn-size li button {
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  border: none;
+}
+.btn-size li label {
+  width: 10px;
+  height: 30px;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 10;
+}
 .btn-size li input[type="radio"] {
   display: block;
   position: absolute;
@@ -342,11 +381,9 @@ div#quanitityStepper {
   opacity: 0;
   cursor: pointer;
 }
-.color-area li.active label,
 .btn-size li.active label {
   border: 1px solid #000;
 }
-.color-area:first-child,
 .btn-size:first-child {
   padding-left: 0;
 }
@@ -609,17 +646,6 @@ reward-animation .circular-chart {
     top: 1em;
     right: 16px;
   }
-  .main-wrapper .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    width: 100% !important;
-  }
   .main-wrapper h1 {
     font-size: 22px;
     margin: 0;
@@ -680,4 +706,15 @@ reward-animation .circular-chart {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 100% !important;
 }
