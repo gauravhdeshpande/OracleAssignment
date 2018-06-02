@@ -1,87 +1,93 @@
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
+#orderNumber p:nth-child(5) {
+  text-align: center;
+  margin: 3% 0%;
+}
+.primary-btn {
+  height: 40px;
+  width: 100%;
+  border-radius: 3px;
+  font-family: Open Sans;
+  font-size: 1.2em;
+  text-align: center;
+}
+.purchase-btn {
+  height: 40px;
+  width: 100%;
+  border-radius: 3px;
+  font-family: Open Sans;
+  font-size: 1.2em;
+  text-align: center;
+}
+.breadcrumb {
+  font-family: Open Sans;
   font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
+  font-size: 1em;
+  color: #3370a2;
 }
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+.breadcrumb :hover {
+  text-decoration: none;
 }
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
+.back-breadcrumb {
+  font-family: Open Sans;
   font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhs.ttf) format('truetype');
+  font-size: 1em;
+  color: #333333;
+}
+.back-breadcrumb :hover {
+  text-decoration: none;
+}
+select {
+  border: 1px solid #cccccc;
+  font-family: Open Sans, sans-seriff;
+  font-weight: 300;
+  font-size: 1em;
+  border-radius: 3px;
+  height: 40px;
+}
+input {
+  border: 1px solid #cccccc;
+  height: 45px;
+  border-radius: 3px solid #333333;
+  font-family: Open Sans, sans-seriff;
+  font-weight: 600;
+  font-size: 1em;
+}
+select-quantity {
+  border: 1px solid #666666;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px solid #333333;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 1em;
+}
+select-quantity .disabled {
+  color: #cccccc;
+}
+.price-table table {
+  border: 1px solid #cccccc;
+  height: 40px;
 }
 /* PDP for Desktop  */
-@-webkit-keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-  }
-}
-@keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
-  }
-  to {
-    bottom: 0;
-    opacity: 0;
-  }
-}
-@keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
-  }
-  to {
-    bottom: 0;
-    opacity: 0;
-  }
-}
-/* General Styles */
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
 #main-image {
   width: auto;
   max-width: 100%;
 }
 .customRadio {
-  padding: 10px 30px;
   border: 1px solid #e9e9e9;
   padding: 10px 20px;
   margin-right: 6px;
 }
 .customRadio:hover {
   border: 1px solid #d3d3d3;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-}
-.odp_img {
-  width: 100%;
 }
 .qtyStpr {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .qtyStpr input {
@@ -105,60 +111,54 @@
   outline: none;
 }
 input[type="submit"] {
-  outline: none;
   border: none;
   height: 40px;
-  background: #3370a2;
+  background: #043c63;
   color: white;
-  padding: 0 18px;
+  width: 100%;
   border-radius: 3px;
-  position: relative;
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
-html {
-  font-family: 'Open Sans', sans-seriff;
-  line-height: 1.5;
-  font-weight: 400;
+body {
+  font-family: Open Sans, sans-seriff;
+  line-height: 1.8em;
   font-size: 16px;
 }
-html h1 {
+body h1 {
   font-size: 18px;
 }
-html h2 {
+body h2 {
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1em;
   padding: 0;
   margin: 0;
 }
-html p {
+body p {
   font-size: 16px;
 }
-html .rating + a {
+body .rating + a {
   font-size: 16px !important;
 }
-html input[type=radio] {
+body .odp_img {
+  width: 100%;
+}
+body input[type=radio] {
   display: none;
   width: 100px;
   height: 100px;
   position: relative;
   top: 2em;
 }
-html a {
+body a {
   text-decoration: none;
-  color: #000;
+  color: #333333;
 }
-html input[type="checkbox"] {
+body input[type="checkbox"] {
   width: 20px;
   height: 20px;
 }
-html li {
+body li {
   display: inline-block;
   vertical-align: top;
-}
-body {
-  line-height: 1.8em;
 }
 .ax-hidden {
   text-indent: -9999px;
@@ -167,43 +167,34 @@ body {
   top: 0;
 }
 .fa {
-  color: #2e2e2e;
+  color: #333333;
 }
 .fa.checked {
   color: #FFC107;
 }
-header {
-  width: 100%;
-  height: 100px;
-  background: black;
-  color: white;
-  text-align: center;
-}
-header h2 {
-  padding-top: 1.8em;
-}
+header,
 footer {
   width: 100%;
-  height: 100px;
+  height: 60px;
   background: black;
-  color: white;
+  color: #fff;
   text-align: center;
-}
-footer h2 {
-  position: relative;
-  top: 2.8em;
+  font-size: 2em;
+  font-family: Open Sans, sans-seriff;
+  line-height: 1.8em;
 }
 .breadcrumb {
   margin: 2% 1%;
   font-size: 14px;
+  font-weight: 300;
 }
 .breadcrumb a {
-  color: #043c63;
+  color: #3370a2;
   text-decoration: none;
 }
 .breadcrumb a:before {
   content: "/";
-  margin-right: 10px;
+  margin-right: 3px;
 }
 .breadcrumb a:nth-child(1)::before {
   content: "";
@@ -223,6 +214,7 @@ footer h2 {
   display: inherit;
 }
 .department-section {
+  display: -ms-inline-grid;
   display: inline-grid;
   margin: 2%;
 }
@@ -240,7 +232,11 @@ footer h2 {
   border-top: 1px solid #fff;
 }
 .quantity-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .main-img {
@@ -267,10 +263,10 @@ footer h2 {
   background: #043c63;
   border: 1px solid #f3f3f3;
   margin-top: 1em;
-  color: white;
+  color: #fff;
   border-radius: 3px;
 }
-div#quanitityStepper {
+#quanitityStepper {
   margin: 0;
 }
 .tab {
@@ -287,11 +283,13 @@ div#quanitityStepper {
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   font-size: 17px;
 }
 .tab button:hover {
-  background-color: #ddd;
+  background-color: inherit;
 }
 .tab button.active {
   background-color: #ccc;
@@ -305,7 +303,7 @@ div#quanitityStepper {
 .color-area {
   display: block;
   line-height: 2.8em;
-  margin: 3% 0%;
+  margin: 3% 0% 8%;
 }
 .color-area li {
   padding: 5px;
@@ -341,7 +339,8 @@ div#quanitityStepper {
   cursor: pointer;
 }
 .color-area li.active label {
-  border: 1px solid #000;
+  border: none;
+  opacity: 0.3;
 }
 .color-area:first-child {
   padding-left: 0;
@@ -352,7 +351,7 @@ div#quanitityStepper {
   margin: 3% 0%;
 }
 .btn-size li {
-  padding: 5px;
+  padding: 1.2em;
   width: 25px;
   height: 25px;
   position: relative;
@@ -364,28 +363,29 @@ div#quanitityStepper {
   border: none;
 }
 .btn-size li label {
-  width: 10px;
-  height: 30px;
+  width: 16px;
+  height: 38px;
   display: block;
   border-radius: 50%;
   position: absolute;
   top: 0px;
   left: 0;
   z-index: 10;
+  text-align: center;
 }
 .btn-size li input[type="radio"] {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   z-index: 11;
   opacity: 0;
   cursor: pointer;
 }
 .btn-size li.active label {
-  border: 1px solid #000;
+  border: 1px dashed #e9e9e9;
 }
 .btn-size:first-child {
   padding-left: 0;
@@ -393,7 +393,7 @@ div#quanitityStepper {
 input#quantity {
   margin: 2% 0;
   text-align: center;
-  border: 1px solid #e9e9e9;
+  border: 1px solid #ebebeb;
   border-radius: 4px;
   width: 60px;
   height: 40px;
@@ -405,21 +405,16 @@ span.input-group-btn > button {
   background: #f9f9f9;
   width: 44px;
   height: 44px;
-  border: 1px solid #e9e9e9;
+  border: 1px solid #ebebeb;
   outline: none;
   padding: 6px 10px;
   font-weight: bold;
 }
-.section-6 {
-  width: 50%;
-  float: left;
-}
 .primaryBtn {
-  outline: none;
-  color: white;
-  padding: 8px 55px;
   border: none;
-  background: #3370a2;
+  background: #043c63;
+  color: #fff;
+  padding: 8px 50px;
   border-radius: 3px;
   position: relative;
   line-height: 2.6em;
@@ -429,13 +424,14 @@ span.input-group-btn > button {
 }
 #final-price {
   background: #e9e9e9;
-  margin: -3%;
-  margin-bottom: 0%;
-  margin-top: 10%;
+  margin: 10% -2% 0%;
+  padding-top: 2%;
 }
 .visaImage {
   width: auto;
   max-width: 15%;
+  vertical-align: middle;
+  padding-right: 10px;
 }
 li.col-lg-12.row {
   margin-bottom: 3em;
@@ -452,16 +448,16 @@ li.col-lg-12.row {
   margin-top: 3%;
 }
 .hotPrice {
-  color: tomato;
+  color: #da0f0f;
 }
 .main-wrapper .col {
   padding: 10px 10px;
 }
 .main-wrapper .col h2 {
   padding-bottom: 10px;
-  font-size: 18px;
-  font-family: open sans semibold;
-  line-height: 1.5em;
+  font-size: 1em;
+  font-family: Open Sans, sans-seriff;
+  line-height: 1.8em;
 }
 .main-wrapper .col form.brand-section {
   padding: 10px 0 0 0;
@@ -472,6 +468,7 @@ li.col-lg-12.row {
 .main-wrapper .product-group-heading {
   background: #f9f9f9;
   padding: 10px;
+  -ms-grid-columns: 33% 66%;
   grid-template-columns: 33% 66%;
 }
 .main-wrapper .product-group-heading .heading {
@@ -485,7 +482,7 @@ li.col-lg-12.row {
   width: 20%;
   padding: 2%;
   line-height: 1.5;
-  border-right: 1px dashed #8080806b;
+  border-right: 1px dashed #bdb1b1;
   margin: 5% 0.3%;
 }
 #plp-listing li:last-child {
@@ -502,8 +499,8 @@ input#number {
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: #333;
-  color: #fff;
+  background-color: #043c63;
+  color: blue;
   text-align: center;
   border-radius: 2px;
   padding: 16px;
@@ -518,19 +515,11 @@ input#number {
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-.reward-animation {
-  width: 230px;
-  margin-left: -4em;
-}
-.reward-animation .circular-chart {
-  max-width: 80%;
-  max-height: 250px;
-}
-.reward-animation .circular-chart .circle {
-  stroke: slategray;
+.reward-animation .circle {
+  stroke: #043c63;
   fill: none;
-  stroke-width: 3.3px;
-  stroke-linecap: round;
+  stroke-width: 2.5px;
+  -webkit-animation: progress 2s ease-out forwards;
   animation: progress 2s ease-out forwards;
 }
 input [type="radio"] {
@@ -543,38 +532,53 @@ input [type="radio"] {
   position: absolute;
   width: 1px;
 }
-.circular-chart {
-  max-width: 80%;
-  max-height: 250px;
-  text-align: center;
-  margin-left: 20%;
-}
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
   padding-right: 1rem;
   padding-left: 1rem;
 }
-reward-animation .circular-chart {
+.reward-animation .circular-chart {
   max-width: 80%;
-  max-height: 250px;
+  max-height: 200px;
+}
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+td {
+  padding-bottom: 0.6em;
+  padding-right: 5em;
 }
 @media screen and (max-width: 587px) {
-  #final-price {
-    padding-top: 0%;
-    background: #e9e9e9;
-    margin: -6%;
-    margin-bottom: 0%;
-    margin-top: 0%;
-    padding: 6% 30%;
-  }
   .main-wrapper .col {
     padding: 10px 10px;
   }
   .main-wrapper .col h2 {
     padding-bottom: 10px;
-    font-size: 18px;
-    font-family: open sans semibold;
+    font-size: 0.8em;
+    font-family: Open Sans, sans-seriff;
     line-height: 1.5em;
   }
   .main-wrapper .col form.brand-section {
@@ -587,16 +591,6 @@ reward-animation .circular-chart {
   .main-wrapper #quanitityStepper {
     margin-left: auto !important;
     margin-right: auto !important;
-  }
-  .main-wrapper .plus,
-  .main-wrapper .minus {
-    background: #f9f9f9;
-    width: 100%;
-    padding: 6px 20px;
-    font-weight: bold;
-    height: 38px;
-    border: none;
-    outline: none;
   }
   .main-wrapper .product-col img {
     border: 0;
@@ -639,8 +633,8 @@ reward-animation .circular-chart {
     outline: none;
     border: none;
     height: 40px;
-    background: #3370a2;
-    color: white;
+    background: #043c63;
+    color: #fff;
     padding: 6px 30px;
     width: 148px;
     border-radius: 3px;
@@ -658,6 +652,7 @@ reward-animation .circular-chart {
     background: transparent !important;
     background: #f9f9f9;
     padding: 10px;
+    -ms-grid-columns: 33% 67%;
     grid-template-columns: 33% 67%;
     margin-top: 15px;
   }
@@ -669,7 +664,7 @@ reward-animation .circular-chart {
     line-height: 1.5;
     border-right: none;
     margin: auto;
-    border-bottom: 1px dashed grey;
+    border-bottom: 1px dashed ;
     padding-bottom: 20px;
   }
   .main-wrapper #plp-listing li:last-child {
@@ -697,7 +692,7 @@ reward-animation .circular-chart {
   #hamburger a {
     border: 1px solid grey;
     width: 100%;
-    padding: 2% 30%;
+    padding: 2% 28%;
     margin-bottom: -3px;
   }
   #hamburger ul {
@@ -728,14 +723,6 @@ reward-animation .circular-chart {
     border: 1px solid black;
     text-decoration: none;
   }
-  #optionList a:hover {
-    border: 1px solid grey;
-    background: white;
-  }
-  #optionList a:active {
-    background: grey;
-    color: white;
-  }
   #optionList select {
     display: none;
   }
@@ -764,6 +751,8 @@ reward-animation .circular-chart {
   .qtyStpr {
     margin-left: auto;
     margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .brand-section {
@@ -777,8 +766,34 @@ reward-animation .circular-chart {
   }
   .hide-mobile select {
     width: 100%;
+    margin: 0% 0% 6%;
   }
   .tablinks {
     width: 100%;
+  }
+  #color-ul {
+    overflow-x: scroll;
+  }
+  #final-price {
+    background: #f9f9f9;
+    width: auto;
+    margin-left: -5%;
+    margin-right: -5%;
+  }
+  #final-price {
+    padding-top: 0%;
+    background: #e9e9e9;
+    margin: -6%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding: 6% 30%;
+  }
+  input[type="submit"] {
+    border: none;
+    height: 40px;
+    background: #043c63;
+    color: white;
+    width: 40%;
+    border-radius: 3px;
   }
 }
