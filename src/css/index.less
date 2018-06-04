@@ -310,9 +310,10 @@ header, footer {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	box-pack: justify;
 	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 .main-img {
 	width: 50%;
@@ -433,7 +434,7 @@ header, footer {
 	line-height: 2.8em;
     margin: 3% 0%;
     
-	li {cdd
+	li {
         padding: 1.2em;
         width:25px;
         height:25px;
@@ -658,7 +659,7 @@ input {
 	}
 }
 
-@-webkit-keyframes fadein {
+@keyframes fadein {
 	from {
 		bottom: 0;
 		opacity: 0;
