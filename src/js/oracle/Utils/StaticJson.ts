@@ -20,9 +20,9 @@ const parentJson = {
             details:{
                 title:'Product Title 1',
                 images:[
-                    "couch_lg_0.jpg",
-                    "couch_sm_1.jpg",
-                    "couch_sm_0.jpg"
+                    {src:"couch_lg_0.jpg",alt:"Sofa view 1"},
+                    {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
+                    {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
                 ],
                 colors:['red','green','blue'],
                 sizes:['small','medium','large','xtra large'],
