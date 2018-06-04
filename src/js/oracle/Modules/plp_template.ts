@@ -16,7 +16,7 @@ class Template{
         rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`,0,obj.rating).join('')+`(${obj.rating})`;
         pricing = `
             <del>${obj.price.currency+' '+obj.price.sellingPrice}</del>
-            <span>${obj.price.currency+' '+obj.price.discountedPrice}</span>
+            <span class="curr-price">${obj.price.currency+' '+obj.price.discountedPrice}</span>
             <span class="${obj.price.sale?'hotPrice':''}">${obj.price.currency+' '+obj.price.low} - ${obj.price.high} ${obj.price.sale?'SALE':''}</span>
             ${obj.price.sale?'':"<span>&nbsp;</span>"}
         `;
