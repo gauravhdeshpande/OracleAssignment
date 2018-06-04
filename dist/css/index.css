@@ -594,6 +594,9 @@ td {
   left: 20px;
   font-weight: 300;
 }
+.selected {
+  text-transform: capitalize;
+}
 @media screen and (max-width: 587px) {
   .main-wrapper .col {
     padding: 10px 10px;
