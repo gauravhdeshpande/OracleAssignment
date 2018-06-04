@@ -111,7 +111,7 @@ const parentJson = {
                     "couch_sm_1.jpg",
                     "couch_sm_0.jpg"
                 ],
-                colors:['red','green','blue'],
+                colors:['white','grey','blue','bluee','slategray' ,'electro'],
                 sizes:['small','medium','large','xtra large'],
                 description:'Lorem Ipsum for 2'
             } 
@@ -119,16 +119,28 @@ const parentJson = {
     ],
     colorCodes:[
         {
-            name:'red',
-            code:'ff0000'
+            name:'white',
+            code:'dcdde1'
         },
         {
-            name:'green',
-            code:'00ff00'
+            name:'grey',
+            code:'7f8fa6'
         },
         {
             name:'blue',
-            code:'0000ff'
+            code:'273c75'
+        },
+        {
+            name:'bluee',
+            code:'353b48'
+        },
+        {
+            name:'slategray',
+            code:'487eb0'
+        },
+        {
+            name:'electro',
+            code:'2f3640'
         }
     ],
     orderDetails:{
