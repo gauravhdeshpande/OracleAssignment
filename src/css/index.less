@@ -189,7 +189,8 @@ body {
 	line-height: @line-height;
 	font-size: 16px;
 	h1 {
-		font-size: 18px;
+		font-size: @font-16;
+		font-weight: 600;
 	}
 	h2 {
 		position: relative;
@@ -224,7 +225,7 @@ body {
 	}
 	input[type="checkbox"] {
 		width: 20px;
-		height: 20px;
+		height: 15px;
 	}
 	li {
 		display: inline-block;
@@ -256,7 +257,7 @@ header, footer {
 }
 
 .breadcrumb {
-	margin: 2% 1%;
+	margin: 2% 0%;
 	font-size: 14px;
 	font-weight: @fontw-light;
 	a {
@@ -376,11 +377,11 @@ header, footer {
 }
 .color-area {
 	display: block;
-	line-height: 2.8em;
-    margin: 3% 0% 8%;
+	// line-height: 2.8em;
+    // margin: 3% 0% 8%;
     
 	li {
-        padding: 5px;
+        padding: 1em;
         width:25px;
         height:25px;
         position:relative;
@@ -392,8 +393,8 @@ header, footer {
 			border: none;
 		}
 		label {
-			width: 25px;
-			height: 25px;
+			width: 44px;
+			height: 44px;
 			display: block;
             border-radius: 50%;
             position:absolute;
@@ -408,8 +409,8 @@ header, footer {
                 position:absolute;
                 top:0;
                 left:0;
-                width:25px;
-                height:25px;
+                width:44px;
+                height:44px;
                 z-index:11;
                 opacity:0;
                 cursor:pointer;
@@ -445,8 +446,8 @@ header, footer {
 			border: none;
 		} 
 		label {
-            width: 16px;
-            height: 38px;
+            width: 8px;
+            height: 30px;
             display: block;
             border-radius: 50%;
             position: absolute;
@@ -935,32 +936,28 @@ td {
 }
 
 
-// #grey-bg {
-//     background: #f9f9f9;
-//     padding-top: 3%;
-// 	margin-left: auto;
-//     margin-right: auto;
-//     width: 90%;
-// #final-price {
-// 	margin-left: auto;
-//     margin-right: auto;
-//     width: 100%;
-//     display: block;
-//     // overflow: hidden;
+#grey-bg {
+    background: #f9f9f9;
+    padding-top: 3%;
+	margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+#final-price {
+	margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: block;
+    // overflow: hidden;
 
-// .visaImage {
-// 	width: auto;
-//     max-width: 15%;
-//     vertical-align: middle;
-//     padding-right: 10px;
-// }
-// }
-// }	
-
-
-.total {
-    border-top: none;
+.visaImage {
+	width: auto;
+    max-width: 15%;
+    vertical-align: middle;
+    padding-right: 10px;
 }
+}
+}	
+
 
 input[type="submit"] {
     border: none;
@@ -972,4 +969,29 @@ input[type="submit"] {
 	width: 40%;
 	border-radius: 3px;
 }
+table {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top:0;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    margin: auto;
+}
+
+b, strong {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+}
+
+// IE 10+ Media Queries 
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.department-section {
+	   display: flex;
+	   flex-direction: column; 		
+   }
 }

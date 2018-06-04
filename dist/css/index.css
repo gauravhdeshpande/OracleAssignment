@@ -124,7 +124,8 @@ body {
   font-size: 16px;
 }
 body h1 {
-  font-size: 18px;
+  font-size: 1em;
+  font-weight: 600;
 }
 body h2 {
   position: relative;
@@ -154,7 +155,7 @@ body a {
 }
 body input[type="checkbox"] {
   width: 20px;
-  height: 20px;
+  height: 15px;
 }
 body li {
   display: inline-block;
@@ -184,7 +185,7 @@ footer {
   line-height: 1.8em;
 }
 .breadcrumb {
-  margin: 2% 1%;
+  margin: 2% 0%;
   font-size: 14px;
   font-weight: 300;
 }
@@ -302,11 +303,9 @@ footer {
 }
 .color-area {
   display: block;
-  line-height: 2.8em;
-  margin: 3% 0% 8%;
 }
 .color-area li {
-  padding: 5px;
+  padding: 1em;
   width: 25px;
   height: 25px;
   position: relative;
@@ -318,8 +317,8 @@ footer {
   border: none;
 }
 .color-area li label {
-  width: 25px;
-  height: 25px;
+  width: 44px;
+  height: 44px;
   display: block;
   border-radius: 50%;
   position: absolute;
@@ -332,8 +331,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25px;
-  height: 25px;
+  width: 44px;
+  height: 44px;
   z-index: 11;
   opacity: 0;
   cursor: pointer;
@@ -363,8 +362,8 @@ footer {
   border: none;
 }
 .btn-size li label {
-  width: 16px;
-  height: 38px;
+  width: 8px;
+  height: 30px;
   display: block;
   border-radius: 50%;
   position: absolute;
@@ -777,8 +776,24 @@ td {
   #color-ul {
     overflow-x: scroll;
   }
-  .total {
-    border-top: none;
+  #grey-bg {
+    background: #f9f9f9;
+    padding-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  #grey-bg #final-price {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: block;
+  }
+  #grey-bg #final-price .visaImage {
+    width: auto;
+    max-width: 15%;
+    vertical-align: middle;
+    padding-right: 10px;
   }
   input[type="submit"] {
     border: none;
@@ -787,5 +802,26 @@ td {
     color: white;
     width: 40%;
     border-radius: 3px;
+  }
+  table {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    margin: auto;
+  }
+  b,
+  strong {
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .department-section {
+    display: flex;
+    flex-direction: column;
   }
 }
