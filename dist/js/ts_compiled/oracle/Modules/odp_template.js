@@ -83,7 +83,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             let pricing;
             this.templateHtml = `
         <div id="orderNumber">
-            <p><b>Ordder Number</b></p>
+            <p><b>Order Number</b></p>
             <p>${Math.ceil(Math.random() * 1000000000000)}</p>
             <p><b>Order Date</b></p>
             <p>${new Date().toDateString()}</p>
@@ -107,7 +107,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             ${obj.price.sale ? '' : "<span>&nbsp;</span>"}
         `;
                 this.templateHtml += `<li class="col-lg-12 row" data-id="${obj.id}">
-            <div class="col-lg-2 col-xs-6"><img class="odp_img" src="images/${obj.image}"/></div>
+            <div class="col-lg-2 col-xs-6"><img class="odp_img" alt="${obj.image.alt}" src="images/${obj.image.src}"/></div>
             <div class="col-lg-4 col-xs-6">
                 <a href="pdp.html?id=${obj.id}"><span class="product-details">${obj.name}</span></a>
                 <span> ${pricing}</span>

@@ -21,7 +21,7 @@ define(["require", "exports"], function (require, exports) {
         `;
                 this.list += `<li class="product-col" data-id="${obj.id}">
             <a href="pdp.html?id=${obj.id}">
-            <img src="images/${obj.image}"/>
+            <img alt="images/${obj.image.alt}" src="images/${obj.image.src}"/>
             <span class="product-details">${obj.name}</span>
             ${pricing}
             <span>${rating}</span>
