@@ -12,7 +12,7 @@ define(["require", "exports"], function (require, exports) {
             let pricing;
             this.list = '';
             this.productJson.map((obj, index) => {
-                rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`, 0, obj.rating).join('') + `(${obj.rating})`;
+                rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`, 0, obj.rating).join('');
                 pricing = `
             <del>${obj.price.currency + ' ' + obj.price.sellingPrice}</del>
             <span class="curr-price">${obj.price.currency + ' ' + obj.price.discountedPrice}</span>
