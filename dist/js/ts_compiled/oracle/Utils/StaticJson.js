@@ -28,7 +28,7 @@ define(["require", "exports"], function (require, exports) {
                     ],
                     colors: ['red', 'green', 'blue'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
-                    description: 'Lorem Ipsum for 1'
+                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 }
             },
             {
@@ -57,7 +57,7 @@ define(["require", "exports"], function (require, exports) {
                     ],
                     colors: ['red', 'green', 'blue'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
-                    description: 'Lorem Ipsum for 2'
+                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 }
             },
             {
@@ -86,7 +86,7 @@ define(["require", "exports"], function (require, exports) {
                     ],
                     colors: ['red', 'green', 'blue'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
-                    description: 'Lorem Ipsum for 2'
+                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 }
             },
             {
@@ -113,24 +113,36 @@ define(["require", "exports"], function (require, exports) {
                         "couch_sm_1.jpg",
                         "couch_sm_0.jpg"
                     ],
-                    colors: ['red', 'green', 'blue'],
+                    colors: ['white', 'grey', 'blue', 'bluee', 'slategray', 'electro'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
-                    description: 'Lorem Ipsum for 2'
+                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 }
             }
         ],
         colorCodes: [
             {
-                name: 'red',
-                code: 'ff0000'
+                name: 'white',
+                code: 'dcdde1'
             },
             {
-                name: 'green',
-                code: '00ff00'
+                name: 'grey',
+                code: '7f8fa6'
             },
             {
                 name: 'blue',
-                code: '0000ff'
+                code: '273c75'
+            },
+            {
+                name: 'bluee',
+                code: '353b48'
+            },
+            {
+                name: 'slategray',
+                code: '487eb0'
+            },
+            {
+                name: 'electro',
+                code: '2f3640'
             }
         ],
         orderDetails: {

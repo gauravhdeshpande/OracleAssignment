@@ -23,7 +23,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
     <form action="odp.html" id="productDetailForm">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 col-xs-12">
+            <div class="col-lg-5 col-xs-12">
                 <img id="main-image" src="images/${this.activeImage}" alt="Product Image">
                 <div>
                     ${this.json.details.images.map((el) => {
@@ -31,17 +31,17 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             }).join('')}
                 </div>
             </div>
-            <div class="col-lg-6 col-xs-12">
+            <div class="col-lg-7 col-xs-12">
                 <div class="product-title">
                     <h1>${this.json.name}</h1>
                     <p class="item-details">Item #:${this.json.id}</p>
-                    <p class="rating">${new CommonComponents_1.default(this.json.rating).html}</p><a>Reviews(0)</a>
+                    <p class="rating">${new CommonComponents_1.default(this.json.rating).html} <span class="review-text"><a>Reviews(0)</a></span></p>
                 </div>
                 <!-- Product type -->
                 <div class="price-block">
-                    <span class="list-price">ListPrice:${this.json.price.currency} ${this.json.price.high}</span>
-                    <span class="sale-price">${this.json.price.currency} ${this.json.price.discountedPrice}</span>
-                    <span class="sale-price">${this.json.price.currency} ${this.json.price.sellingPrice}</span>
+                    <span class="list-price">ListPrice:${this.json.price.currency} ${this.json.price.high}</span><br>
+                    <span class="sale-price">${this.json.price.currency} ${this.json.price.discountedPrice}</span><br>
+                    <span class="sale-price">${this.json.price.currency} ${this.json.price.sellingPrice}</span><br>
                 </div>
                 <div class="btn-size">
                 <p>Size: <span id="selected"></span></p>
@@ -65,10 +65,10 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                     <div class="col-lg-4 col-xs-6" id="quanitityStepper">
                         <!-- Quantity Stepper -->
                     </div>
-                    <input class="col-lg-4" type="submit" value="Add To Cart"/>
+                    <input class="col-lg-5" type="submit" value="Add To Cart"/>
                 </div>
                 <div class="overview">
-                    <h3>Overview</h3>
+                    <h1>Overview</h1>
                     <p class="product-desc">${this.json.details.description}</p>
                 </div>
             </div>
