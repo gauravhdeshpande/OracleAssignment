@@ -51,7 +51,7 @@ class Template{
                     <span class="sale-price hotPrice">${this.json.price.currency} ${this.json.price.sellingPrice} SALE</span><br>
                 </div>
                 <div class="btn-size">
-                <p>Size: <span class="selected"></span></p>
+                <p><b>Size: </b><span class="selected"></span></p>
                 <ul class="btn-ul">
                     ${this.json.details.sizes.map((el,id)=>{
                         console.log(el,id);
@@ -62,16 +62,19 @@ class Template{
                 </ul>
                 </div>
                 <div class="color-area">
-                    <p class="color-title">Color: <span class="selected"></span></p>
+                    <p class="color-title"><b>Color: </b><span class="selected"></span></p>
                     <ul id="color-ul">
                     ${this.json.details.colors.map((el,id)=>{
                         return '<li><input id="color'+id+'" value="'+el+'" type="radio" class="colorBtn" name="color"><label for="color'+id+'"style="background:#'+this.colorCodes[el]+';"><span class="ax-hidden">'+el+'</span></label></li>'
                     }).join('')}
                     </ul>
                 </div>
+                <p class="quantityText"><b>Quantity:</b></p>
                 <div class="row">
+                    
                     <div class="col-lg-4 col-xs-6" id="quanitityStepper">
                         <!-- Quantity Stepper -->
+                        
                     </div>
                     <input class="col-lg-5" type="submit" value="Add To Cart"/>
                 </div>
