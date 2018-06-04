@@ -777,16 +777,8 @@ td {
   #color-ul {
     overflow-x: scroll;
   }
-  #grey-bg {
-    background: #f9f9f9;
-    width: auto;
-    margin-left: -5%;
-    margin-right: -5%;
-    padding-top: 0%;
-    margin: -6%;
-    margin-bottom: 0%;
-    margin-top: 0%;
-    padding: 6% 30%;
+  .total {
+    border-top: none;
   }
   input[type="submit"] {
     border: none;
