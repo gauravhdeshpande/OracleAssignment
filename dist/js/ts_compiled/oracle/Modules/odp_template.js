@@ -120,7 +120,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
             this.templateHtml += '</ul>';
             let priceTable = document.getElementById('final-price');
             priceTable.innerHTML = `
-        <div class="reward-animation col-lg-6">    
+        <div id="animationContainer" class="reward-animation col-lg-6">    
         <h2>Rewards Points</h2>    
 <svg viewBox="0 0 ${this.box} ${this.box}" class="circular-chart">
   
@@ -131,13 +131,13 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
     <text x="50%" y="60%" text-anchor="middle" fill="black" font-size="4px" font-family="Open Sans" dy=".3em">Points</text>
   </svg>
 </div>
-<hr>
-<div class="col-lg-2">
+
+<div class="col-lg-3" id="paymentContainer">
             <h2>Payment Method</h2>
             <div id="visaDiv"><img class="visaImage" src="images/Visa-icon.png"><span>************6654</span></div>
             
 </div>
-<div class="col-lg-3">
+<div class="col-lg-3" id="costingContainer">
         <table>
         <tbody>
             <tr class="subtotal">
