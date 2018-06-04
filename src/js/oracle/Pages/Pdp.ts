@@ -34,7 +34,15 @@ class Pdp extends BasePage{
         
         switch(event.target.getAttribute('class')){
             case 'thumbnails':
+            case 'thumbnails active':
                 document.getElementById('main-image').setAttribute('src',event.target.getAttribute('src'));
+                document.getElementById('main-image').setAttribute('alt',event.target.getAttribute('alt'));
+                let i = 0;
+                let k = document.querySelectorAll('.active.thumbnails');
+                for(i=0;i<k.length;i++){
+                    k[i].className = k[i].className.replace(/ active/,'');
+                }
+                event.target.className += " active";
                 break;
             case 'sizeBtn':
             event.target.closest('div').querySelector('.selected').innerHTML=event.target.value.charAt(0);

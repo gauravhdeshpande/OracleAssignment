@@ -24,10 +24,10 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
         <div class="container-fluid">
         <div class="row">
             <div class="col-lg-5 col-xs-12">
-                <img id="main-image" src="images/${this.activeImage}" alt="Product Image">
+                <img id="main-image" src="images/${this.activeImage.src}" alt="${this.activeImage.alt}">
                 <div>
                     ${this.json.details.images.map((el) => {
-                return '<a href="#"><img class="thumbnails" src="images/' + el + '" alt="Product Image"></a>';
+                return '<a href="#"><img class="thumbnails" src="images/' + el.src + '" alt="' + el.alt + '"></a>';
             }).join('')}
                 </div>
             </div>
