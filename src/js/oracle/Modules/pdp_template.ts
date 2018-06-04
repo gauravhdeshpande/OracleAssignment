@@ -46,23 +46,23 @@ class Template{
                 </div>
                 <!-- Product type -->
                 <div class="price-block">
-                    <span class="list-price">ListPrice:${this.json.price.currency} ${this.json.price.high}</span><br>
-                    <span class="sale-price">${this.json.price.currency} ${this.json.price.discountedPrice}</span><br>
-                    <span class="sale-price">${this.json.price.currency} ${this.json.price.sellingPrice}</span><br>
+                    <del class="list-price">List Price: ${this.json.price.currency}${this.json.price.high}</del><br>
+                    <p class="curr-price"><b>${this.json.price.currency} ${this.json.price.discountedPrice}</b></p>
+                    <span class="sale-price hotPrice">${this.json.price.currency} ${this.json.price.sellingPrice} SALE</span><br>
                 </div>
                 <div class="btn-size">
-                <p>Size: <span id="selected"></span></p>
+                <p>Size: <span class="selected"></span></p>
                 <ul class="btn-ul">
                     ${this.json.details.sizes.map((el,id)=>{
                         console.log(el,id);
-                        return '<li><input id="radio'+id+'" value="'+el+'" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="customRadio" for="radio'+id+'">'+el.substr(0,1)+'<span class="ax-hidden">'+el.substr(1)+'</span></label></li>'
+                        return '<li><p class="sizeContainer"><input id="radio'+id+'" value="'+el+'" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="customRadio" for="radio'+id+'">'+el.substr(0,1)+'<span class="ax-hidden">'+el.substr(1)+'</span></label></p></li>'
                 
                     //return '<button class="sizeBtn" style="text-transform:capitalize;"><span>'+el.substr(0,1)+'</span><span class="ax-hidden">'+el.substr(1)+'</span></button>'
                 }).join('')}
                 </ul>
                 </div>
                 <div class="color-area">
-                    <p class="color-title">Color: </p>
+                    <p class="color-title">Color: <span class="selected"></span></p>
                     <ul id="color-ul">
                     ${this.json.details.colors.map((el,id)=>{
                         return '<li><input id="color'+id+'" value="'+el+'" type="radio" class="colorBtn" name="color"><label for="color'+id+'"style="background:#'+this.colorCodes[el]+';"><span class="ax-hidden">'+el+'</span></label></li>'

@@ -37,11 +37,20 @@ class Pdp extends BasePage{
                 document.getElementById('main-image').setAttribute('src',event.target.getAttribute('src'));
                 break;
             case 'sizeBtn':
+            event.target.closest('div').querySelector('.selected').innerHTML=event.target.value.charAt(0);
+            event.target.closest('ul').querySelectorAll('li').forEach(element => {
+                element.removeAttribute('class','');
+            });
+            event.target.closest('li').setAttribute('class','active');
+            
+            break;
             case 'colorBtn':
+            event.target.closest('div').querySelector('.selected').innerHTML=event.target.value;
                 event.target.closest('ul').querySelectorAll('li').forEach(element => {
                     element.removeAttribute('class','');
                 });
                 event.target.closest('li').setAttribute('class','active');
+                
                 break;
             default: 
                 break;
