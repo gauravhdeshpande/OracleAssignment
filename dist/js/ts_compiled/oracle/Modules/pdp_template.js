@@ -48,7 +48,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 <ul class="btn-ul">
                     ${this.json.details.sizes.map((el, id) => {
                 console.log(el, id);
-                return '<li><p class="sizeContainer"><input id="radio' + id + '" value="' + el + '" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="customRadio" for="radio' + id + '">' + el.substr(0, 1) + '<span class="ax-hidden">' + el.substr(1) + '</span></label></p></li>';
+                return '<li><p class="sizeContainer"><input id="radio' + id + '" value="' + el + '" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="customRadio" for="radio' + id + '"><span class="firstLetter">' + el.substr(0, 1) + '</span><span class="ax-hidden">' + el.substr(1) + '</span></label></p></li>';
                 //return '<button class="sizeBtn" style="text-transform:capitalize;"><span>'+el.substr(0,1)+'</span><span class="ax-hidden">'+el.substr(1)+'</span></button>'
             }).join('')}
                 </ul>
