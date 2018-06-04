@@ -4,7 +4,10 @@ const parentJson = {
         {
             id:"1",
             name:"Dadidas Outdoor Men's Caprock Trail Hiking Shoes",
-            image:"product-image_0.png",
+            image:{
+                src:"product-image_0.png",
+                alt:"Hiking shoes"
+            },
             brand:"361 degrees",
             price:{
                 currency:"$",
@@ -29,7 +32,10 @@ const parentJson = {
         {
             id:"2",
             name:"Cadidas Outdoor Men's Caprock Trail Hiking Shoes",
-            image:"product-image_1.png",
+            image:{
+                src:"product-image_1.png",
+                alt:"Hiking shoes"
+            },
             brand:"adidas",
             price:{
                 currency:"$",
@@ -55,7 +61,10 @@ const parentJson = {
         {
             id:"3",
             name:"Badidas Outdoor Men's Caprock Trail Hiking Shoes",
-            image:"product-image_1.png",
+            image:{
+                src:"product-image_1.png",
+                alt:"Hiking shoes"
+            },
             brand:"360 degrees",
             price:{
                 currency:"$",
@@ -81,7 +90,10 @@ const parentJson = {
         {
             id:"4",
             name:"Adidas Outdoor Men's Caprock Trail Hiking Shoes",
-            image:"product-image_1.png",
+            image:{
+                src:"product-image_1.png",
+                alt:"Hiking shoes"
+            },
             brand:"adidas",
             price:{
                 currency:"$",
