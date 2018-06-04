@@ -50,7 +50,7 @@ class Template{
                     id:obj.id
                 }
             }
-        rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`,0,obj.rating).join('')+`(${obj.rating})`;
+        rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`,0,obj.rating).join('');
         pricing = `
             <del>${obj.price.currency+' '+obj.price.sellingPrice}</del><br/>
             <span>${obj.price.currency+' '+obj.price.discountedPrice}</span><br/>
@@ -82,9 +82,9 @@ class Template{
   </svg>
 </div>
 <hr>
-<div class="col-lg-3">
+<div class="col-lg-2">
             <h2>Payment Method</h2>
-            <div id="visaDiv"><img class="visaImage" src="images/Visa-icon.png"><span>0123456789ABCDEF</span></div>
+            <div id="visaDiv"><img class="visaImage" src="images/Visa-icon.png"><span>************6654</span></div>
             
 </div>
 <div class="col-lg-3">
