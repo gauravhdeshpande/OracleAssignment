@@ -190,7 +190,7 @@ footer {
   text-align: center;
   font-size: 2em;
   font-family: Open Sans, sans-seriff;
-  line-height: 2.5em;
+  line-height: 1.8em;
 }
 .breadcrumb {
   margin: 2% 0%;
@@ -306,6 +306,7 @@ footer {
 }
 .overview {
   margin-top: 5%;
+  line-height: 1.8em;
 }
 .overview h1 {
   font-size: 22px;
