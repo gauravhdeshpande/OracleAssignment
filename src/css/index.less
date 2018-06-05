@@ -65,7 +65,7 @@
 // Breadcrumb style 
 .breadcrumb {
 	font-family: Open Sans;
-	font-weight: 300;
+	font-weight: @fontw-semibold;
 	font-size: 1em;
 	color: @light_blue;
 	
@@ -267,7 +267,6 @@ header, footer {
 .breadcrumb {
 	margin: 2% 0%;
 	font-size: 14px;
-	font-weight: @fontw-light;
 	a {
 		color: @light_blue;
 		text-decoration: none;
@@ -486,7 +485,9 @@ header, footer {
     }
     li.active{
         label {
-			border: 1px dashed #e9e9e9;
+			background: #042c63;
+			color: @white;
+			border: 1px solid #e9e9e9;
         }
     }
 	&:first-child {

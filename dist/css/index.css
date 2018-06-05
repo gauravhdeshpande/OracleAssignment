@@ -20,7 +20,7 @@
 }
 .breadcrumb {
   font-family: Open Sans;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 1em;
   color: #3370a2;
 }
@@ -195,7 +195,6 @@ footer {
 .breadcrumb {
   margin: 2% 0%;
   font-size: 14px;
-  font-weight: 300;
 }
 .breadcrumb a {
   color: #3370a2;
@@ -398,7 +397,9 @@ footer {
   cursor: pointer;
 }
 .btn-size li.active label {
-  border: 1px dashed #e9e9e9;
+  background: #042c63;
+  color: #fff;
+  border: 1px solid #e9e9e9;
 }
 .btn-size:first-child {
   padding-left: 0;
