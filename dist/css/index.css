@@ -446,7 +446,7 @@ span.input-group-btn > button {
   padding-right: 10px;
 }
 li.col-lg-12.row {
-  margin-bottom: 2em;
+  margin: 1em -1em;
   border-bottom: 1px solid darkgray;
 }
 li.col-lg-12.row:last-child {
@@ -784,19 +784,21 @@ table tr td:not(:last-child) {
     padding: 15px;
   }
   .buyAgain {
+    left: -1em;
     outline: none;
     color: white;
-    padding: 9px 18px;
+    padding: 2px 30px;
     border: none;
     background: #3370a2;
     border-radius: 3px;
     position: relative;
     line-height: 2.6em;
     font-size: 14px;
-    width: auto;
+    width: 85px;
     margin-left: auto;
     margin-right: auto;
-    left: 1em;
+    text-align: center;
+    display: inline-block;
   }
   .qtyStpr {
     margin-left: auto;
@@ -881,6 +883,13 @@ table tr td:not(:last-child) {
   border-bottom: 1px solid darkgrey;
   margin: 10% 0%;
   padding: 6% 0%;
+}
+.odpQuantityStepper,
+.odpBuyAgain {
+  margin-top: 2em;
+}
+.current-price {
+  margin: 10px -30px;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .department-section {
