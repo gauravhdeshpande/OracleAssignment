@@ -671,7 +671,7 @@ input {
 }
 .reward-animation {
 	.circular-chart {
-		max-width: 80%;
+		max-width: 90%;
 		max-height: 200px;
 	}
 	h2 {
@@ -708,14 +708,15 @@ input {
 }
 
 .total {
-    border-top: 1px dashed #4e4646;
+    border-top: 1px solid darkgrey;
 }
 
-td {
-    padding-bottom: 0.8em;
-    padding-right: 4em;
-}
+// td {
+//     padding-bottom: 0.8em;
+//     padding-right: 4em;
+// }
 
+table tr td:not(:last-child) { padding: 0 140px 0 0; }
 
 
 .firstLetter {
@@ -792,6 +793,8 @@ body {
 		border: 0;
 		width: 40%;
 		float: left;
+		padding-bottom: 100px;
+		padding-right: 10px;
     }
 }
 	.hide {
@@ -983,8 +986,12 @@ body {
 	width: 100%;
 }
 #color-ul {
-    overflow-x: scroll;
-}
+		overflow-x: scroll;
+		overflow-y: hidden;
+		width: 100%;
+		white-space: nowrap;
+	}
+
 
 
 #grey-bg {
@@ -1041,6 +1048,13 @@ b, strong {
 .hotPrice {
 	color: @sale;
 	font-size: 24px !important;
+}
+
+#paymentContainer {
+    border-top: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
+    margin: 10% 0%;
+    padding: 6% 0%;
 }
 
 // IE 10+ Media Queries 
