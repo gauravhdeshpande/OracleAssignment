@@ -907,7 +907,7 @@ table tr td:not(:last-child) {
     margin-top: 2em;
   }
   .current-price {
-    margin: 10px 0px;
+    margin: 10px -30px;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
