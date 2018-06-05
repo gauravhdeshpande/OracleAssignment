@@ -53,7 +53,7 @@ const parentJson = {
                     {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
                     {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
                 ],
-                colors:['bluee','slategray','electro'],
+                colors:['light blue','slategray','electro'],
                 sizes:['small','medium','large','xtra large'],
                 description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             } 
@@ -82,7 +82,7 @@ const parentJson = {
                     {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
                     {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
                 ],
-                colors:['electro','bluee','white'],
+                colors:['electro','light blue','white'],
                 sizes:['small','medium','large','xtra large'],
                 description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             } 
@@ -111,7 +111,7 @@ const parentJson = {
                     {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
                     {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
                 ],
-                colors:['white','grey','blue','bluee','slategray' ,'electro'],
+                colors:['white','grey','blue','light blue','slategray' ,'electro'],
                 sizes:['small','medium','large','xtra large'],
                 description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             } 
@@ -131,7 +131,7 @@ const parentJson = {
             code:'273c75'
         },
         {
-            name:'bluee',
+            name:'light blue',
             code:'353b48'
         },
         {

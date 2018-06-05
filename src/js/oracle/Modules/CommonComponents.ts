@@ -3,7 +3,7 @@ class Stars{
     html;
     constructor(props){
         this.obj = {rating:props};
-        this.html = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`,0,this.obj.rating).join('');
+        this.html = Array(5).fill(`<i class="fa fa-star fa-2x"></i>`).fill(`<i class="fa fa-star checked fa-2x"></i>`,0,this.obj.rating).join('');
     }
 }
 class QuantityStepper{
