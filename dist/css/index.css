@@ -891,24 +891,24 @@ table tr td:not(:last-child) {
     font-weight: 600;
     font-size: 14px;
   }
-}
-.hotPrice {
-  color: #da0f0f;
-  font-weight: 600;
-  font-size: 24px !important;
-}
-#paymentContainer {
-  border-top: 1px solid darkgrey;
-  border-bottom: 1px solid darkgrey;
-  margin: 10% 0%;
-  padding: 6% 0%;
-}
-.odpQuantityStepper,
-.odpBuyAgain {
-  margin-top: 2em;
-}
-.current-price {
-  margin: 10px 0px;
+  .hotPrice {
+    color: #da0f0f;
+    font-weight: 600;
+    font-size: 24px !important;
+  }
+  #paymentContainer {
+    border-top: 1px solid darkgrey !important;
+    border-bottom: 1px solid darkgrey !important;
+    margin: 10% 0%;
+    padding: 6% 0%;
+  }
+  .odpQuantityStepper,
+  .odpBuyAgain {
+    margin-top: 2em;
+  }
+  .current-price {
+    margin: 10px 0px;
+  }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .department-section {
