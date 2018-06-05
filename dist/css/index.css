@@ -616,6 +616,9 @@ table tr td:not(:last-child) {
   margin: 0px !important;
   padding: 0px !important;
 }
+#orderNumber {
+  line-height: 1.5em;
+}
 @media screen and (max-width: 587px) {
   body h1 {
     font-size: 0.8em;
@@ -903,7 +906,7 @@ table tr td:not(:last-child) {
   margin-top: 2em;
 }
 .current-price {
-  margin: 10px -30px;
+  margin: 10px 0px;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .department-section {
