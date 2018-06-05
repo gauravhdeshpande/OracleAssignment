@@ -51,7 +51,7 @@ select {
 input {
   border: 1px solid #cccccc;
   height: 45px;
-  border-radius: 3px;
+  border-radius: 0;
   font-family: Open Sans, sans-seriff;
   font-weight: 600;
   font-size: 1em;
@@ -446,7 +446,11 @@ span.input-group-btn > button {
   padding-right: 10px;
 }
 li.col-lg-12.row {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid darkgray;
+}
+li.col-lg-12.row:last-child {
+  border-bottom: none;
 }
 .tabcontent {
   display: none;
@@ -800,6 +804,7 @@ table tr td:not(:last-child) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 150px;
   }
   .brand-section {
     display: none;

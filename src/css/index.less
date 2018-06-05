@@ -102,7 +102,7 @@ select {
 input {
 	border: 1px solid #cccccc;
 	height: 45px;
-	border-radius: 3px;
+	border-radius: 0;
 	font-family: @site_font;
 	font-weight: 600;
 	font-size: 1em;
@@ -544,7 +544,11 @@ span.input-group-btn {
     padding-right: 10px;
 }
 li.col-lg-12.row {
-	margin-bottom: 3em;
+	margin-bottom: 2em;
+	border-bottom: 1px solid darkgray; 
+	&:last-child{
+	border-bottom: none; 
+	}
 }
 .tabcontent {
 	display: none;
@@ -974,7 +978,8 @@ body {
     margin-right: auto;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+	display: flex;
+	width: 150px;
 }
 .brand-section {
     display: none;
