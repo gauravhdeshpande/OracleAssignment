@@ -734,7 +734,7 @@ table tr td:not(:last-child) {
     border: none;
     width: 100%;
     padding: 3% 30%;
-    margin: 0px -3px 10px 0px;
+    margin: 0px -3px -3px 0px;
     background: #043c63;
     color: #fff;
   }
