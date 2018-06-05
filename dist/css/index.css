@@ -634,6 +634,10 @@ table tr td:not(:last-child) {
     margin-left: auto !important;
     margin-right: auto !important;
   }
+  .main-wrapper .reward-animation h2 {
+    margin-left: 0;
+    font-weight: 600;
+  }
   .main-wrapper .product-col img {
     border: 0;
     width: 40%;
