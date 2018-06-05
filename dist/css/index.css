@@ -726,17 +726,19 @@ table tr td:not(:last-child) {
     width: 23%;
   }
   #hamburger {
-    display: block;
-    width: 90%;
-    margin: auto;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
   }
   #hamburger a {
     border: none;
     width: 100%;
-    padding: 3% 30%;
+    padding: 3% 0%;
     margin: 12px -3px -10px 0px;
     background: #043c63;
     color: #fff;
+    display: inline-block;
+    text-align: center;
   }
   #hamburger ul {
     display: none;
@@ -762,9 +764,10 @@ table tr td:not(:last-child) {
     display: inline-block;
     background: #fff;
     color: black;
-    padding: 5px 15px;
+    padding: 0px 8%;
     border: 1px solid black;
     text-decoration: none;
+    margin-left: 0%;
   }
   #optionList select {
     display: none;
@@ -832,6 +835,7 @@ table tr td:not(:last-child) {
     margin-right: auto;
     width: 100%;
     display: block;
+    padding-bottom: 20px;
   }
   #grey-bg #final-price .visaImage {
     width: auto;

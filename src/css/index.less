@@ -899,16 +899,19 @@ body {
 }
 
 #hamburger {
-	display: block;
-	width: 90%;
-	margin: auto;
+	display: inline-block;
+    width: 100%;
+	margin: 0 auto;
+	
 	a {
 		border: none;
 		width: 100%;
-		padding: 3% 30%;
+		padding: 3% 0%;
 		margin: 12px -3px -10px 0px;
 		background: #043c63;
 		color: @white;
+		display: inline-block;
+		text-align: center;
 	}
 
 	ul{display:none;}
@@ -929,12 +932,13 @@ body {
 		margin-top: 6px;
 	}
 	a {
-	  display: inline-block;
-	  background: #fff;
-	  color: black;
-	  padding: 5px 15px;
-	  border: 1px solid black;
-	  text-decoration: none;
+		display: inline-block;
+		background: #fff;
+		color: black;
+		padding: 0px 8%;
+		border: 1px solid black;
+		text-decoration: none;
+		margin-left: 0%;
 	}
 	select {
 	  display: none;
@@ -1010,7 +1014,8 @@ body {
 	margin-left: auto;
     margin-right: auto;
     width: 100%;
-    display: block;
+	display: block;
+	padding-bottom: 20px; 	
     // overflow: hidden;
 
 .visaImage {
