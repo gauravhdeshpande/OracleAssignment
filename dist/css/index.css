@@ -36,6 +36,10 @@
 .back-breadcrumb :hover {
   text-decoration: none;
 }
+.main-section {
+  width: 90%;
+  margin: 0 auto;
+}
 select {
   border: 1px solid #cccccc;
   font-family: Open Sans, sans-seriff;
@@ -67,6 +71,9 @@ select-quantity .disabled {
 .price-table table {
   border: 1px solid #cccccc;
   height: 40px;
+}
+.plp-heading {
+  font-size: 1.6em;
 }
 /* PDP for Desktop  */
 #main-image {
@@ -129,7 +136,8 @@ body h1 {
 }
 body h2 {
   position: relative;
-  font-size: 1em;
+  font-size: 0.8em;
+  font-weight: 600;
   padding: 0;
   margin: 0;
 }
@@ -477,8 +485,6 @@ li.col-lg-12.row {
 .main-wrapper .product-group-heading {
   background: #f9f9f9;
   padding: 10px;
-  -ms-grid-columns: 33% 66%;
-  grid-template-columns: 33% 66%;
 }
 .main-wrapper .product-group-heading .heading {
   display: inline-block;
@@ -598,6 +604,17 @@ td {
   text-transform: capitalize;
 }
 @media screen and (max-width: 587px) {
+  body h1 {
+    font-size: 1em;
+    font-weight: 300;
+  }
+  .plp-heading {
+    font-size: 1.6em;
+  }
+  .main-section {
+    width: 98%;
+    margin: 0 auto;
+  }
   .main-wrapper .col {
     padding: 10px 10px;
   }
@@ -620,10 +637,8 @@ td {
   }
   .main-wrapper .product-col img {
     border: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    width: 40%;
+    float: left;
   }
   .main-wrapper .hide {
     display: none;
@@ -675,15 +690,9 @@ td {
     padding: 0;
   }
   .main-wrapper .product-group-heading {
-    background: transparent !important;
     background: #f9f9f9;
-    padding: 10px;
-    -ms-grid-columns: 33% 67%;
-    grid-template-columns: 33% 67%;
-    margin-top: 15px;
-  }
-  .main-wrapper .product-group-heading > .heading > p {
-    display: none;
+    margin-top: 10px;
+    margin: 8% -8%;
   }
   .main-wrapper #plp-listing li {
     width: 100%;
@@ -704,8 +713,9 @@ td {
   }
   .main-wrapper select {
     text-transform: none;
-    width: 152px;
-    height: 45px;
+    width: 135px;
+    height: 38px;
+    font-size: 14px;
   }
   .main-wrapper .btn-size > button {
     width: 23%;
@@ -716,10 +726,12 @@ td {
     margin: auto;
   }
   #hamburger a {
-    border: 1px solid grey;
+    border: none;
     width: 100%;
-    padding: 2% 28%;
-    margin-bottom: -3px;
+    padding: 3% 30%;
+    margin: 0px -3px 10px 0px;
+    background: #043c63;
+    color: #fff;
   }
   #hamburger ul {
     display: none;
@@ -842,6 +854,10 @@ td {
     font-weight: 600;
     font-size: 14px;
   }
+}
+.hotPrice {
+  color: #da0f0f;
+  font-size: 24px !important;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .department-section {
