@@ -162,7 +162,14 @@ class Template{
         }
         else{
             cost = this.productJson.reduce((a,b)=>{
-                return Number(a.quantity)*Number(a.price.sellingPrice) + Number(b.quantity)*Number(b.price.sellingPrice);
+                if(a.price){
+                    return Number(a.quantity)*Number(a.price.sellingPrice) + Number(b.quantity)*Number(b.price.sellingPrice);
+            
+                }
+                else{
+                    return a + Number(b.quantity)*Number(b.price.sellingPrice);
+            
+                }
             });
         }
         
