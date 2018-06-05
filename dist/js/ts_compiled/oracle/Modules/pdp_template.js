@@ -64,11 +64,11 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 <p class="quantityText"><b>Quantity:</b></p>
                 <div class="row">
                     
-                    <div class="col-lg-4 col-xs-6" id="quanitityStepper">
+                    <div class="col-lg-4 col-xs-12 qtyBtn" id="quanitityStepper">
                         <!-- Quantity Stepper -->
                         
                     </div>
-                    <input class="col-lg-5" type="submit" value="Add To Cart"/>
+                    <input class="col-lg-5 col-xs-12 qtyBtn" type="submit" value="Add To Cart"/>
                 </div>
                 <div class="overview">
                     <h1>Overview</h1>
