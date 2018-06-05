@@ -64,8 +64,8 @@ class Template{
                 <span> ${pricing}</span>
                 <span>${rating}</span>            
             </div>  
-            <div class="col-lg-3 col-xs-6" id=${qsid}></div>
-            <div class="col-lg-3 col-xs-6"> <a class="primaryBtn buyAgain" href="pdp.html?id=${obj.id}">Buy Again</a><p class="current-price">Current Price ${obj.price.currency+' '+obj.price.sellingPrice}</p></div>      
+            <div class="col-lg-3 col-xs-6 odpQuantityStepper" id=${qsid}></div>
+            <div class="col-lg-3 col-xs-6 odpBuyAgain"> <a class="primaryBtn buyAgain" href="pdp.html?id=${obj.id}">Buy Again</a><p class="current-price">Current Price ${obj.price.currency+' '+obj.price.sellingPrice}</p></div>      
         </li>`});
         this.templateHtml += '</ul>';
         let priceTable = document.getElementById('final-price');
@@ -99,11 +99,11 @@ class Template{
                 <td>$123.00</td>
             </tr>
             <tr class="shipping">
-                <td><b>Shipping<br/>Standard</b></td>
+                <td><b>Shipping</b><br/>Standard</td>
                 <td>$123.00</td>
             </tr>
             <tr class="promo">
-                <td><b>Promo<br/>SPRINGSHI</b></td>
+                <td><b>Promo</b><br/>SPRINGSHI</td>
                 <td>$123.00</td>
             </tr>
             
