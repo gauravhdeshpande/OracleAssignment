@@ -835,6 +835,7 @@ table tr td:not(:last-child) {
     margin-right: auto;
     width: 100%;
     display: block;
+    padding-bottom: 20px;
   }
   #grey-bg #final-price .visaImage {
     width: auto;
