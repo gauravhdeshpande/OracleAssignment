@@ -16,7 +16,7 @@ define(["require", "exports"], function (require, exports) {
                 pricing = `
             <del>${obj.price.currency + ' ' + obj.price.sellingPrice}</del>
             <span class="curr-price">${obj.price.currency + ' ' + obj.price.discountedPrice}</span>
-            <span class="${obj.price.sale ? 'hotPrice' : ''}">${obj.price.currency + ' ' + obj.price.low} - ${obj.price.high} ${obj.price.sale ? 'SALE' : ''}</span>
+            <span class="${obj.price.sale ? 'hotPrice' : ''}">${obj.price.currency + ' ' + obj.price.low} - ${obj.price.currency + ' ' + obj.price.high} ${obj.price.sale ? 'SALE' : ''}</span>
             ${obj.price.sale ? '' : "<span>&nbsp;</span>"}
         `;
                 this.list += `<li class="product-col" data-id="${obj.id}">
