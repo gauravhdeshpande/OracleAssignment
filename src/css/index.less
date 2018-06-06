@@ -43,6 +43,32 @@ html {
 	font-size: 16px;
 }
 
+.product-title {
+	line-height: 2em;
+	h1 {
+		line-height: 0.6em;
+	}
+.item-details {
+	line-height: 0;
+	.rating {
+		margin-top: 10px !important;
+	}
+}
+}
+
+.price-block {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -1em;
+    line-height: 1.8em;
+}
+
+.thumbnails {
+    margin-right: 10px;
+    opacity: 0.6;
+}
+
 #orderNumber p:nth-child(5) {
 	text-align: center;
 	margin: 0% 0%; 
@@ -95,11 +121,12 @@ html {
 }
 
 select {
-    border: 1px solid #cccccc;
+    border: 1px solid #666666;
     font-family: @site_font;
     font-size: 1rem;
 	border-radius: 3px;
 	height: 40px;
+	padding-left: 10px; 
 }
 
 input {
@@ -125,6 +152,10 @@ select-quantity {
 }
 }
 
+
+#sortby-label {
+	margin-right: 10px;
+}
 
 .price-table table {
 		border: 1px solid #cccccc;
@@ -362,8 +393,15 @@ header, footer {
 #quanitityStepper {
 	margin: 0;
 }
+
+#main-image {
+    width: auto;
+    max-width: 100%;
+    margin: 15% 10%;
+}
+
 .tab {
-	margin-top: 10%;
+	margin-top: 2%;
 	width: 100%;
 	overflow: hidden;
 	border: 1px solid #ccc;
