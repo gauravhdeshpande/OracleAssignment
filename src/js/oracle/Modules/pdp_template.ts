@@ -42,7 +42,7 @@ class Template{
                 <div class="product-title">
                     <h1>${this.json.name}</h1>
                     <p class="item-details">Item #:${this.json.id}</p>
-                    <p class="rating">${new Stars(this.json.rating).html} <span class="review-text"><a>Reviews(0)</a></span></p>
+                    <p class="rating">${new Stars(this.json.rating).html} <span class="review-text"><a> Reviews(0)</a></span></p>
                 </div>
                 <!-- Product type -->
                 <div class="price-block">
