@@ -32,7 +32,7 @@ class Template{
         <div class="row">
             <div class="col-lg-5 col-xs-12">
                 <img id="main-image" src="images/${this.activeImage.src}" alt="${this.activeImage.alt}">
-                <div>
+                <div id="product-images">
                     ${this.json.details.images.map((el)=>{
                         return '<a href="#"><img class="thumbnails" src="images/'+el.src+'" alt="'+el.alt+'"></a>'
                     }).join('')}
