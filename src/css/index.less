@@ -289,7 +289,7 @@ body {
 	top: 0;
 }
 .fa {
-	color: @black;
+	color:#cccccc;
 }
 .fa.checked {
 	color: @star_color;
@@ -303,6 +303,10 @@ header, footer {
 	font-size: 2rem;
 	font-family: @site_font;
 	line-height: 1.8rem;
+	h2 {
+		font-size: 1.2em;
+	    padding-top: 1%;
+	}
 }
 
 .breadcrumb {
@@ -390,6 +394,11 @@ header, footer {
 		}
 	}
 }
+
+.btn-ul {
+	margin-bottom: -4em!important;
+}
+
 #quanitityStepper {
 	margin: 0;
 }
@@ -397,7 +406,10 @@ header, footer {
 #main-image {
     width: auto;
     max-width: 100%;
-    margin: 15% 10%;
+	margin: 15% 10%;
+}
+#product-images {
+	border-bottom: 1px solid #f9f9f9;
 }
 
 .tab {
@@ -495,7 +507,7 @@ header, footer {
     margin: 0% 0%;
     
 	li {
-        padding: 1.2rem;
+        padding: 3rem;
         width:25px;
         height:25px;
         position:relative;
@@ -507,10 +519,10 @@ header, footer {
 			border: none;
 		} 
 		label {
-            width: 8px;
-            height: 30px;
+            width: 50px;
+            height: 20px;
             display: block;
-            border-radius: 50%;
+            // border-radius: 50%;
             position: absolute;
             top: 0px;
             left: 0;
@@ -524,8 +536,8 @@ header, footer {
                 position:absolute;
                 top:0;
                 left:0;
-                width:50px;
-                height:50px;
+                width:150px;
+                height:150px;
                 z-index:11;
                 opacity:0;
                 cursor:pointer;
@@ -787,9 +799,10 @@ table tr td:not(:last-child) { padding: 0 140px 0 0; }
 .firstLetter {
     vertical-align: middle;
     position: absolute;
-    top: 4px;
-    left: 20px;
+    top: 0;
     font-weight: 300;
+    text-align: center;
+    left: 40%;
 }
 
 .selected {

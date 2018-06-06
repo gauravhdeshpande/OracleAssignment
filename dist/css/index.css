@@ -208,7 +208,7 @@ body li {
   top: 0;
 }
 .fa {
-  color: #333333;
+  color: #cccccc;
 }
 .fa.checked {
   color: #FFC107;
@@ -223,6 +223,11 @@ footer {
   font-size: 2rem;
   font-family: Open Sans, sans-seriff;
   line-height: 1.8rem;
+}
+header h2,
+footer h2 {
+  font-size: 1.2em;
+  padding-top: 1%;
 }
 .breadcrumb {
   margin: 2% 0%;
@@ -307,6 +312,9 @@ footer {
   color: #fff;
   border-radius: 3px;
 }
+.btn-ul {
+  margin-bottom: -4em !important;
+}
 #quanitityStepper {
   margin: 0;
 }
@@ -314,6 +322,9 @@ footer {
   width: auto;
   max-width: 100%;
   margin: 15% 10%;
+}
+#product-images {
+  border-bottom: 1px solid #f9f9f9;
 }
 .tab {
   margin-top: 2%;
@@ -400,7 +411,7 @@ footer {
   margin: 0% 0%;
 }
 .btn-size li {
-  padding: 1.2rem;
+  padding: 3rem;
   width: 25px;
   height: 25px;
   position: relative;
@@ -412,10 +423,9 @@ footer {
   border: none;
 }
 .btn-size li label {
-  width: 8px;
-  height: 30px;
+  width: 50px;
+  height: 20px;
   display: block;
-  border-radius: 50%;
   position: absolute;
   top: 0px;
   left: 0;
@@ -427,8 +437,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
   z-index: 11;
   opacity: 0;
   cursor: pointer;
@@ -645,9 +655,10 @@ table tr td:not(:last-child) {
 .firstLetter {
   vertical-align: middle;
   position: absolute;
-  top: 4px;
-  left: 20px;
+  top: 0;
   font-weight: 300;
+  text-align: center;
+  left: 40%;
 }
 .selected {
   text-transform: capitalize;
