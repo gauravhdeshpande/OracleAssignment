@@ -448,7 +448,7 @@ span.input-group-btn > button {
   padding-right: 10px;
 }
 li.col-lg-12.row {
-  margin: 1em -1em;
+  margin: 1em -2em;
   border-bottom: 1px solid darkgray;
   font-weight: 600;
   line-height: 1.8em;
@@ -752,7 +752,7 @@ table tr td:not(:last-child) {
   #hamburger a {
     border: none;
     width: 90%;
-    padding: 1	% 0;
+    padding: 1% 0;
     margin: 12px -3px -10px 0px;
     background: #043c63;
     color: #fff;
@@ -802,7 +802,7 @@ table tr td:not(:last-child) {
     padding: 19px;
   }
   .buyAgain {
-    left: -1em;
+    left: -4em;
     outline: none;
     color: white;
     padding: 2px 30px;
@@ -812,7 +812,7 @@ table tr td:not(:last-child) {
     position: relative;
     line-height: 2.6em;
     font-size: 14px;
-    width: 85px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -824,7 +824,14 @@ table tr td:not(:last-child) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 150px;
+    width: 100%	;
+  }
+  .qtyStpr input {
+    width: 35px;
+    height: 34px;
+    text-align: center;
+    outline: none;
+    border: 1px solid #e3e3e3;
   }
   .brand-section {
     display: none;
