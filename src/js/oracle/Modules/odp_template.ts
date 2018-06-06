@@ -57,7 +57,7 @@ class Template{
             <span class="${obj.price.sale?'hotPrice':''}">${obj.price.sale?'SALE':''} ${obj.price.currency+' '+obj.price.low} - ${obj.price.high}</span><br/>
             ${obj.price.sale?'':"<span>&nbsp;</span>"}
         `;
-        this.templateHtml+=`<li class="col-lg-12 row" data-id="${obj.id}">
+        this.templateHtml+=`<li class="col-lg-12 row" id="productDetail" data-id="${obj.id}">
             <div class="col-lg-2 col-xs-6"><img class="odp_img" alt="${obj.image.alt}" src="images/${obj.image.src}"/></div>
             <div class="col-lg-4 col-xs-6">
                 <a href="pdp.html?id=${obj.id}"><span class="product-details">${obj.name}</span></a>

@@ -76,7 +76,7 @@ class Template{
                         <!-- Quantity Stepper -->
                         
                     </div>
-                    <input class="col-lg-5 col-xs-12 qtyBtn" type="submit" value="Add To Cart"/>
+                    <input class="col-lg-5 col-xs-11 qtyBtn" type="submit" value="Add To Cart"/>
                 </div>
                 <div class="overview">
                     <h1>Overview</h1>
