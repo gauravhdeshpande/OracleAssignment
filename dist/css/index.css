@@ -675,6 +675,9 @@ table tr td:not(:last-child) {
 #orderNumber {
   line-height: 1.5rem;
 }
+.product-details {
+  font-size: 14px;
+}
 @media screen and (max-width: 587px) {
   body h1 {
     font-size: 0.8rem;
