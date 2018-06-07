@@ -100,6 +100,7 @@ select-quantity .disabled {
 }
 #sortby-label {
   margin-right: 10px;
+  font-size: 14px;
 }
 .price-table table {
   border: 1px solid #cccccc;
@@ -107,6 +108,7 @@ select-quantity .disabled {
 }
 .plp-heading {
   font-size: 1.6rem;
+  padding-bottom: 30px;
 }
 /* PDP for Desktop  */
 .active-link {
@@ -147,7 +149,7 @@ select-quantity .disabled {
 .minus {
   background: #f9f9f9;
   width: 23%;
-  padding: 3px 0px;
+  padding: 0px 0px;
   font-weight: bold;
   height: 38px;
   border: none;
@@ -156,7 +158,7 @@ select-quantity .disabled {
 input[type="submit"] {
   border: none;
   height: 40px;
-  background: #043c63;
+  background: #3370a2;
   color: white;
   width: 100%;
   border-radius: 3px;
@@ -220,21 +222,22 @@ body li {
 header,
 footer {
   width: 100%;
-  height: 60px;
+  height: 100px;
   background: black;
   color: #fff;
   text-align: center;
   font-size: 2rem;
   font-family: Open Sans, sans-seriff;
-  line-height: 1.8rem;
+  line-height: 5rem;
+  text-transform: uppercase;
 }
 header h2,
 footer h2 {
-  font-size: 1.2em;
+  font-size: 1em;
   padding-top: 1%;
 }
 .breadcrumb {
-  margin: 2% 0%;
+  margin: 1% 0% -1%;
   font-size: 14px;
 }
 .breadcrumb a {
@@ -268,6 +271,11 @@ footer h2 {
   margin: 2%;
   font-size: 14px;
   line-height: 2em;
+  text-decoration: underline;
+}
+.department-section #order-link {
+  color: #043c63 !important;
+  text-decoration: none;
 }
 .sort {
   float: right;
@@ -359,7 +367,7 @@ footer h2 {
 }
 .overview {
   margin-top: 5%;
-  line-height: 1.8rem;
+  line-height: 1.3rem;
 }
 .overview h1 {
   font-size: 22px;
@@ -488,7 +496,8 @@ span.input-group-btn > button {
   line-height: 2.6rem;
 }
 .current-price {
-  margin: 20px 3px;
+  margin: 3px 3px;
+  font-size: 13px;
 }
 #grey-bg {
   background: #f9f9f9;
@@ -511,6 +520,13 @@ li.col-lg-12.row {
 li.col-lg-12.row:last-child {
   border-bottom: none;
 }
+.odpQuantityStepper {
+  padding-left: 6em;
+}
+.odpQuantityStepper .plus,
+.odpQuantityStepper .minus {
+  width: 30%;
+}
 .tabcontent {
   display: none;
   padding: 6px 12px;
@@ -525,6 +541,7 @@ li.col-lg-12.row:last-child {
 .hotPrice {
   color: #da0f0f;
   font-size: 24px;
+  font-weight: bold;
 }
 .list-price {
   font-size: 14px;
@@ -554,7 +571,7 @@ li.col-lg-12.row:last-child {
 }
 .main-wrapper .product-group-heading form {
   float: right;
-  margin: -5px 0 0 0;
+  margin: 0 0 0 0;
 }
 #plp-listing li {
   width: 20%;
@@ -684,6 +701,14 @@ table tr td:not(:last-child) {
 table {
   margin-left: -3%;
 }
+.fa-2x {
+  font-size: 1.5em !important;
+  letter-spacing: 5px;
+}
+.sale-price {
+  display: block;
+  margin-bottom: -1.6em;
+}
 @media screen and (max-width: 587px) {
   body h1 {
     font-size: 0.8rem;
@@ -724,7 +749,7 @@ table {
     border: 0;
     width: 40%;
     float: left;
-    padding-bottom: 100px;
+    padding-bottom: 110px;
     padding-right: 10px;
   }
   .main-wrapper .hide {
@@ -787,7 +812,7 @@ table {
     border-right: none;
     margin: auto;
     border-bottom: 1px solid #e9e9e9 ;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
   .main-wrapper #plp-listing li:last-child {
     border-bottom: none;
@@ -800,7 +825,7 @@ table {
   }
   .main-wrapper select {
     text-transform: none;
-    width: 135px;
+    width: 140px;
     height: 38px;
     font-size: 14px;
   }
@@ -964,7 +989,12 @@ table {
   .hotPrice {
     color: #da0f0f;
     font-weight: 600;
-    font-size: 24px !important;
+    font-size: 22px !important;
+  }
+  .fa {
+    padding-right: 5px !important;
+    font-size: 20px !important;
+    margin-top: 10px !important;
   }
   #paymentContainer {
     border-top: 1px solid darkgrey !important;
