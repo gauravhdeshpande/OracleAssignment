@@ -270,6 +270,8 @@ footer h2 {
   display: -ms-inline-grid;
   display: inline-grid;
   margin: 2%;
+  font-size: 14px;
+  line-height: 2em;
 }
 .sort {
   float: right;
@@ -365,6 +367,7 @@ footer h2 {
 }
 .overview h1 {
   font-size: 22px;
+  font-weight: 400;
 }
 #hamburger {
   display: none;
@@ -489,7 +492,7 @@ span.input-group-btn > button {
   line-height: 2.6rem;
 }
 .current-price {
-  margin: 20px 0px;
+  margin: 20px 3px;
 }
 #grey-bg {
   background: #f9f9f9;
@@ -681,6 +684,9 @@ table tr td:not(:last-child) {
 }
 .product-details {
   font-size: 14px;
+}
+table {
+  margin-left: -3%;
 }
 @media screen and (max-width: 587px) {
   body h1 {
