@@ -365,7 +365,6 @@ footer h2 {
 }
 .overview h1 {
   font-size: 22px;
-  font-weight: 300;
 }
 #hamburger {
   display: none;
@@ -438,6 +437,8 @@ footer h2 {
   left: 0;
   z-index: 10;
   text-align: center;
+  border: 1px solid #3370a2;
+  border-radius: 3px;
 }
 .btn-size li input[type="radio"] {
   display: block;
@@ -663,7 +664,6 @@ table tr td:not(:last-child) {
   vertical-align: middle;
   position: absolute;
   top: 0;
-  font-weight: 300;
   text-align: center;
   left: 40%;
 }
