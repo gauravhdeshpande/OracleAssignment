@@ -3,7 +3,7 @@ const parentJson = {
     productList:[
         {
             id:"1",
-            name:"Dadidas Outdoor Men's Caprock Trail Hiking Shoes",
+            name:"Adidas Outdoor Men's Caprock Trail Hiking Shoes",
             image:{
                 src:"product-image_0.png",
                 alt:"Hiking shoes"
@@ -31,12 +31,12 @@ const parentJson = {
         },
         {
             id:"2",
-            name:"Cadidas Outdoor Men's Caprock Trail Hiking Shoes",
+            name:"Nike Men's Air Force 1 Running Shoes",
             image:{
                 src:"product-image_1.png",
                 alt:"Hiking shoes"
             },
-            brand:"adidas",
+            brand:"360 degree",
             price:{
                 currency:"$",
                 sellingPrice:"2499.00",
@@ -60,12 +60,12 @@ const parentJson = {
         },
         {
             id:"3",
-            name:"Badidas Outdoor Men's Caprock Trail Hiking Shoes",
+            name:"Adidas Outdoor Men's Caprock Trail Hiking Shoes",
             image:{
-                src:"product-image_1.png",
+                src:"product-image_0.png",
                 alt:"Hiking shoes"
             },
-            brand:"360 degrees",
+            brand:"adidas",
             price:{
                 currency:"$",
                 sellingPrice:"2499.00",
@@ -89,12 +89,12 @@ const parentJson = {
         },
         {
             id:"4",
-            name:"Adidas Outdoor Men's Caprock Trail Hiking Shoes",
+            name:"Nike Men's Air Force 1 Running Shoes",
             image:{
                 src:"product-image_1.png",
                 alt:"Hiking shoes"
             },
-            brand:"adidas",
+            brand:"360 degree",
             price:{
                 currency:"$",
                 sellingPrice:"2499.00",
