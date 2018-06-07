@@ -77,6 +77,10 @@ select {
   border-radius: 3px;
   height: 40px;
   padding-left: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  -ms-progress-appearance: none;
+  -moz-appearance: none;
 }
 input {
   border: 1px solid #cccccc;
@@ -215,7 +219,7 @@ body li {
   color: #cccccc;
 }
 .fa.checked {
-  color: #FFC107;
+  color: #043c63;
 }
 header,
 footer {
