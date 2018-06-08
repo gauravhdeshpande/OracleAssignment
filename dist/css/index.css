@@ -597,12 +597,15 @@ li.col-lg-12.row:last-child {
   padding: 2%;
   line-height: 1.5;
   border-right: 1px solid #ebebeb;
-  margin: 3% 0%;
+  margin: 0% 0%;
   font-weight: 600;
   height: 370px;
   border-bottom: 1px solid #cccccc;
 }
 #plp-listing li:last-child {
+  border-right: none;
+}
+#plp-listing li:nth-child(4) {
   border-right: none;
 }
 input#number {
