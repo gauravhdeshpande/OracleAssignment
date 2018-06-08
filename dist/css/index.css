@@ -145,7 +145,16 @@ select-quantity .disabled {
 .hide-mobile {
   display: none;
 }
-.plus,
+.plus {
+  background: #f9f9f9;
+  width: 25%;
+  padding: 0px 0px;
+  font-weight: bold;
+  height: 42px;
+  border: none;
+  outline: none;
+  font-size: 42px;
+}
 .minus {
   background: #f9f9f9;
   width: 25%;
@@ -154,6 +163,7 @@ select-quantity .disabled {
   height: 42px;
   border: none;
   outline: none;
+  font-size: 42px;
 }
 input[type="submit"] {
   border: none;
@@ -521,7 +531,14 @@ li.col-lg-12.row:last-child {
   border-bottom: none;
 }
 .odpQuantityStepper {
-  padding-left: 6em;
+  padding-left: 1em;
+}
+.odpQuantityStepper .qtyStpr input {
+  width: 35px !important;
+  height: 38px;
+  text-align: center;
+  outline: none;
+  border: 1px solid #e3e3e3;
 }
 .odpQuantityStepper .plus,
 .odpQuantityStepper .minus {
@@ -890,10 +907,10 @@ table {
     padding: 19px;
   }
   .buyAgain {
-    left: -4rem;
+    left: -2rem;
     outline: none;
     color: white;
-    padding: 2px 30px;
+    padding: 1px 28px;
     border: none;
     background: #3370a2;
     border-radius: 3px;
@@ -1075,6 +1092,49 @@ table {
   .btn-size:first-child {
     padding-left: 0;
   }
+  .color-area {
+    display: block;
+  }
+  .color-area li {
+    padding: 1rem;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    padding-right: 24px;
+  }
+  .color-area li button {
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    border: none;
+  }
+  .color-area li label {
+    width: 44px;
+    height: 44px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .color-area li input[type="radio"] {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    z-index: 11;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .color-area li.active label {
+    border: 2px solid #043c63;
+  }
+  .color-area:first-child {
+    padding-left: 0;
+  }
   .firstLetter {
     vertical-align: middle;
     position: absolute;
@@ -1082,6 +1142,11 @@ table {
     text-align: center;
     left: 47%;
     font-weight: 600;
+  }
+  .breadcrumb a {
+    color: #3370a2;
+    text-decoration: none;
+    font-size: 10px;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
