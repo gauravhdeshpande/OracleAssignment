@@ -23,6 +23,8 @@ html {
 .thumbnails {
   margin-right: 10px;
   opacity: 0.6;
+  width: auto;
+  max-width: 100%;
 }
 #orderNumber p:nth-child(5) {
   text-align: center;
