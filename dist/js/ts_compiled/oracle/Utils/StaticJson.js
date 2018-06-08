@@ -22,9 +22,9 @@ define(["require", "exports"], function (require, exports) {
                 details: {
                     title: 'Product Title 1',
                     images: [
-                        { src: "couch_lg_0.jpg", alt: "Sofa view 1" },
-                        { src: "couch_sm_1.jpg", alt: "Sofa view 2" },
-                        { src: "couch_sm_0.jpg", alt: "Sofa view 3" },
+                        { src: "adidas_1.jpg", alt: "Shoes view 1" },
+                        { src: "adidas_33.jpg", alt: "Shoes view 2" },
+                        { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
                     colors: ['white', 'grey', 'blue'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
@@ -51,9 +51,9 @@ define(["require", "exports"], function (require, exports) {
                 details: {
                     title: 'Product Title 2',
                     images: [
-                        { src: "couch_lg_0.jpg", alt: "Sofa view 1" },
-                        { src: "couch_sm_1.jpg", alt: "Sofa view 2" },
-                        { src: "couch_sm_0.jpg", alt: "Sofa view 3" },
+                        { src: "adidas_1.jpg", alt: "Shoes view 1" },
+                        { src: "adidas_33.jpg", alt: "Shoes view 2" },
+                        { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
                     colors: ['light blue', 'slategray', 'electro'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
@@ -80,9 +80,9 @@ define(["require", "exports"], function (require, exports) {
                 details: {
                     title: 'Product Title 2',
                     images: [
-                        { src: "couch_lg_0.jpg", alt: "Sofa view 1" },
-                        { src: "couch_sm_1.jpg", alt: "Sofa view 2" },
-                        { src: "couch_sm_0.jpg", alt: "Sofa view 3" },
+                        { src: "adidas_1.jpg", alt: "Shoes view 1" },
+                        { src: "adidas_33.jpg", alt: "Shoes view 2" },
+                        { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
                     colors: ['electro', 'light blue', 'white'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
@@ -109,9 +109,9 @@ define(["require", "exports"], function (require, exports) {
                 details: {
                     title: 'Product Title 2',
                     images: [
-                        { src: "couch_lg_0.jpg", alt: "Sofa view 1" },
-                        { src: "couch_sm_1.jpg", alt: "Sofa view 2" },
-                        { src: "couch_sm_0.jpg", alt: "Sofa view 3" },
+                        { src: "adidas_1.jpg", alt: "Shoes view 1" },
+                        { src: "adidas_33.jpg", alt: "Shoes view 2" },
+                        { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
                     colors: ['white', 'grey', 'blue', 'light blue', 'slategray', 'electro'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
@@ -138,9 +138,9 @@ define(["require", "exports"], function (require, exports) {
                 details: {
                     title: 'Product Title 2',
                     images: [
-                        { src: "couch_lg_0.jpg", alt: "Sofa view 1" },
-                        { src: "couch_sm_1.jpg", alt: "Sofa view 2" },
-                        { src: "couch_sm_0.jpg", alt: "Sofa view 3" },
+                        { src: "adidas_1.jpg", alt: "Shoes view 1" },
+                        { src: "adidas_33.jpg", alt: "Shoes view 2" },
+                        { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
                     colors: ['electro', 'light blue', 'white'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
@@ -167,9 +167,9 @@ define(["require", "exports"], function (require, exports) {
                 details: {
                     title: 'Product Title 2',
                     images: [
-                        { src: "couch_lg_0.jpg", alt: "Sofa view 1" },
-                        { src: "couch_sm_1.jpg", alt: "Sofa view 2" },
-                        { src: "couch_sm_0.jpg", alt: "Sofa view 3" },
+                        { src: "adidas_1.jpg", alt: "Shoes view 1" },
+                        { src: "adidas_33.jpg", alt: "Shoes view 2" },
+                        { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
                     colors: ['light blue', 'slategray', 'electro'],
                     sizes: ['small', 'medium', 'large', 'xtra large'],
