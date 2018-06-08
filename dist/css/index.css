@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhs.ttf) format('truetype');
+}
 html {
   font-size: 16px;
 }
@@ -371,10 +389,10 @@ footer h2 {
   font-size: 17px;
 }
 .tab button:hover {
-  background-color: inherit;
+  background-color: #cccccc;
 }
 .tab button.active {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 .overview {
   margin-top: 5%;
@@ -618,7 +636,6 @@ label {
   min-width: 250px;
   margin-left: -125px;
   background-color: #043c63;
-  color: blue;
   text-align: center;
   border-radius: 2px;
   padding: 16px;
