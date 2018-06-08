@@ -106,9 +106,9 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 }
                 rating = Array(5).fill(`<i class="fa fa-star"></i>`).fill(`<i class="fa fa-star checked"></i>`, 0, obj.rating).join('');
                 pricing = `
-            <del>${obj.price.currency + ' ' + obj.price.sellingPrice}</del><br/>
-            <span>${obj.price.currency + ' ' + obj.price.discountedPrice}</span><br/>
-            <span class="${obj.price.sale ? 'hotPrice' : ''}">${obj.price.sale ? 'SALE' : ''} ${obj.price.currency + ' ' + obj.price.low} - ${obj.price.high}</span><br/>
+            <del>${obj.price.currency + obj.price.sellingPrice}</del><br/>
+            <span>${obj.price.currency + obj.price.discountedPrice}</span><br/>
+            <span class="${obj.price.sale ? 'hotPrice' : ''}">${obj.price.sale ? 'SALE' : ''} ${obj.price.currency + obj.price.low} - ${obj.price.currency + obj.price.high}</span><br/>
             ${obj.price.sale ? '' : "<span>&nbsp;</span>"}
         `;
                 this.templateHtml += `<li class="col-lg-12 row" id="productDetail" data-id="${obj.id}">
@@ -119,7 +119,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 <span>${rating}</span>            
             </div>  
             <div class="col-lg-3 col-xs-6 odpQuantityStepper" id=${qsid}></div>
-            <div class="col-lg-3 col-xs-6 odpBuyAgain"> <a class="primaryBtn buyAgain" href="pdp.html?id=${obj.id}">Buy Again</a><p class="current-price">Current Price ${obj.price.currency + ' ' + obj.price.sellingPrice}</p></div>      
+            <div class="col-lg-3 col-xs-6 odpBuyAgain"> <a class="primaryBtn buyAgain" href="pdp.html?id=${obj.id}">Buy Again</a><p class="current-price">Current Price ${obj.price.currency + obj.price.sellingPrice}</p></div>      
         </li>`;
             });
             this.templateHtml += '</ul>';
