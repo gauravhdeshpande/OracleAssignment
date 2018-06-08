@@ -20,9 +20,9 @@ const parentJson = {
             details:{
                 title:'Product Title 1',
                 images:[
-                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_3.png",alt:"Shoes view 1"},
                     {src:"adidas_1.jpg",alt:"Shoes view 2"},
-                    {src:"adidas_0.jpg",alt:"Shoes view 3"},
+                    {src:"adidas_3.png",alt:"Shoes view 3"},
                 ],
                 colors:['white','grey','blue'],
                 sizes:['small','medium','large','xtra large'],
@@ -49,9 +49,9 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_3.png",alt:"Shoes view 1"},
                     {src:"adidas_1.jpg",alt:"Shoes view 2"},
-                    {src:"adidas_0.jpg",alt:"Shoes view 3"},
+                    {src:"adidas_3.png",alt:"Shoes view 3"},
                 ],
                 colors:['green','slategray','electro'],
                 sizes:['small','medium','large','xtra large'],
@@ -78,9 +78,9 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_3.png",alt:"Shoes view 1"},
                     {src:"adidas_1.jpg",alt:"Shoes view 2"},
-                    {src:"adidas_0.jpg",alt:"Shoes view 3"},
+                    {src:"adidas_3.png",alt:"Shoes view 3"},
                 ],
                 colors:['electro','light blue','white', 'orange'],
                 sizes:['small','medium','large','xtra large'],
@@ -107,9 +107,9 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_3.png",alt:"Shoes view 1"},
                     {src:"adidas_1.jpg",alt:"Shoes view 2"},
-                    {src:"adidas_0.jpg",alt:"Shoes view 3"},
+                    {src:"adidas_3.png",alt:"Shoes view 3"},
                 ],
                 colors:['white','grey','blue','light blue','slategray' ,'electro'],
                 sizes:['small','medium','large','xtra large'],
@@ -136,7 +136,7 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_3.png",alt:"Shoes view 1"},
                     {src:"adidas_1.jpg",alt:"Shoes view 2"},
                     {src:"adidas_2.jpg",alt:"Shoes view 3"},
                 ],
@@ -164,7 +164,7 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_3.png",alt:"Shoes view 1"},
                     {src:"adidas_1.jpg",alt:"Shoes view 2"},
                     {src:"adidas_3.png",alt:"Shoes view 3"},
                 ],
