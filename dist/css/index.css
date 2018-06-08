@@ -359,7 +359,7 @@ footer h2 {
 }
 .tab {
   margin-top: 2%;
-  width: 100%;
+  width: 99.88%;
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
@@ -963,7 +963,7 @@ del {
     width: 100%	;
   }
   .qtyStpr input {
-    width: 130px;
+    width: 145px;
     height: 38px;
     text-align: center;
     outline: none;
