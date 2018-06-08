@@ -32,7 +32,7 @@ define(["require", "exports"], function (require, exports) {
                 }
             },
             {
-                id: "5",
+                id: "2",
                 name: "Nike Men's Air Force 1 Running Shoes",
                 image: {
                     src: "product-image_1.png",
