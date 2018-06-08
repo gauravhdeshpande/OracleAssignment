@@ -596,9 +596,11 @@ li.col-lg-12.row:last-child {
   width: 20%;
   padding: 2%;
   line-height: 1.5;
-  border-right: 1px solid #bdb1b1;
-  margin: 3% 0.4%;
+  border-right: 1px solid #ebebeb;
+  margin: 3% 0%;
   font-weight: 600;
+  height: 370px;
+  border-bottom: 1px solid #cccccc;
 }
 #plp-listing li:last-child {
   border-right: none;
@@ -727,6 +729,19 @@ table {
 .sale-price {
   display: block;
   margin-bottom: -1.6em;
+}
+del {
+  color: #cccccc;
+  font-size: 14px;
+}
+.disabled::before {
+  position: absolute;
+  content: "";
+  border-top: 3px solid #333333;
+  transform: rotate(45deg);
+  width: 69px;
+  transform-origin: 7px 13px;
+  pointer-events: none;
 }
 @media screen and (max-width: 587px) {
   body h1 {

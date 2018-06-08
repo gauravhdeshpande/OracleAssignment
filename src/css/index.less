@@ -731,18 +731,21 @@ li.col-lg-12.row {
 }
 
 
-select {
-		// background: url("images/down-arrow.png");
+// select {
+// 		// background: url("images/down-arrow.png");
 	
-}
+// }
 #plp-listing {
 	li {
 		width: 20%;
 		padding: 2%;
 		line-height: 1.5;
-		border-right: 1px solid #bdb1b1;
-		margin: 3% 0.4%;
+		border-right: 1px solid #ebebeb;
+		margin: 3% 0%;
 		font-weight: 600;
+		height: 370px;
+		border-bottom: 1px solid #cccccc;
+
 		&:last-child {
 			border-right: none;
 		}
@@ -907,6 +910,22 @@ table {
     margin-bottom: -1.6em;
 }
 
+del {
+	color: #cccccc;
+    font-size: 14px;
+}
+
+// Disabled Code 
+
+.disabled::before {
+    position: absolute;
+    content: "";
+    border-top: 3px solid #333333;
+    transform: rotate(45deg);
+    width: 69px;
+    transform-origin: 7px 13px;
+    pointer-events: none;
+}
 
 // MEDIA QUERIES 
 
