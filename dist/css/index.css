@@ -352,7 +352,7 @@ footer h2 {
   max-width: 80%;
   margin: 10% 10%;
   height: auto;
-  max-height: 500px;
+  max-height: 400px;
 }
 #product-images {
   border-bottom: 1px solid #f9f9f9;
@@ -527,14 +527,14 @@ span.input-group-btn > button {
   vertical-align: middle;
   padding-right: 10px;
 }
-li.col-lg-12.row {
+#productDetail {
   margin: 1rem -2rem;
   border-bottom: 1px solid darkgray;
   font-weight: 600;
   line-height: 1.8rem;
   padding-bottom: 1rem;
 }
-li.col-lg-12.row:last-child {
+#productDetail:last-child {
   border-bottom: none;
 }
 .odpQuantityStepper {
@@ -747,8 +747,13 @@ del {
   content: "";
   border-top: 3px solid #333333;
   transform: rotate(45deg);
-  width: 69px;
-  transform-origin: 7px 13px;
+  width: 60px;
+  transform-origin: 0px 6px;
+  pointer-events: none;
+}
+.disabledSize {
+  border: 1px dashed #cccccc !important;
+  color: #cccccc;
   pointer-events: none;
 }
 #top-total::before {
@@ -1200,6 +1205,13 @@ del {
   .odpQuantityStepper .plus,
   .odpQuantityStepper .minus {
     width: 30%;
+  }
+  #main-image {
+    width: auto;
+    max-width: 100%;
+    margin: 0% 0%;
+    height: auto;
+    max-height: 300px;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
