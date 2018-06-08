@@ -64,8 +64,17 @@ define(["require", "exports"], function (require, exports) {
                         { src: "adidas_33.jpg", alt: "Shoes view 2" },
                         { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
-                    colors: ['light blue', 'slategray', 'electro'],
-                    sizes: ['small', 'medium', 'large', 'xtra large'],
+                    colors: [
+                        { name: 'light blue', status: '' },
+                        { name: 'slategray', status: '' },
+                        { name: 'electro', status: 'disabled' }
+                    ],
+                    sizes: [
+                        { name: 'small', status: '' },
+                        { name: 'medium', status: 'disabled' },
+                        { name: 'large', status: '' },
+                        { name: 'xtra large', status: '' },
+                    ],
                     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 }
             },
@@ -93,8 +102,17 @@ define(["require", "exports"], function (require, exports) {
                         { src: "adidas_33.jpg", alt: "Shoes view 2" },
                         { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
-                    colors: ['electro', 'light blue', 'white'],
-                    sizes: ['small', 'medium', 'large', 'xtra large'],
+                    colors: [
+                        { name: 'electro', status: 'disabled' },
+                        { name: 'light blue', status: '' },
+                        { name: 'white', status: '' }
+                    ],
+                    sizes: [
+                        { name: 'small', status: 'disabled' },
+                        { name: 'medium', status: '' },
+                        { name: 'large', status: '' },
+                        { name: 'xtra large', status: '' },
+                    ],
                     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 }
             },
@@ -122,8 +140,20 @@ define(["require", "exports"], function (require, exports) {
                         { src: "adidas_33.jpg", alt: "Shoes view 2" },
                         { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
-                    colors: ['white', 'grey', 'blue', 'light blue', 'slategray', 'electro'],
-                    sizes: ['small', 'medium', 'large', 'xtra large'],
+                    colors: [
+                        { name: 'white', status: '' },
+                        { name: 'grey', status: '' },
+                        { name: 'blue', status: '' },
+                        { name: 'light blue', status: '' },
+                        { name: 'slategray', status: '' },
+                        { name: 'electro', status: 'disabled' }
+                    ],
+                    sizes: [
+                        { name: 'small', status: '' },
+                        { name: 'medium', status: '' },
+                        { name: 'large', status: '' },
+                        { name: 'xtra large', status: 'disabled' },
+                    ],
                     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 }
             },
@@ -151,8 +181,17 @@ define(["require", "exports"], function (require, exports) {
                         { src: "adidas_33.jpg", alt: "Shoes view 2" },
                         { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
-                    colors: ['electro', 'light blue', 'white'],
-                    sizes: ['small', 'medium', 'large', 'xtra large'],
+                    colors: [
+                        { name: 'electro', status: '' },
+                        { name: 'light blue', status: 'disabled' },
+                        { name: 'white', status: '' }
+                    ],
+                    sizes: [
+                        { name: 'small', status: '' },
+                        { name: 'medium', status: 'disabled' },
+                        { name: 'large', status: '' },
+                        { name: 'xtra large', status: '' },
+                    ],
                     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 }
             },
@@ -180,8 +219,17 @@ define(["require", "exports"], function (require, exports) {
                         { src: "adidas_33.jpg", alt: "Shoes view 2" },
                         { src: "adidas_8.jpg", alt: "Shoes view 3" },
                     ],
-                    colors: ['light blue', 'slategray', 'electro'],
-                    sizes: ['small', 'medium', 'large', 'xtra large'],
+                    colors: [
+                        { name: 'light blue', status: 'disabled' },
+                        { name: 'slategray', status: '' },
+                        { name: 'electro', status: '' }
+                    ],
+                    sizes: [
+                        { name: 'small', status: 'disabled' },
+                        { name: 'medium', status: '' },
+                        { name: 'large', status: '' },
+                        { name: 'xtra large', status: '' },
+                    ],
                     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 }
             }
