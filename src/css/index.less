@@ -214,8 +214,8 @@ select-quantity {
 	display: -ms-flexbox;
 	display: flex;
 	input {
-		width: 48px;
-		height: 34px;
+		width: 48px; 
+		height: 38px;
 		text-align: center;
 		outline: none;
 		border: 1px solid #e3e3e3;
@@ -1430,7 +1430,16 @@ b, strong {
     white-space: pre;
 }
 
+.tab {
+	button {
+		&::after {
+			content: '\A';
+			margin-bottom: 10px;
+		}
+	}
 }
+}
+
 // IE 10+ Media Queries 
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
