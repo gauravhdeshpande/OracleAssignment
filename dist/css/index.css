@@ -281,11 +281,13 @@ footer h2 {
   margin: 2%;
   font-size: 14px;
   line-height: 2em;
+}
+.department-section li a {
   text-decoration: underline;
 }
 .department-section #order-link {
-  color: #043c63 !important;
-  text-decoration: none;
+  color: #333333 !important;
+  text-decoration: none !important;
 }
 .sort {
   float: right;
