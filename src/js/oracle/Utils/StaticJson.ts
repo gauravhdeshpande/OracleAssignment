@@ -20,9 +20,9 @@ const parentJson = {
             details:{
                 title:'Product Title 1',
                 images:[
-                    {src:"couch_lg_0.jpg",alt:"Sofa view 1"},
-                    {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
-                    {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_1.jpg",alt:"Shoes view 2"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 3"},
                 ],
                 colors:['white','grey','blue'],
                 sizes:['small','medium','large','xtra large'],
@@ -49,11 +49,11 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"couch_lg_0.jpg",alt:"Sofa view 1"},
-                    {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
-                    {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_1.jpg",alt:"Shoes view 2"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 3"},
                 ],
-                colors:['light blue','slategray','electro'],
+                colors:['green','slategray','electro'],
                 sizes:['small','medium','large','xtra large'],
                 description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             } 
@@ -78,11 +78,11 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"couch_lg_0.jpg",alt:"Sofa view 1"},
-                    {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
-                    {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_1.jpg",alt:"Shoes view 2"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 3"},
                 ],
-                colors:['electro','light blue','white'],
+                colors:['electro','light blue','white', 'orange'],
                 sizes:['small','medium','large','xtra large'],
                 description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             } 
@@ -107,9 +107,9 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"couch_lg_0.jpg",alt:"Sofa view 1"},
-                    {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
-                    {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_1.jpg",alt:"Shoes view 2"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 3"},
                 ],
                 colors:['white','grey','blue','light blue','slategray' ,'electro'],
                 sizes:['small','medium','large','xtra large'],
@@ -136,9 +136,9 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"couch_lg_0.jpg",alt:"Sofa view 1"},
-                    {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
-                    {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_1.jpg",alt:"Shoes view 2"},
+                    {src:"adidas_2.jpg",alt:"Shoes view 3"},
                 ],
                 colors:['electro','light blue','white'],
                 sizes:['small','medium','large','xtra large'],
@@ -164,9 +164,9 @@ const parentJson = {
             details:{
                 title:'Product Title 2',
                 images:[
-                    {src:"couch_lg_0.jpg",alt:"Sofa view 1"},
-                    {src:"couch_sm_1.jpg",alt:"Sofa view 2"},
-                    {src:"couch_sm_0.jpg",alt:"Sofa view 3"},
+                    {src:"adidas_0.jpg",alt:"Shoes view 1"},
+                    {src:"adidas_1.jpg",alt:"Shoes view 2"},
+                    {src:"adidas_3.png",alt:"Shoes view 3"},
                 ],
                 colors:['light blue','slategray','electro'],
                 sizes:['small','medium','large','xtra large'],
@@ -177,7 +177,7 @@ const parentJson = {
     colorCodes:[
         {
             name:'white',
-            code:'dcdde1'
+            code:'46df6a '
         },
 		        {
             name:'green',
