@@ -25,7 +25,7 @@ class Template{
             <img alt="images/${obj.image.alt}" src="images/${obj.image.src}"/>
             <span class="product-details">${obj.name}</span>
             ${pricing}
-            <span>${rating}</span>
+            <span>${rating} (${obj.rating})</span>
             </a>
         </li>`});
         
