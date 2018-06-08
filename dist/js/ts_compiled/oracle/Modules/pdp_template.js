@@ -40,8 +40,8 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 <!-- Product type -->
                 <div class="price-block">
                     <del class="list-price">List Price: ${this.json.price.currency}${this.json.price.high}</del><br>
-                    <p class="curr-price"><b>${this.json.price.currency} ${this.json.price.discountedPrice}</b></p>
-                    <span class="sale-price hotPrice">${this.json.price.currency} ${this.json.price.sellingPrice} SALE</span><br>
+                    <p class="curr-price"><b>${this.json.price.currency}${this.json.price.discountedPrice}</b></p>
+                    <span class="sale-price hotPrice">${this.json.price.currency}${this.json.price.sellingPrice} SALE</span><br>
                 </div>
                 <div class="btn-size">
                 <p><b>Size: </b><span class="selected"></span></p>
