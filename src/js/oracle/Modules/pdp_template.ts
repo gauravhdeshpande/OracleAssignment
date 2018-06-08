@@ -19,7 +19,7 @@ class Template{
         this.qs.appendto('quanitityStepper');
     }
     showImage=(event)=>{
-       console.log('in thumbail ....');
+       //console.log('in thumbail ....');
         
     }
     getCount=()=>{
@@ -54,7 +54,6 @@ class Template{
                 <p><b>Size: </b><span class="selected"></span></p>
                 <ul class="btn-ul">
                     ${this.json.details.sizes.map((el,id)=>{
-                        console.log(el,id);
                         return '<li><p class="sizeContainer"><input id="radio'+id+'"'+(el.status=='disabled'?'disabled="disabled"':'')+'value="'+el.name+'" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="'+(el.status=='disabled'?'disabledSize':'')+' customRadio" for="radio'+id+'"><span class="firstLetter">'+el.name.substr(0,1)+'</span><span class="ax-hidden">'+el.name.substr(1)+'</span></label></p></li>'
                 
                     //return '<button class="sizeBtn" style="text-transform:capitalize;"><span>'+el.substr(0,1)+'</span><span class="ax-hidden">'+el.substr(1)+'</span></button>'
