@@ -48,7 +48,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                 <ul class="btn-ul">
                     ${this.json.details.sizes.map((el, id) => {
                 console.log(el, id);
-                return '<li><p class="sizeContainer"><input id="radio' + id + '" value="' + el + '" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="customRadio" for="radio' + id + '"><span class="firstLetter">' + el.substr(0, 1) + '</span><span class="ax-hidden">' + el.substr(1) + '</span></label></p></li>';
+                return '<li><p class="sizeContainer"><input id="radio' + id + '"' + (el.status == 'disabled' ? 'disabled="disabled"' : '') + 'value="' + el.name + '" type="radio" class="sizeBtn" name="size"><label style="text-transform:capitalize;" class="' + (el.status == 'disabled' ? 'disabledSize' : '') + ' customRadio" for="radio' + id + '"><span class="firstLetter">' + el.name.substr(0, 1) + '</span><span class="ax-hidden">' + el.name.substr(1) + '</span></label></p></li>';
                 //return '<button class="sizeBtn" style="text-transform:capitalize;"><span>'+el.substr(0,1)+'</span><span class="ax-hidden">'+el.substr(1)+'</span></button>'
             }).join('')}
                 </ul>
@@ -57,7 +57,7 @@ define(["require", "exports", "./CommonComponents"], function (require, exports,
                     <p class="color-title"><b>Color: </b><span class="selected"></span></p>
                     <ul id="color-ul">
                     ${this.json.details.colors.map((el, id) => {
-                return '<li><input id="color' + id + '" value="' + el + '" type="radio" class="colorBtn" name="color"><label for="color' + id + '"style="background:#' + this.colorCodes[el] + ';"><span class="ax-hidden">' + el + '</span></label></li>';
+                return '<li><input id="color' + id + '"' + (el.status == 'disabled' ? 'disabled="disabled"' : '') + 'value="' + el.name + '" type="radio" class="colorBtn" name="color"><label class="' + (el.status == 'disabled' ? 'disabled' : '') + ' " for="color' + id + '"style="background:#' + this.colorCodes[el.name] + ';"><span class="ax-hidden">' + el.name + '</span></label></li>';
             }).join('')}
                     </ul>
                 </div>
