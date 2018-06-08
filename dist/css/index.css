@@ -693,7 +693,7 @@ input [type="radio"] {
   border-top: 1px solid darkgrey;
 }
 table tr td:not(:last-child) {
-  padding: 0 1330px 0 0;
+  padding: 0 120px 0 0;
 }
 .firstLetter {
   vertical-align: middle;
